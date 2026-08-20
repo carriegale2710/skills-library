@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
-The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+If the issue tracker URL or triage label vocabulary has not been provided, ask the user before proceeding:
+- "What issue tracker should I publish to? (e.g. GitHub Issues URL, Linear workspace)"
+- "What triage label should I apply to ready tickets? (e.g. `ready-for-agent`)"
 
 ## Process
 
@@ -54,7 +56,7 @@ Iterate until the user approves the breakdown.
 Publish the approved tickets in dependency order (blockers first).
 
 - **Local files** → write one file per ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`
-- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket; apply the `ready-for-agent` triage label.
+- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket; apply the configured triage label.
 
 <issue-template>
 
