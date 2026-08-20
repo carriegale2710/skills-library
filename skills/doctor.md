@@ -18,6 +18,10 @@ This skill is **read-only**: no commits, no file writes, no Space changes.
    if one is absent from your context, it was not uploaded). ⚠️ for any file you are confident is missing;
    ⏭️ if you are genuinely uncertain whether it was uploaded — do not report ⚠️ on a file you might
    simply not have seen yet. Fix for ⚠️: upload the missing file per https://gaiacode.pro/get-started.
+2. **Skills directory.** Confirm the `skills/` folder is present in the Space
+   files and contains at least one `.md` file beyond `README.md`. ⚠️ if absent or
+   empty — GAIA's slash-command skills will not be available. Fix: re-upload
+   the skills bundle per https://gaiacode.pro/get-started.
 3. **Version consistency.** In `SYSTEM_PROMPT.md`, the header
    `# GAIA CODE — SYSTEM PROMPT (v<version>)` and the PART VII footer rule
    `Running GAIA Code <version>` must carry the same number. ⚠️ on mismatch —
