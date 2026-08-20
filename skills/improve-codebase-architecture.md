@@ -8,10 +8,21 @@ disable-model-invocation: true
 
 Surface architectural friction and propose **deepening opportunities**: refactors that turn shallow modules into deep ones. The aim is testability and AI-navigability.
 
-This command is _informed_ by the project's domain model and built on a shared design vocabulary:
+## Design Vocabulary
 
-- Call the Skill tool with "codebase-design" for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, "the interface is the test surface", "one adapter = hypothetical seam, two = real"). Use these terms exactly in every suggestion, and don't drift into "component," "service," "API," or "boundary."
-- The domain language in `CONTEXT.md` gives names to good seams; ADRs in `docs/adr/` record decisions this command should not re-litigate.
+Use these terms exactly throughout every suggestion. Do not drift to "component," "service," "API," or "boundary."
+
+- **module** — a unit with an interface and an implementation
+- **interface** — the surface through which a module is used; the test surface
+- **depth** — ratio of implementation complexity to interface complexity; a deep module hides a lot behind a simple interface
+- **seam** — a point where the implementation can be substituted without changing callers
+- **adapter** — a module that bridges two interfaces; one adapter = hypothetical seam, two = real
+- **leverage** — how much behavior change you get per unit of interface change
+- **locality** — keeping related logic close together so bugs and their causes are in the same module
+
+**Deletion test:** would deleting a module concentrate complexity (into its callers or a deeper module), or just move it? "Concentrates" = the signal the module is shallow and worth deepening.
+
+**"The interface is the test surface"** — the seam at which you write tests should be the module's public interface, not its internals.
 
 ## Process
 
@@ -20,11 +31,11 @@ This command is _informed_ by the project's domain model and built on a shared d
 **Scope before you scan: YAGNI.** Deepening a module pays off by making future changes to it easier, so put extra weight on the parts of the codebase that have recently changed. Decide *where* to look before you look:
 
 - If the user named a direction (a module, a subsystem, a pain point), take it, and skip the inference below.
-- Otherwise, walk back a good stretch of the commit history (`git log --oneline`) to find the codebase's hot spots, the files and areas that keep coming up, and let those paths pull your attention first. If the changes are scattered with no clear hot spot, widen the net.
+- Otherwise, use GitHub MCP `list_commits` to walk back a stretch of the commit history and find hot spots — files and areas that keep changing. Let those paths pull your attention first. If changes are scattered with no clear hot spot, widen the net.
 
-Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first.
+Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first, using `get_file_contents`.
 
-Then spawn a sub-agent to walk the codebase. Don't follow rigid heuristics; explore organically and note where you experience friction:
+Then read the codebase using GitHub MCP read tools (`get_file_contents`, `list_commits`). Don't follow rigid heuristics; explore organically and note where you experience friction:
 
 - Where does understanding one concept require bouncing between many small modules?
 - Where are modules **shallow**, with an interface nearly as complex as the implementation?
@@ -32,11 +43,11 @@ Then spawn a sub-agent to walk the codebase. Don't follow rigid heuristics; expl
 - Where do tightly-coupled modules leak across their seams?
 - Which parts of the codebase are untested, or hard to test through their current interface?
 
-Apply the **deletion test** to anything you suspect is shallow: would deleting it concentrate complexity, or just move it? A "yes, concentrates" is the signal you want.
+Apply the **deletion test** to anything you suspect is shallow.
 
 ### 2. Present candidates as an HTML report
 
-Write a self-contained HTML file to the OS temp directory so nothing lands in the repo. Resolve the temp dir from `$TMPDIR`, falling back to `/tmp` (or `%TEMP%` on Windows), and write to `<tmpdir>/architecture-review-<timestamp>.html` so each run gets a fresh file. Open it for the user and tell them the absolute path.
+Write a self-contained HTML file to the OS temp directory so nothing lands in the repo. Resolve the temp dir from `$TMPDIR`, falling back to `/tmp` (or `%TEMP%` on Windows), and write to `<tmpdir>/architecture-review-<timestamp>.html` so each run gets a fresh file. Tell the user the absolute path.
 
 The report uses **Tailwind via CDN** for layout and styling, and **Mermaid via CDN** for diagrams. Each candidate gets a **before/after visualisation**.
 
@@ -55,4 +66,4 @@ Do NOT propose interfaces yet. Ask the user: "Which of these would you like to e
 
 ### 3. Grilling loop
 
-Once the user picks a candidate, call the Skill tool with "grilling" to walk the decision tree with them.
+Once the user picks a candidate, invoke the `/grilling` skill to walk the decision tree with them.
