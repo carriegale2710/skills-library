@@ -1,9 +1,9 @@
 ---
 name: bug-fix
-description: Bug diagnosis to merged fix pipeline. Use when the user reports a bug, an error, or unexpected behaviour and wants a structured end-to-end fix — from root-cause diagnosis through tests to a reviewed, merged PR.
+description: Use when the user reports a bug, an error, or unexpected behaviour and wants a structured end-to-end fix — covering root-cause diagnosis, test coverage, and a reviewed merged PR in one guided session.
 ---
 
-# Bug Fix Pipeline
+# Bug Fix
 
 ## Overview
 

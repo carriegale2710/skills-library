@@ -1,9 +1,9 @@
 ---
 name: frontend-build
-description: Spec to built frontend pipeline. Use when the user wants to design and build a new UI feature or page end-to-end — from a written spec through visual design decisions to tested, committed components.
+description: Use when the user wants to design and build a new UI feature or page end-to-end — covering spec, visual design decisions, and tested committed components in one guided session.
 ---
 
-# Frontend Build Pipeline
+# Frontend Build
 
 ## Overview
 

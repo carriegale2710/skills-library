@@ -1,9 +1,9 @@
 ---
 name: research-to-issues
-description: Research-to-backlog pipeline. Use when the user wants to go from a raw topic, market idea, or product question all the way to prioritised GitHub issues in one guided workflow.
+description: Use when the user wants to go from a raw topic, market idea, or product question all the way to prioritised GitHub issues — covering research, idea generation, and backlog creation in one guided session.
 ---
 
-# Research to Issues Pipeline
+# Research to Issues
 
 ## Overview
 

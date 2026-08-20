@@ -1,6 +1,6 @@
 ---
 name: feature-ship
-description: Full end-to-end feature shipping pipeline. Use when the user says "ship feature X", "take this idea to a PR", or wants to go from a rough concept to a merged pull request in one guided workflow.
+description: Use when the user says "ship feature X", "take this idea to a PR", wants to go from a rough concept to a merged pull request, or needs to move end-to-end from idea through spec, tickets, tests, and review in one guided session.
 ---
 
 # Feature Ship Pipeline
