@@ -5,111 +5,68 @@ description: Helps users discover and install agent skills when they ask questio
 
 # Find Skills
 
-This skill helps you discover and install skills from the open agent skills ecosystem.
+Help the user discover skills from the open-agent skills ecosystem and install them into this Space.
 
-## When to Use This Skill
+GAIA has no shell — do **not** run `npx skills` or any CLI command. Use the tools below instead.
 
-Use this skill when the user:
+## Discovery
 
-- Asks "how do I do X" where X might be a common task with an existing skill
-- Says "find a skill for X" or "is there a skill for X"
-- Asks "can you do X" where X is a specialized capability
-- Expresses interest in extending agent capabilities
-- Wants to search for tools, templates, or workflows
-- Mentions they wish they had help with a specific domain (design, testing, deployment, etc.)
-
-## How to Help Users Find Skills
-
-### Step 1: Understand What They Need
+### Step 1 — Understand what they need
 
 Identify:
-1. The domain (e.g., React, testing, design, deployment)
-2. The specific task (e.g., writing tests, creating animations, reviewing PRs)
-3. Whether this is common enough that a skill likely exists
+1. The domain (e.g. React, testing, design, deployment)
+2. The specific task (e.g. writing tests, reviewing PRs, creating changelogs)
 
-### Step 2: Browse skills.sh
+### Step 2 — Search GitHub for skills
 
-Fetch the skills leaderboard first to check for a well-known match:
+Use `search_repositories` MCP tool with queries like:
 
-```
-fetch_url: https://skills.sh/
-```
+- `agent-skills react nextjs` — web dev skills
+- `agent-skills testing jest playwright` — test skills
+- `claude skills pr-review` — PR review skills
+- `agent-skills <domain>` — general domain search
 
-The leaderboard surfaces the most popular and battle-tested skills. Check if any top skill covers the user's domain.
+Scope to well-known owners first: `vercel-labs`, `anthropics`, `ComposioHQ`.
 
-### Step 3: Search GitHub for skills
+### Step 3 — Verify quality before recommending
 
-If the leaderboard doesn't cover the need, use `search_repositories` MCP to find skill repos:
+For each candidate:
+1. Check GitHub stars — prefer repos with 100+ stars
+2. Check source reputation — official sources are more trustworthy
+3. Use `fetch_url` to read the skill's README or SKILL.md and confirm it covers the user's need
 
-- Query: `agent-skills <domain>` or `claude-skills <domain>` or `skill <task-keyword>`
-- Filter by `topic:agent-skills` if relevant
-- Check popular sources: `vercel-labs`, `anthropics`, `ComposioHQ`
+### Step 4 — Present options
 
-For each candidate found, fetch its `SKILL.md` or `README.md` to verify it's a real skill file.
+Present each match with:
+- Skill name and what it does
+- Source repo and star count
+- How to install it (see below)
 
-### Step 4: Verify Quality Before Recommending
+### Step 5 — Install via the GAIA skill installer
 
-Do not recommend a skill based solely on search results. Always verify:
+To install a skill from GitHub, tell the user:
 
-1. **GitHub stars** — prefer repos with meaningful stars; be cautious under 100
-2. **Source reputation** — official sources (`vercel-labs`, `anthropics`, `microsoft`) over unknown authors
-3. **Skill file exists** — confirm a `SKILL.md` or `.md` skill file is present and readable
+> "I can install this skill for you. Say: **install the skill from gh `<owner>/<repo>`** and I'll package it for upload."
 
-### Step 5: Present Options to the User
-
-When you find relevant skills, present them with:
-
-1. The skill name and what it does
-2. The source repo and star count
-3. How to install it (see Step 6)
-4. A link to learn more
-
-Example response:
-
-```
-I found a skill that might help: "react-best-practices" from vercel-labs/agent-skills.
-It provides React and Next.js performance optimization guidelines.
-
-To install it, say:
-"install the skill from gh vercel-labs/agent-skills"
-```
-
-### Step 6: Install a Skill
-
-GAIA has no shell — there is no `npx skills` command available. To install a skill, use the **GAIA skill installer**:
-
-> The user says: "install the skill from gh `<owner>/<repo>`"
-
-GAIA will:
-1. Fetch the skill file from GitHub MCP
+The GAIA skill installer (built into the system) will:
+1. Fetch the skill file from the repo
 2. Write it to `output/<name>.md`
-3. Tell the user to download and upload it to the Space
+3. Ask the user to upload it to this Space
 
-## When No Skills Are Found
+## When no skills are found
 
 If no relevant skills exist:
+1. Say so clearly
+2. Offer to help with the task directly using GAIA's built-in capabilities
+3. Offer to write a new skill with `/write-a-skill`
 
-1. Acknowledge that no existing skill was found
-2. Offer to help with the task directly using general capabilities
-3. Suggest the user could write a custom skill using `/write-a-skill`
+## Common skill categories
 
-Example:
-
-```
-I searched for skills related to "xyz" but didn't find any matches.
-I can still help you with this task directly. Would you like me to proceed?
-
-If this is something you do often, I can help you write a custom skill with /write-a-skill.
-```
-
-## Common Skill Categories
-
-| Category        | Example Queries                          |
-| --------------- | ---------------------------------------- |
-| Web Development | react, nextjs, typescript, css, tailwind |
-| Testing         | testing, jest, playwright, e2e           |
-| DevOps          | deploy, docker, kubernetes, ci-cd        |
-| Documentation   | docs, readme, changelog, api-docs        |
-| Code Quality    | review, lint, refactor, best-practices   |
-| Design          | ui, ux, design-system, accessibility     |
-| Productivity    | workflow, automation, git                |
+| Category | Search terms |
+|---|---|
+| Web Development | react, nextjs, typescript, tailwind |
+| Testing | testing, jest, playwright, e2e |
+| DevOps | deploy, docker, kubernetes, ci-cd |
+| Documentation | docs, readme, changelog, api-docs |
+| Code Quality | review, lint, refactor, best-practices |
+| Design | ui, ux, design-system, accessibility |

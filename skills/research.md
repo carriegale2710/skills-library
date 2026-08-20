@@ -1,43 +1,32 @@
 ---
 name: research
-description: Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork done.
+description: Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated.
 ---
 
 # Research
 
-Investigate the question against **primary sources** and write the findings to the repo.
+Investigate the question and write findings to a Markdown file in the repo.
 
 ## Process
 
-### 1. Identify primary sources
+### 1. Clarify scope
 
-Primary sources are:
-- Official documentation sites
-- Source code (on GitHub)
-- Specs, RFCs, or standards documents
-- First-party API references
+If the question is ambiguous, ask one clarifying question before starting. Otherwise proceed directly.
 
-Do not rely on secondary write-ups (blog posts, Stack Overflow summaries) unless no primary source exists. When using a secondary source, note it explicitly.
+### 2. Investigate against primary sources
 
-### 2. Research
+Use `search_web` to find candidate sources, then `fetch_url` to read the primary sources directly — official docs, source code, specs, first-party APIs. Do **not** rely on secondary summaries; follow every claim back to the source that owns it.
 
-For each claim or question:
-
-1. Use `search_web` to locate the relevant primary source
-2. Use `fetch_url` to read the actual page or document
-3. Follow links to the source that **owns** the claim — don't stop at an aggregator
-4. Note any version, date, or context dependency on the claim
-
-Repeat until the question is answered or the source trail runs cold.
+For repository-specific questions (e.g. "how does module X work?"), use GitHub MCP `get_file_contents` and `list_commits` to read the actual code and history.
 
 ### 3. Write findings to the repo
 
-1. Check where the repo already keeps research notes (look for `docs/`, `notes/`, `research/` using `get_file_contents` on the root)
-2. Match that convention; if there is none, use `docs/research/<topic>.md`
-3. Write a single Markdown file with:
-   - A clear title and date
-   - Each finding as a bullet or section
-   - Every claim linked to its primary source inline
-   - A "Sources" section at the bottom listing all URLs used
-4. Use GitHub MCP `create_or_update_file` to save the file
-5. Tell the user the path where it was saved
+Write a single Markdown file citing each claim's source URL.
+
+- Match the repo's existing notes convention (e.g. `docs/research/`, `docs/notes/`, `notes/`).
+- If no convention exists, write to `docs/research/YYYY-MM-DD-<topic>.md` and say where you saved it.
+- Use GitHub MCP `create_or_update_file` to commit the file.
+
+### 4. Report
+
+After writing, give the user a short summary: key findings, file path, and any open questions worth following up.

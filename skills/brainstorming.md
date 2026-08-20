@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: Explores user intent, requirements, and design before implementation. Use when starting a new feature, project, or significant change where the approach is not yet decided.
+description: Explores user intent and design before implementation. Use when the user wants to build something new, extend existing functionality, or work through an architectural decision before writing code.
 ---
 
 # Brainstorming Ideas Into Designs

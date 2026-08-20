@@ -8,40 +8,41 @@ disable-model-invocation: true
 
 Surface architectural friction and propose **deepening opportunities**: refactors that turn shallow modules into deep ones. The aim is testability and AI-navigability.
 
-## Design Vocabulary
+## Design vocabulary
 
-Use these terms exactly throughout every suggestion. Do not drift to "component," "service," "API," or "boundary."
+Use these terms exactly in every suggestion — do not drift into "component," "service," "API," or "boundary":
 
-- **module** — a unit with an interface and an implementation
-- **interface** — the surface through which a module is used; the test surface
-- **depth** — ratio of implementation complexity to interface complexity; a deep module hides a lot behind a simple interface
-- **seam** — a point where the implementation can be substituted without changing callers
-- **adapter** — a module that bridges two interfaces; one adapter = hypothetical seam, two = real
-- **leverage** — how much behavior change you get per unit of interface change
-- **locality** — keeping related logic close together so bugs and their causes are in the same module
+- **module** — a named unit with an interface and an implementation
+- **interface** — the surface through which a module is used
+- **depth** — ratio of implementation complexity to interface complexity (deep = good)
+- **seam** — a boundary where behaviour can be varied without editing the calling code
+- **adapter** — code that converts between two seam forms
+- **leverage** — a small interface change that unlocks many call-site simplifications
+- **locality** — related logic living close together, reducible to a single read path
 
-**Deletion test:** would deleting a module concentrate complexity (into its callers or a deeper module), or just move it? "Concentrates" = the signal the module is shallow and worth deepening.
+**Design principles:**
+- The deletion test: would deleting this module concentrate complexity, or just move it? "Concentrates" = signal worth keeping.
+- "The interface is the test surface" — test through the interface, not the implementation.
+- "One adapter = hypothetical seam, two = real" — two adapters justify extracting the seam.
 
-**"The interface is the test surface"** — the seam at which you write tests should be the module's public interface, not its internals.
+The domain language in `CONTEXT.md` gives names to good seams; ADRs in `docs/adr/` record decisions this command should not re-litigate.
 
 ## Process
 
 ### 1. Explore
 
-**Scope before you scan: YAGNI.** Deepening a module pays off by making future changes to it easier, so put extra weight on the parts of the codebase that have recently changed. Decide *where* to look before you look:
+**Scope before you scan: YAGNI.** Deepening pays off on hot spots — code that keeps changing.
 
-- If the user named a direction (a module, a subsystem, a pain point), take it, and skip the inference below.
-- Otherwise, use GitHub MCP `list_commits` to walk back a stretch of the commit history and find hot spots — files and areas that keep changing. Let those paths pull your attention first. If changes are scattered with no clear hot spot, widen the net.
+- If the user named a direction (a module, a subsystem, a pain point), take it.
+- Otherwise, use GitHub MCP `list_commits` to find the hot spots: files and areas that keep coming up in recent history. Let those paths pull your attention first.
 
-Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first, using `get_file_contents`.
-
-Then read the codebase using GitHub MCP read tools (`get_file_contents`, `list_commits`). Don't follow rigid heuristics; explore organically and note where you experience friction:
+Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first. Then read the hot-spot files via GitHub MCP `get_file_contents`, exploring organically. Note friction where you experience it:
 
 - Where does understanding one concept require bouncing between many small modules?
 - Where are modules **shallow**, with an interface nearly as complex as the implementation?
 - Where have pure functions been extracted just for testability, but the real bugs hide in how they're called (no **locality**)?
 - Where do tightly-coupled modules leak across their seams?
-- Which parts of the codebase are untested, or hard to test through their current interface?
+- Which parts are untested, or hard to test through their current interface?
 
 Apply the **deletion test** to anything you suspect is shallow.
 

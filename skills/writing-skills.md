@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Reference guide for the TDD-for-skills methodology: baseline testing, writing minimal skills, and refactoring to close loopholes. Use when editing an existing skill, verifying a skill works, or reviewing skill quality — not for creating a brand new skill (use write-a-skill for that).
+description: Reference guide for writing high-quality agent skills using TDD principles. Use when a skill author wants to understand the methodology, validate an existing skill, or verify a skill works before deployment. Not for creating a new skill right now — use /write-a-skill for that.
 disable-model-invocation: true
 ---
 

@@ -8,9 +8,9 @@ disable-model-invocation: true
 
 Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
-If the issue tracker URL or triage label vocabulary has not been provided, ask the user before proceeding:
-- "What issue tracker should I publish to? (e.g. GitHub Issues URL, Linear workspace)"
-- "What triage label should I apply to ready tickets? (e.g. `ready-for-agent`)"
+The issue tracker and triage label vocabulary should have been provided to you. If not, ask the user to provide:
+- Which tracker to use (GitHub Issues, Linear, local files, etc.)
+- The label vocabulary for triage (e.g. `ready-for-agent`, `blocked`, etc.)
 
 ## Process
 

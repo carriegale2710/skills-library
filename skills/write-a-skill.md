@@ -1,6 +1,6 @@
 ---
 name: write-a-skill
-description: Create a new agent skill file with proper structure, progressive disclosure, and bundled resources. Use when the user says "write a skill", "create a skill", or "build a skill for X".
+description: Creates a new agent skill file right now. Use when the user says "create a skill", "write a skill", or "make a skill for X". For skill-writing methodology and TDD philosophy, see /writing-skills instead.
 ---
 
 # Write a Skill
