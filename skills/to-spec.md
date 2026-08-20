@@ -7,18 +7,18 @@ disable-model-invocation: true
 This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user; just synthesize what you already know.
 
 The issue tracker and triage label vocabulary should have been provided to you. If not, ask the user to provide:
-- Which tracker to use (GitHub Issues, Linear, local files, etc.)
+- Which tracker to use (GitHub Issues is the default for this setup; otherwise Linear, local files, etc.)
 - The label vocabulary for triage (e.g. `ready-for-agent`, `blocked`, etc.)
 
 ## Process
 
 1. Explore the repo to understand the current state of the codebase, if you haven't already. Use the project's domain glossary vocabulary throughout the spec, and respect any ADRs in the area you're touching.
 
-2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better - the ideal number is one.
+2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better — the ideal number is one.
 
-Check with the user that these seams match their expectations.
+   Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the configured triage label.
+3. Write the spec using the template below, then publish it to the issue tracker. For GitHub Issues, use GitHub MCP `issue_write` (method `create`). Apply the configured triage label.
 
 <spec-template>
 

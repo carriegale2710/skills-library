@@ -48,7 +48,7 @@ Apply the **deletion test** to anything you suspect is shallow.
 
 ### 2. Present candidates as an HTML report
 
-Write a self-contained HTML file to the OS temp directory so nothing lands in the repo. Resolve the temp dir from `$TMPDIR`, falling back to `/tmp` (or `%TEMP%` on Windows), and write to `<tmpdir>/architecture-review-<timestamp>.html` so each run gets a fresh file. Tell the user the absolute path.
+Write a self-contained HTML file to the OS temp directory using `execute_code`: resolve the path as `os.environ.get('TMPDIR', '/tmp')` and write to `<tmpdir>/architecture-review-<timestamp>.html` so each run gets a fresh file. Copy it to `output/` so the user can download it.
 
 The report uses **Tailwind via CDN** for layout and styling, and **Mermaid via CDN** for diagrams. Each candidate gets a **before/after visualisation**.
 

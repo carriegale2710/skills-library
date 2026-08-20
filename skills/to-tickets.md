@@ -9,7 +9,7 @@ disable-model-invocation: true
 Break a plan, spec, or conversation into a set of **tickets**: tracer-bullet vertical slices, each declaring the tickets that **block** it.
 
 The issue tracker and triage label vocabulary should have been provided to you. If not, ask the user to provide:
-- Which tracker to use (GitHub Issues, Linear, local files, etc.)
+- Which tracker to use (GitHub Issues is the default for this setup; otherwise Linear, local files, etc.)
 - The label vocabulary for triage (e.g. `ready-for-agent`, `blocked`, etc.)
 
 ## Process
@@ -55,8 +55,9 @@ Iterate until the user approves the breakdown.
 
 Publish the approved tickets in dependency order (blockers first).
 
-- **Local files** → write one file per ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`
-- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket; apply the configured triage label.
+- **GitHub Issues (default)** → use GitHub MCP `issue_write` (method `create`) for each ticket; apply the configured triage label. Link blockers by referencing issue numbers in the body.
+- **Local files** → write one file per ticket to the **sandbox** (not the repo) under `scratch/<feature-slug>/issues/<NN>-<slug>.md` using `execute_code`.
+- **Other trackers (Linear, etc.)** → follow whatever API the user provides.
 
 <issue-template>
 

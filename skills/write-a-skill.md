@@ -7,28 +7,20 @@ description: Creates a new agent skill file right now. Use when the user says "c
 
 ## Process
 
-1. **Gather requirements** - ask the user about:
+1. **Gather requirements** — ask the user about:
    - What task/domain does the skill cover?
    - What specific use cases should it handle?
-   - Does it need executable scripts or just instructions?
    - Any reference materials to include?
 
-2. **Draft the skill** - create:
-   - `SKILL.md` with concise instructions
-   - Additional reference files if content exceeds 500 lines
+2. **Draft the skill** — write a single `<name>.md` file. If content would exceed ~150 lines, split into `<name>.md` (main) and `<name>-reference.md` (extended reference), with a pointer from the main file to the reference (see `frontend-design.md` + `frontend-design-reference.md` as the model).
 
-3. **Review with user** - present draft and ask:
+3. **Review with user** — present the draft and ask:
    - Does this cover your use cases?
    - Anything missing or unclear?
 
-## Skill Structure
+4. **Deliver** — write the final file to `output/<name>.md` using `execute_code` so the user can download and upload it to their Space.
 
-```
-skill-name/
-├── SKILL.md           # Main instructions (required)
-├── REFERENCE.md       # Detailed docs (if needed)
-└── EXAMPLES.md        # Usage examples (if needed)
-```
+> **Note:** Space files are flat — skills live directly as `<name>.md`, not inside a subdirectory. Do not create a `skill-name/` folder structure.
 
 ## SKILL.md Template
 
@@ -47,12 +39,12 @@ description: Brief description. Use when [specific triggers].
 [Step-by-step processes]
 
 ## Advanced features
-[Link to separate files]
+[Link to separate reference file if needed]
 ```
 
 ## Description Requirements
 
-The description is **the only thing your agent sees** when deciding which skill to load.
+The description is **the only thing the agent sees** when deciding which skill to load.
 
 - Max 1024 chars
 - Write in third person
@@ -63,7 +55,8 @@ The description is **the only thing your agent sees** when deciding which skill 
 ## Review Checklist
 
 - [ ] Description includes triggers ("Use when...")
-- [ ] SKILL.md under 100 lines
+- [ ] Main file under 150 lines; extended content in a `-reference.md` sibling
 - [ ] No time-sensitive info
 - [ ] Consistent terminology
 - [ ] Concrete examples included
+- [ ] Delivered to `output/<name>.md` for the user to upload

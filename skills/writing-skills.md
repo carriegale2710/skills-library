@@ -1,6 +1,6 @@
 ---
 name: writing-skills
-description: Reference guide for writing high-quality agent skills using TDD principles. Use when a skill author wants to understand the methodology, validate an existing skill, or verify a skill works before deployment. Not for creating a new skill right now — use /write-a-skill for that.
+description: Reference guide for writing high-quality agent skills. Use when a skill author wants to understand the methodology, validate an existing skill, or verify a skill works before deployment. Not for creating a new skill right now — use /write-a-skill for that.
 disable-model-invocation: true
 ---
 
@@ -10,9 +10,9 @@ disable-model-invocation: true
 
 **Writing skills IS Test-Driven Development applied to process documentation.**
 
-You write test cases (pressure scenarios with subagents), watch them fail (baseline behavior), write the skill (documentation), watch tests pass (agents comply), and refactor (close loopholes).
+You write test cases (pressure scenarios), watch them fail (baseline behavior), write the skill (documentation), watch tests pass (agent complies), and refactor (close loopholes).
 
-**Core principle:** If you didn't watch an agent fail without the skill, you don't know if the skill teaches the right thing.
+**Core principle:** If you didn't observe an agent fail without the skill, you don't know if the skill teaches the right thing.
 
 ## What is a Skill?
 
@@ -55,13 +55,13 @@ What goes wrong + fixes
 ## RED-GREEN-REFACTOR for Skills
 
 ### RED: Baseline
-Run pressure scenario WITHOUT the skill. Document exact rationalizations agents use.
+Simulate the scenario yourself without the skill active — reason through what a naive agent would do and document the exact rationalizations it would use to skip or shortcut the intended behaviour.
 
 ### GREEN: Write Minimal Skill
-Address those specific rationalizations. Run same scenarios WITH skill — agent should now comply.
+Address those specific rationalizations. Re-run the scenario mentally WITH the skill — the agent should now comply.
 
 ### REFACTOR: Close Loopholes
-Agent found new rationalization? Add explicit counter. Re-test until bulletproof.
+Found a new rationalization? Add an explicit counter. Repeat until the skill is bulletproof against all identified shortcuts.
 
 ## Match the Form to the Failure
 
@@ -75,21 +75,21 @@ Agent found new rationalization? Add explicit counter. Re-test until bulletproof
 ## Skill Creation Checklist
 
 **RED Phase:**
-- [ ] Create pressure scenarios (3+ combined pressures for discipline skills)
-- [ ] Run WITHOUT skill — document baseline behavior verbatim
+- [ ] Define 3+ pressure scenarios
+- [ ] Simulate WITHOUT skill — document baseline rationalizations verbatim
 
 **GREEN Phase:**
 - [ ] `name` uses only letters, numbers, hyphens
 - [ ] Description starts with "Use when..." and includes specific triggers/symptoms
 - [ ] Description does NOT summarize workflow
 - [ ] Address specific baseline failures
-- [ ] Run WITH skill — verify compliance
+- [ ] Simulate WITH skill — verify compliance
 
 **REFACTOR Phase:**
 - [ ] Add explicit counters for new rationalizations
 - [ ] Build rationalization table
 - [ ] Create red flags list
-- [ ] Re-test until bulletproof
+- [ ] Re-simulate until bulletproof
 
 ## The Iron Law
 

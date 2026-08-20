@@ -12,7 +12,7 @@ This skill takes the current conversation context and codebase understanding and
 
 2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Check with the user that these seams match their expectations.
 
-3. Write the PRD using the template below, then publish it to the project issue tracker.
+3. Write the PRD using the template below, then publish it to the issue tracker. For GitHub Issues (the default for this setup), use GitHub MCP `issue_write` (method `create`).
 
 ## PRD Template
 
