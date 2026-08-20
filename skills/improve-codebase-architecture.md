@@ -8,31 +8,43 @@ disable-model-invocation: true
 
 Surface architectural friction and propose **deepening opportunities**: refactors that turn shallow modules into deep ones. The aim is testability and AI-navigability.
 
-This command is _informed_ by the project's domain model and built on a shared design vocabulary:
+## Design vocabulary
 
-- Call the Skill tool with "codebase-design" for the architecture vocabulary (**module**, **interface**, **depth**, **seam**, **adapter**, **leverage**, **locality**) and its principles (the deletion test, "the interface is the test surface", "one adapter = hypothetical seam, two = real"). Use these terms exactly in every suggestion, and don't drift into "component," "service," "API," or "boundary."
-- The domain language in `CONTEXT.md` gives names to good seams; ADRs in `docs/adr/` record decisions this command should not re-litigate.
+Use these terms exactly in every suggestion — do not drift into "component," "service," "API," or "boundary":
+
+- **module** — a named unit with an interface and an implementation
+- **interface** — the surface through which a module is used
+- **depth** — ratio of implementation complexity to interface complexity (deep = good)
+- **seam** — a boundary where behaviour can be varied without editing the calling code
+- **adapter** — code that converts between two seam forms
+- **leverage** — a small interface change that unlocks many call-site simplifications
+- **locality** — related logic living close together, reducible to a single read path
+
+**Design principles:**
+- The deletion test: would deleting this module concentrate complexity, or just move it? "Concentrates" = signal worth keeping.
+- "The interface is the test surface" — test through the interface, not the implementation.
+- "One adapter = hypothetical seam, two = real" — two adapters justify extracting the seam.
+
+The domain language in `CONTEXT.md` gives names to good seams; ADRs in `docs/adr/` record decisions this command should not re-litigate.
 
 ## Process
 
 ### 1. Explore
 
-**Scope before you scan: YAGNI.** Deepening a module pays off by making future changes to it easier, so put extra weight on the parts of the codebase that have recently changed. Decide *where* to look before you look:
+**Scope before you scan: YAGNI.** Deepening pays off on hot spots — code that keeps changing.
 
-- If the user named a direction (a module, a subsystem, a pain point), take it, and skip the inference below.
-- Otherwise, walk back a good stretch of the commit history (`git log --oneline`) to find the codebase's hot spots, the files and areas that keep coming up, and let those paths pull your attention first. If the changes are scattered with no clear hot spot, widen the net.
+- If the user named a direction (a module, a subsystem, a pain point), take it.
+- Otherwise, use GitHub MCP `list_commits` to find the hot spots: files and areas that keep coming up in recent history. Let those paths pull your attention first.
 
-Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first.
-
-Then spawn a sub-agent to walk the codebase. Don't follow rigid heuristics; explore organically and note where you experience friction:
+Read the project's domain glossary (`CONTEXT.md`) and any ADRs in the area you're touching first. Then read the hot-spot files via GitHub MCP `get_file_contents`, exploring organically. Note friction where you experience it:
 
 - Where does understanding one concept require bouncing between many small modules?
 - Where are modules **shallow**, with an interface nearly as complex as the implementation?
 - Where have pure functions been extracted just for testability, but the real bugs hide in how they're called (no **locality**)?
 - Where do tightly-coupled modules leak across their seams?
-- Which parts of the codebase are untested, or hard to test through their current interface?
+- Which parts are untested, or hard to test through their current interface?
 
-Apply the **deletion test** to anything you suspect is shallow: would deleting it concentrate complexity, or just move it? A "yes, concentrates" is the signal you want.
+Apply the **deletion test** to anything you suspect is shallow.
 
 ### 2. Present candidates as an HTML report
 
@@ -55,4 +67,4 @@ Do NOT propose interfaces yet. Ask the user: "Which of these would you like to e
 
 ### 3. Grilling loop
 
-Once the user picks a candidate, call the Skill tool with "grilling" to walk the decision tree with them.
+Once the user picks a candidate, invoke the `/grilling` skill to walk the decision tree with them.
