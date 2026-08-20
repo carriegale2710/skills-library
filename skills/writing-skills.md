@@ -1,6 +1,7 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: Reference guide for writing high-quality agent skills using TDD principles. Use when a skill author wants to understand the methodology, validate an existing skill, or verify a skill works before deployment. Not for creating a new skill right now — use /write-a-skill for that.
+disable-model-invocation: true
 ---
 
 # Writing Skills
