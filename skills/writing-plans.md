@@ -1,59 +1,100 @@
 ---
 name: writing-plans
-description: Use after a spec is approved - distills plan.md into context.md and a rolling markdown backlog
+description: Use when you have a spec or requirements for a multi-step task, before touching code
 ---
 
-<skill_overview>
-The approved spec says what must be true. `context.md` and `tasks.md` say what to do next and what was learned.
-</skill_overview>
+# Writing Plans
 
-<quick_reference>
-| Step | Action | Rule |
-|------|--------|------|
-| 1 | Read `plan.md` | Do not restate it vaguely |
-| 2 | Verify codebase reality | Prefer investigator evidence over assumptions |
-| 3 | Research the task | Collect 3+ best-practice sources for the specific slice |
-| 4 | Write `context.md` | Capture files, decisions, discoveries, resume notes |
-| 5 | Write `tasks.md` | Use `Now`, `Next`, `Later`, `Blocked`, `Done` |
-| 6 | Keep backlog lean | Only 1-2 active items in `Now` |
+## Overview
 
-**Forbidden:** placeholders like `[details omitted]` or giant speculative task trees.
-</quick_reference>
+Write comprehensive implementation plans assuming the engineer has zero context for our codebase and questionable taste. Document everything they need to know: which files to touch for each task, code, testing, docs they might need to check, how to test it. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
 
-<when_to_use>
-- Spec approved, implementation not started
-- Existing task docs are vague or stale
-- Need a better handoff/resume surface for a large task
-</when_to_use>
+**Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
 
-<the_process>
-## 1. Identify the task directory
+**Save plans to:** `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
 
-Work in a local `plans/active/<slug>/`. Read `plan.md` first.
+## Scope Check
 
-## 2. Verify the codebase
+If the spec covers multiple independent subsystems, suggest breaking this into separate plans — one per subsystem. Each plan should produce working, testable software on its own.
 
-Confirm real file paths, existing modules and constraints, likely implementation seams. Write down mismatches instead of ignoring them.
+## File Structure
 
-## 3. Research the specific task
+Before defining tasks, map out which files will be created or modified and what each one is responsible for.
 
-Collect at least 3 current sources about implementation best practices, library guidance, and common pitfalls. Record useful sources in `context.md`.
+- Design units with clear boundaries and well-defined interfaces.
+- Prefer smaller, focused files over large ones that do too much.
+- Files that change together should live together.
 
-## 4. Populate `context.md`
+## Task Right-Sizing
 
-Capture: key files, important decisions, discoveries, open questions, explicit resume notes.
+A task is the smallest unit that carries its own test cycle and is worth a fresh reviewer's gate. Each task ends with an independently testable deliverable.
 
-## 5. Distill the rolling backlog
+## Bite-Sized Task Granularity
 
-Write `tasks.md` with small, concrete items:
+**Each step is one action (2-5 minutes):**
+- "Write the failing test" - step
+- "Run it to make sure it fails" - step
+- "Implement the minimal code to make the test pass" - step
+- "Run the tests and make sure they pass" - step
+- "Commit" - step
 
-- `Now` for immediate work only
-- `Next` for near-term follow-ups
-- `Later` for deferred work
-- `Blocked` with a reason
-- `Done` for completed items
+## Plan Document Header
 
-## 6. Show the real docs
+**Every plan MUST start with this header:**
 
-Present the actual doc contents, not a summary.
-</the_process>
+```markdown
+# [Feature Name] Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task.
+
+**Goal:** [One sentence describing what this builds]
+
+**Architecture:** [2-3 sentences about approach]
+
+**Tech Stack:** [Key technologies/libraries]
+
+**Spec:** [path to the spec/design doc this plan implements]
+
+## Global Constraints
+
+[Project-wide requirements — version floors, dependency limits, naming rules — one line each.]
+
+---
+```
+
+## Task Structure
+
+````markdown
+### Task N: [Component Name]
+
+**Files:**
+- Create: `exact/path/to/file.py`
+- Modify: `exact/path/to/existing.py:123-145`
+- Test: `tests/exact/path/to/test.py`
+
+**Interfaces:**
+- Consumes: [what this task uses from earlier tasks]
+- Produces: [what later tasks rely on]
+
+- [ ] **Step 1: Write the failing test**
+- [ ] **Step 2: Run test to verify it fails**
+- [ ] **Step 3: Write minimal implementation**
+- [ ] **Step 4: Run test to verify it passes**
+- [ ] **Step 5: Commit**
+````
+
+## No Placeholders
+
+Every step must contain the actual content an engineer needs. Never write:
+- "TBD", "TODO", "implement later"
+- "Add appropriate error handling"
+- "Write tests for the above" (without actual test code)
+- Steps that describe what to do without showing how
+
+## Execution Handoff
+
+After saving the plan, offer execution choice:
+
+**1. Subagent-Driven (recommended)** — fresh subagent per task, review between tasks
+
+**2. Inline Execution** — execute tasks in this session using executing-plans
