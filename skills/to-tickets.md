@@ -56,7 +56,7 @@ Iterate until the user approves the breakdown.
 Publish the approved tickets in dependency order (blockers first).
 
 - **Local files** → write one file per ticket under `.scratch/<feature-slug>/issues/<NN>-<slug>.md`
-- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket; apply the `ready-for-agent` triage label.
+- **A real issue tracker (GitHub, Linear, …)** → publish one issue per ticket; apply the configured triage label.
 
 <issue-template>
 

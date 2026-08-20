@@ -3,18 +3,18 @@ name: write-a-skill
 description: Creates a new agent skill file right now. Use when the user says "create a skill", "write a skill", or "make a skill for X". For skill-writing methodology and TDD philosophy, see /writing-skills instead.
 ---
 
-# Writing Skills
+# Write a Skill
 
 ## Process
 
-1. **Gather requirements** - ask user about:
+1. **Gather requirements** - ask the user about:
    - What task/domain does the skill cover?
    - What specific use cases should it handle?
    - Does it need executable scripts or just instructions?
    - Any reference materials to include?
 
 2. **Draft the skill** - create:
-   - SKILL.md with concise instructions
+   - `SKILL.md` with concise instructions
    - Additional reference files if content exceeds 500 lines
 
 3. **Review with user** - present draft and ask:
@@ -58,6 +58,7 @@ The description is **the only thing your agent sees** when deciding which skill 
 - Write in third person
 - First sentence: what it does
 - Second sentence: "Use when [specific triggers]"
+- Describes ONLY triggering conditions — never summarizes the skill's workflow
 
 ## Review Checklist
 

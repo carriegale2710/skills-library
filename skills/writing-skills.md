@@ -4,7 +4,7 @@ description: Reference guide for writing high-quality agent skills using TDD pri
 disable-model-invocation: true
 ---
 
-# Writing Skills
+# Writing Skills (Reference)
 
 ## Overview
 
