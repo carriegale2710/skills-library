@@ -1,9 +1,10 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: Reference guide for the TDD-for-skills methodology: baseline testing, writing minimal skills, and refactoring to close loopholes. Use when editing an existing skill, verifying a skill works, or reviewing skill quality — not for creating a brand new skill (use write-a-skill for that).
+disable-model-invocation: true
 ---
 
-# Writing Skills
+# Writing Skills (Reference)
 
 ## Overview
 

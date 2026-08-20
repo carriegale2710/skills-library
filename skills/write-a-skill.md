@@ -1,20 +1,20 @@
 ---
 name: write-a-skill
-description: Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.
+description: Create a new agent skill file with proper structure, progressive disclosure, and bundled resources. Use when the user says "write a skill", "create a skill", or "build a skill for X".
 ---
 
-# Writing Skills
+# Write a Skill
 
 ## Process
 
-1. **Gather requirements** - ask user about:
+1. **Gather requirements** - ask the user about:
    - What task/domain does the skill cover?
    - What specific use cases should it handle?
    - Does it need executable scripts or just instructions?
    - Any reference materials to include?
 
 2. **Draft the skill** - create:
-   - SKILL.md with concise instructions
+   - `SKILL.md` with concise instructions
    - Additional reference files if content exceeds 500 lines
 
 3. **Review with user** - present draft and ask:
@@ -58,6 +58,7 @@ The description is **the only thing your agent sees** when deciding which skill 
 - Write in third person
 - First sentence: what it does
 - Second sentence: "Use when [specific triggers]"
+- Describes ONLY triggering conditions — never summarizes the skill's workflow
 
 ## Review Checklist
 
