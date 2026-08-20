@@ -1,4 +1,10 @@
-# AI-agent skills wishlist
+# AI-agent skills
+
+Copy each skill in this folder into your Perplexity Space to access it. Don't put it in the skills section, put it in a `skills/` folder next to your core files.
+
+> Invoke with `/<skill>` in your session chat.
+
+## Wishlist
 
 List of skills I found on skills.sh/ that would be helpful to build micro-saas products.
 You can build skill packs on for each of these categories!
