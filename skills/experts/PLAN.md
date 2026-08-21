@@ -10,6 +10,9 @@
 
 **Spec:** `skills/experts/PRD.md`
 
+> **Tickets:** All tasks below are tracked as GitHub Issues in `carriegale2710/gaia-setup`.
+> [#5 Task 1](https://github.com/carriegale2710/gaia-setup/issues/5) · [#6 Task 2](https://github.com/carriegale2710/gaia-setup/issues/6) · [#7 Task 3](https://github.com/carriegale2710/gaia-setup/issues/7) · [#8 Task 4](https://github.com/carriegale2710/gaia-setup/issues/8) · [#9 Task 5](https://github.com/carriegale2710/gaia-setup/issues/9) · [#10 Task 6](https://github.com/carriegale2710/gaia-setup/issues/10) · [#11 Task 7](https://github.com/carriegale2710/gaia-setup/issues/11) · [#12 Task 8](https://github.com/carriegale2710/gaia-setup/issues/12)
+
 ## Global Constraints
 
 - Expert packages must be permission- and connector-agnostic.
@@ -24,6 +27,8 @@
 ---
 
 ### Task 1: Create the shared skill group
+
+**GitHub Issue:** [#5](https://github.com/carriegale2710/gaia-setup/issues/5)
 
 **Files:**
 - Create: `skills/experts/shared/README.md`
@@ -51,6 +56,8 @@
 
 ### Task 2: Create Expert package templates
 
+**GitHub Issue:** [#6](https://github.com/carriegale2710/gaia-setup/issues/6)
+
 **Files:**
 - Create: `skills/experts/templates/EXPERT.md`
 - Create: `skills/experts/templates/PERSONALITY.md`
@@ -68,6 +75,8 @@
 ---
 
 ### Task 3: Create the Product Research Expert package
+
+**GitHub Issue:** [#7](https://github.com/carriegale2710/gaia-setup/issues/7)
 
 **Files:**
 - Create: `skills/experts/product-research/EXPERT.md`
@@ -91,6 +100,8 @@
 
 ### Task 4: Create the Design + Frontend Expert package
 
+**GitHub Issue:** [#8](https://github.com/carriegale2710/gaia-setup/issues/8)
+
 **Files:**
 - Create: `skills/experts/design-frontend/EXPERT.md`
 - Create: `skills/experts/design-frontend/PERSONALITY.md`
@@ -112,6 +123,8 @@
 ---
 
 ### Task 5: Create the Backend + QA Expert package
+
+**GitHub Issue:** [#9](https://github.com/carriegale2710/gaia-setup/issues/9)
 
 **Files:**
 - Create: `skills/experts/backend-qa/EXPERT.md`
@@ -139,6 +152,8 @@
 
 ### Task 6: Create the Documentation + Writing Expert package
 
+**GitHub Issue:** [#10](https://github.com/carriegale2710/gaia-setup/issues/10)
+
 **Files:**
 - Create: `skills/experts/documentation-writing/EXPERT.md`
 - Create: `skills/experts/documentation-writing/PERSONALITY.md`
@@ -162,6 +177,8 @@
 
 ### Task 7: Create the `.gaia/` project template
 
+**GitHub Issue:** [#11](https://github.com/carriegale2710/gaia-setup/issues/11)
+
 **Files:**
 - Create: `skills/experts/project-template/.gaia/README.md`
 - Create: `skills/experts/project-template/.gaia/PROJECT.md`
@@ -183,6 +200,8 @@
 ---
 
 ### Task 8: Write the Expert system README
+
+**GitHub Issue:** [#12](https://github.com/carriegale2710/gaia-setup/issues/12)
 
 **Files:**
 - Create: `skills/experts/README.md`
