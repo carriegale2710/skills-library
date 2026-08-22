@@ -1,12 +1,15 @@
 # Peritia
 
-This is an agent-agnostic repo to save skills for installing onto AI agent workspaces. It provides customisable skills, references and orchestrator files to plug-and-play into your own custom workflow on top of existing AI agent platforms.
+_(Latin: skill or expertise gained through practice and experience)_
 
-## Why "Peritia"
+This is an **agent-agnostic skill library** to plug, play and customise into your own custom workflow on top of existing AI agent platforms.
 
-*(Latin: skill or expertise gained through practice and experience)*
+Two ways skills are added to this library:
 
-It's capabilities are built up slowly over time. Every skill here gets refined, corrected, or replaced the more it's actually used across different agent platforms. The repo grows the way real expertise does — iteratively, through practice.
+1. Find open-source from skills.sh/ (see `wishlist.md`) or via `/find-skills` command during chats. Download and customise them to fit your personal needs.
+2. Created from scratch using `write-a-skill.md`. Audit with `references/writing-great-skills`.
+
+This library is meant to build up slowly over time. Every skill here gets refined, corrected, or replaced the more it's actually used across different agent platforms. The repo grows the way real expertise does — iteratively, through practice.
 
 ## Personal Benefits
 
@@ -22,19 +25,35 @@ It's capabilities are built up slowly over time. Every skill here gets refined, 
 
 ## Setup
 
-1. **Copy in** the skill files you want, into your workspace.
+Skills in this repo are being updated, and new skills added regularly. Check for updates for any old installations.
+
+1. **Copy in** the skill files you want, into your /skills folder in your AI agent's workspace memory.
+
+> NOTE: Do NOT load up all skills in the same workspace (or make sure the are user-invoked only) as this will dumbify your AI model FAST.
+
 2. **Copy dependencies too** — any files referenced inside those skills.
 
-> Skills in this repo are being updated, and new skills added regularly. Check for updates for any old installations.
+Some skills depend on other files , for example:
 
-## Usage
+- `write-a-skill` uses `writing-great-skills` as its reference file.
+- `bug-fix.md` (orchestrator skill) calls on `/diagnosing-bugs` > `/tdd` > `/pr-review`.
+
+3. **Invoke with `/<skill>`** in your session chat.
+
+Example prompt:
+
+```bash
+/write-a-skill that conducts an accessibility audit for my website.
+```
+
+## Skill Iteration
 
 ### Types of skills
 
-| Type | What it does |
-|---|---|
-| **Standalone skill** | Self-contained, does one job on its own (e.g. a report generator, a formatting task) |
-| **Reference file** | Supporting doc, template, or data a skill depends on — not a skill by itself |
+| Type                  | What it does                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------ |
+| **Standalone skill**  | Self-contained, does one job on its own (e.g. a report generator, a formatting task)       |
+| **Reference file**    | Supporting doc, template, or data a skill depends on — not a skill by itself               |
 | **Orchestrator file** | Routes a task across two or more skills, calling them in sequence or choosing between them |
 
 ### Combining skills
