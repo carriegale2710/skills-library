@@ -1,65 +1,142 @@
-# GAIA Code
+# AI-agent skills
 
-**Version:** 3.4 **Repository:** `alexey-max-fedorov/gaia-ai`
+Copy each skill in this folder into your Perplexity Space to access it. Don't put it in the skills section, put it in a `skills/` folder next to your core files.
 
-GAIA Code is a Claude Code-inspired prompt system for Perplexity Spaces. It brings persistent memory, a plan engine, context-budgeted turns, GitHub MCP integration, and a slash-command skill engine into a Perplexity conversation.
-
----
-
-## Setup
-
-1. Create a new Perplexity Space.
-2. Paste the full contents of `prompts/SYSTEM_INSTRUCTIONS.md` into the Space **Instructions** field. This is the short gate/router — not the full prompt.
-3. Upload these three files as **Space Files**:
-   - `prompts/SYSTEM_PROMPT.md` — behavior
-   - `prompts/MEMORY_ENGINE.md` — memory + planning
-   - `prompts/TURN_ENGINE.md` — turns + context budget
-4. Set the Space model (GLM-5.2 or Claude Sonnet 5.0 Thinking recommended).
-5. _(Optional)_ Connect GitHub via Perplexity Connectors so GAIA can read and write your repositories.
-6. Done — GAIA Code is ready to use.
-
-> GAIA reads all three uploaded files on startup; skipping any one disables that engine. The website's [Get Started](https://gaiacode.pro/get-started) page mirrors these steps with copy/download buttons for each file.
+> Invoke with `/<skill>` in your session chat.
 
 ---
 
-## What's Included
+## ✅ Installed Skills
 
-GAIA Code is **four prompt files** that drive **four engines**.
+These skills are **currently available** in this Space. Upload them to your `skills/` folder and invoke with `/<name>`.
 
-### `prompts/SYSTEM_INSTRUCTIONS.md` — the gate
+| Skill | Invoke | Description |
+|---|---|---|
+| `brainstorming` | `/brainstorming` | Explore and design ideas before any implementation |
+| `bug-fix` | `/bug-fix` | End-to-end bug fix pipeline: diagnose → TDD → PR |
+| `caveman` | `/caveman` | Compress and simplify code to its essence |
+| `diagnosing-bugs` | `/diagnosing-bugs` | Hypothesis-driven root cause analysis |
+| `doctor` | `/doctor` | Health-check a codebase for smells and issues |
+| `feature-ship` | `/feature-ship` | Full pipeline: PRD → spec → tickets → TDD → PR |
+| `find-skills` | `/find-skills` | Search skills.sh for new skills to install |
+| `frontend-build` | `/frontend-build` | Scaffold and build a frontend from a spec |
+| `frontend-design-reference` | `/frontend-design-reference` | Extended reference for frontend-design restraint and copy |
+| `frontend-design` | `/frontend-design` | Opinionated visual design for UI — palette, type, layout |
+| `grilling` | `/grilling` | Pressure-test an idea with probing questions |
+| `handoff` | `/handoff` | Write a handoff summary for context transfer |
+| `improve-codebase-architecture` | `/improve-codebase-architecture` | Audit and refactor overall codebase structure |
+| `pipeline-reference` | `/pipeline-reference` | Reference docs for /pipeline retry and failure handling |
+| `pipeline` | `/pipeline` | Chain any skills in sequence with gates |
+| `pr-review` | `/pr-review` | Review a diff and open a clean PR |
+| `research-to-issues` | `/research-to-issues` | Pipeline: research → brainstorm → GitHub issues |
+| `research` | `/research` | Structured research with findings, sources, and gaps |
+| `tdd` | `/tdd` | Test-driven development: red → green → refactor |
+| `to-issues` | `/to-issues` | Convert ideas or specs to labelled GitHub issues |
+| `to-prd` | `/to-prd` | Write a Product Requirements Document |
+| `to-spec` | `/to-spec` | Write a technical specification |
+| `to-tickets` | `/to-tickets` | Break a spec into granular dev tickets |
+| `triage` | `/triage` | Triage GitHub issues through a state machine |
+| `update` | `/update` | Update MEMORY.md, PLAN.md, and TASKS.md |
+| `write-a-skill` | `/write-a-skill` | Write a new skill file from scratch |
+| `writing-for-agents` | `/writing-for-agents` | Guidance for writing clear, agent-readable documents |
+| `writing-great-skills` | `/writing-great-skills` | Patterns and principles for high-quality skill files |
+| `writing-plans` | `/writing-plans` | Structure and write PLAN.md and TASKS.md |
+| `writing-skills` | `/writing-skills` | Meta-skill for authoring new skills |
 
-Pasted into the Space Instructions field. Switches GAIA on (`USE_GAIA_AGENT=1`), points it at the other three files, and hosts the skill engine.
+---
 
-### `prompts/SYSTEM_PROMPT.md` — behavior
+## 📋 Wishlist — Skills from [skills.sh](https://skills.sh)
 
-Identity, tool philosophy, dependency & version rules (versions are pinned from the registry's JSON API, never a stale snippet), security, and the Claude Code engineering philosophy.
+Useful skills found externally. Install with: `install the skill from gh <owner>/<repo>`
 
-### `prompts/MEMORY_ENGINE.md` — memory + planning
+### UX/UI & Frontend
 
-- **Persistent memory** (`MEMORY.md`) — survives auto-compaction: project structure, your standing notes, and observations GAIA records itself, including mistakes it fixed so they don't repeat. On first contact with a repo it reads `CLAUDE.md` / `AGENTS.md` and seeds memory with the project's structure and conventions.
-- **Plan engine** (`PLAN.md` + `TASKS.md`) — explore → plan → approve → execute, with checkboxes flipped per task as work lands.
+- `web-design-guidelines`
+- `anti-ui-slop`
+- `design-taste-frontend`
+- `stitch-design-taste`
+- `high-end-visual-design`
+- `design-an-interface`
+- `ui-ux-pro-max`
+- `minimalist-ui`
+- `brandkit`
+- `ui-radar`
+- `extract-design-system`
+- `redesign-existing-projects`
+- `impeccable`
+- `vercel-react-view-transitions`
 
-### `prompts/TURN_ENGINE.md` — turns + budget
+### Code Architecture & Refactoring
 
-Context-budget estimation so a turn never overflows the window, a 15-call tool budget, and size-aware commit batching.
+- `codebase-design`
+- `request-refactor-plan`
+- `domain-modeling`
+- `vercel-composition-patterns`
+- `vercel-react-best-practices`
+- `vercel-react-native-skills`
+- `agent-browser`
+- `code-review`
+- `caveman-review`
+- `caveman-compress`
+- `caveman-help`
+- `caveman-stats`
+- `cavecrew`
 
-### Capabilities at a glance
+### Testing & Debugging
 
-- **Plan Mode** — structured planning with an explicit approval gate before any code is written.
-- **GitHub MCP** — read repos, create branches, push commits, open PRs, manage issues.
-- **Persistent memory** — coherent across auto-compaction and context-overflow crashes, with `export memory` / `import memory` to carry it between conversations.
-- **Skill engine** — slash-command skills loaded from Space files (e.g. `/humanizer`, or `/update` to check for a newer GAIA Code version), installable straight from a GitHub repo ("install the skill from gh owner/repo").
-- **Permission modes** — choose how GAIA handles tool-call approval: **Ask Permissions** (default — it asks before every write: commit, push, PR, issue, merge), **Accept Edits** (routine writes run free; merges, repo creation, and default-branch writes still ask), or **Bypass Permissions** (it runs every tool call without asking). Toggle with `/ask-permissions`, `/accept-edits`, and `/dangerously-skip-permissions`; the choice is saved to memory so it survives auto-compaction.
-- **Built-in commands** — `/status` (version, permission mode, plan/task progress, and memory at a glance) and `/help` (every built-in command plus the skills uploaded to your Space).
+- `test-driven-development`
+- `webapp-testing`
+- `playwright-cli`
+- `playwright-best-practices`
+- `systematic-debugging`
+- `diagnose`
+- `git-guardrails-claude-code`
 
-### Bundled skills
+### Documentation & Writing
 
-GAIA Code ships with optional slash-command skills you can upload as Space Files:
+- `grill-with-docs`
+- `obsidian-vault`
+- `caveman-commit`
+- `ubiquitous-language`
 
-- **`prompts/update.md`** (`/update`) — checks whether a newer GAIA Code version is available. It reads the latest released version from this repo's `website/package.json`, compares it to the version your Space is running, and if you're behind, points you to [Get Started](https://gaiacode.pro/get-started) to redeploy.
-- **`prompts/doctor.md`** (`/doctor`) — verifies your deployment: engine files present, versions consistent, memory initialized, GitHub MCP connected. Read-only.
-- **`prompts/pr-review.md`** (`/pr-review`) — reviews a pull request end to end (full diff, every commit) and posts the findings as a PR review via GitHub MCP.
+### Project Planning
 
-## Custom skills
+- `wizard`
+- `teach`
+- `qa`
+- `loop-me`
+- `grill-me`
+- `wait-what`
+- `ask-matt`
+- `wayfinder`
+- `skill-creator`
 
-You can add your own custom skills as you work on projects to the `skills/` folder. Look on skills.sh/ for open-source ones.
+### Video & Media
+
+- `image-to-video`
+- `image-to-code`
+- `hyperframes-cli`
+- `faceless-explainer`
+- `motion-graphics`
+- `product-launch-video`
+- `website-to-video`
+- `hyperframes`
+
+### Marketing & Content
+
+- `copywriting`
+- `copy-editing`
+- `seo-audit`
+- `content-strategy`
+- `marketing-psychology`
+- `marketing-ideas`
+- `programmatic-seo`
+- `ai-seo`
+- `ad-creative`
+- `cold-email`
+- `site-architecture`
+- `churn-prevention`
+- `sales-enablement`
+- `revops`
+- `lead-magnets`
+- `reddit-automation`

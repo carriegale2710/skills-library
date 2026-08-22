@@ -1,5 +1,5 @@
 ---
-name: pipeline-reference
+name: writing-pipelines
 description: Extended reference for the /pipeline skill — retry behaviour, failure handling, and invocation examples. Loaded on demand; do not invoke directly.
 disable-model-invocation: true
 ---
