@@ -1,31 +1,17 @@
-# README Skills Backlog — Implementation Plan
+# Tasks: Backlog for improving Skills for README doc writing
 
-> **For agentic workers:** Use `/feature-ship` or `/pipeline` to execute tasks sequentially. Each task produces a testable deliverable before moving to the next.
-
-**Goal:** Download, audit, and evaluate four agent skills for README writing; produce personalised descriptions for use in the GAIA Code workflow Space.
-
-**Architecture:** Serial skill pipeline — acquire → audit → demonstrate → personalise. Each phase builds on the last. No code changes to repos; all output is documentation and Space files.
-
-**Tech Stack:** GitHub MCP (file fetching), GAIA skill engine (`/writing-for-agents`, `/readme`, `/readme-craft`), `output/` for downloadable artifacts.
-
-**Spec:** User backlog as stated in chat — 21 Aug 2026.
-
-## Global Constraints
-
-- All skill files saved to `output/<name>.md` for user upload to this Space.
-- Commit attribution: `Co-Authored-By: GAIA Code <noreply@gaiacode.pro>` on every commit.
-- Permissions mode: Accept Edits (read from `MEMORY.md`).
-- Do not modify `carriegale2710/gaia-setup` unless explicitly asked.
-- Personalised descriptions must reference GAIA Code, Perplexity Space, and this user's solo dev/micro-SaaS context.
+> Read `PLAN.md` first before this file.
 
 ---
 
 ## Task 1: Download `readme-craft` skill
 
 **Files:**
+
 - Create: `output/readme-craft.md`
 
 **Interfaces:**
+
 - Produces: skill file consumed by Tasks 3, 4, 5
 
 - [ ] **Step 1:** Use `get_file_contents` on `okht/readme-craft` → `skills/readme-craft/SKILL.md`
@@ -38,9 +24,11 @@
 ## Task 2: Download `github-readme-skill` (save as `readme`)
 
 **Files:**
+
 - Create: `output/readme.md`
 
 **Interfaces:**
+
 - Produces: skill file consumed by Tasks 3, 4, 5
 
 - [ ] **Step 1:** Use `get_file_contents` on `Windrunner20/github-readme-skill` → `skills/github-readme/SKILL.md`
@@ -53,14 +41,17 @@
 ## Task 3: Audit all four skill files with `/writing-for-agents`
 
 **Files:**
+
 - Read: `output/readme.md`, `output/readme-craft.md`, `output/human-writing.md`, `output/progressive-disclosure.md`
 - Produces: audit report in chat (no separate file needed unless findings are extensive)
 
 **Interfaces:**
+
 - Consumes: all four skill files from Tasks 1, 2 and prior downloads
 - Produces: per-skill audit findings consumed by Task 5
 
 Audit criteria (from `writing-for-agents.md`):
+
 - Description pointer: front-loaded, branches enumerated, no identity the body already carries
 - Steps vs reference separation: in-file steps clearly ordered, reference disclosed where possible
 - Completion criteria: checkable and exhaustive per step
@@ -80,10 +71,12 @@ Audit criteria (from `writing-for-agents.md`):
 ## Task 4: Produce example READMEs — one per README skill
 
 **Files:**
+
 - Create: `output/example-readme-from-readme-skill.md`
 - Create: `output/example-readme-from-readme-craft-skill.md`
 
 **Interfaces:**
+
 - Consumes: `output/readme.md`, `output/readme-craft.md` (the two skills)
 - Produces: two side-by-side README examples for user comparison
 
@@ -99,12 +92,15 @@ Target project for the demo: a fictional but plausible micro-SaaS Next.js + Supa
 ## Task 5: Write personalised GAIA-context descriptions for all four skills
 
 **Files:**
+
 - Produces: updated frontmatter `description:` strings shown in chat for user to copy-paste into each uploaded skill file
 
 **Interfaces:**
+
 - Consumes: audit findings from Task 3; skill body content from Tasks 1–2 and prior downloads
 
 Personalisation axes:
+
 - GAIA Code + Perplexity Space invocation context (slash-command routing)
 - Solo dev / micro-SaaS portfolio projects (Next.js, Supabase, Flask, Tailwind)
 - Recruiter-facing and open-source README use cases
