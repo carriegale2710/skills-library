@@ -7,7 +7,7 @@ This is an **agent-agnostic skill library** to plug, play and customise into you
 Two ways skills are added to this library:
 
 1. Find open-source from skills.sh/ (see `wishlist.md`) or via `/find-skills` command during chats. Download and customise them to fit your personal needs.
-2. Created from scratch using `write-a-skill.md`. Audit with `references/writing-great-skills`.
+2. Created from scratch using `skills/write-a-skill/SKILL.md`. Audit with `references/writing-great-skills`.
 
 This library is meant to build up slowly over time. Every skill here gets refined, corrected, or replaced the more it's actually used across different agent platforms. The repo grows the way real expertise does — iteratively, through practice.
 
@@ -36,7 +36,7 @@ Skills in this repo are being updated, and new skills added regularly. Check for
 Some skills depend on other files , for example:
 
 - `write-a-skill` uses `writing-great-skills` as its reference file.
-- `bug-fix.md` (orchestrator skill) calls on `/diagnosing-bugs` > `/tdd` > `/pr-review`.
+- `orchestrators/bug-fix/SKILL.md` (orchestrator skill) calls on `/diagnosing-bugs` > `/tdd` > `/pr-review`.
 
 3. **Invoke with `/<skill>`** in your session chat.
 
