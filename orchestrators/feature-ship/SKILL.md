@@ -1,6 +1,6 @@
 ---
 name: feature-ship
-description: Use when the user says "ship feature X", "take this idea to a PR", wants to go from a rough concept to a merged pull request, or needs to move end-to-end from idea through spec, tickets, tests, and review in one guided session.
+description: Use when the user says "ship feature X", "take this idea to a PR", wants to go from a rough concept to a merged pull request, or needs to move end-to-end from idea through spec, tickets, and review in one guided session.
 ---
 
 # Feature Ship Pipeline
@@ -12,26 +12,25 @@ Orchestrates five sub-skills in sequence to take a feature from idea to merged P
 ## Stages
 
 ### Stage 1 — PRD
+
 Load and run `/to-prd`.
 Artifact: Product Requirements Document.
 Gate: user confirms PRD is complete (`yes` / `continue` / `next`).
 
 ### Stage 2 — Spec
+
 Load and run `/to-spec`.
 Artifact: Technical specification document.
 Gate: user confirms spec is complete.
 
 ### Stage 3 — Tickets
+
 Load and run `/to-tickets`.
 Artifact: GitHub issues created in the repo.
 Gate: user confirms tickets are correct.
 
-### Stage 4 — TDD
-Load and run `/tdd`.
-Artifact: Failing tests committed before implementation.
-Gate: user confirms tests capture requirements.
-
 ### Stage 5 — PR Review
+
 Load and run `/pr-review`.
 Artifact: Reviewed diff; PR opened.
 Gate: user approves PR.
@@ -43,6 +42,7 @@ Do NOT advance to the next stage without explicit user confirmation (`yes`, `con
 ## Progress tracking
 
 After each stage completes, report:
+
 ```
 ✅ Stage N complete — [artifact name]
 Next: Stage N+1 — [stage name]. Confirm to continue.
