@@ -20,4 +20,3 @@ Shared skills are copied into each Expert Space verbatim.
 | `writing-plans` | Produce detailed implementation plans from requirements/specs. |
 | `research-to-issues` | Run research → brainstorming → issues as a gated workflow. |
 | `find-skills` | Discover and install external skills for a Space. |
-| `doctor` | Run a structured diagnosis workflow for ambiguous problems. |
