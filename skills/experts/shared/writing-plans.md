@@ -76,7 +76,7 @@ A task is the smallest unit that carries its own test cycle and is worth a fresh
 - [ ] **Step 2: Run test to verify it fails**
 - [ ] **Step 3: Write minimal implementation**
 - [ ] **Step 4: Run test to verify it passes**
-- [ ] **Step 5: Commit via GitHub MCP `push_files`**
+- [ ] **Step 5: Commit via your normal repository workflow**
 ````
 
 ## No Placeholders

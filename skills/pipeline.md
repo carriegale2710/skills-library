@@ -87,4 +87,4 @@ Stages completed:
 
 ## Failure handling
 
-See `pipeline-reference.md` for retry behaviour and failure examples.
+If any stage fails, stop the pipeline, report the failed stage and error details, and wait for explicit confirmation before retrying.

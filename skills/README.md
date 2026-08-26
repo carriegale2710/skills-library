@@ -18,7 +18,6 @@ These skills are **currently available** in this Space. Upload them to your `ski
 | `grilling`                      | `/grilling`                      | Pressure-test an idea with probing questions              |
 | `handoff`                       | `/handoff`                       | Write a handoff summary for context transfer              |
 | `improve-codebase-architecture` | `/improve-codebase-architecture` | Audit and refactor overall codebase structure             |
-| `pipeline-reference`            | `/pipeline-reference`            | Reference docs for /pipeline retry and failure handling   |
 | `pipeline`                      | `/pipeline`                      | Chain any skills in sequence with gates                   |
 | `research-to-issues`            | `/research-to-issues`            | Pipeline: research → brainstorm → GitHub issues           |
 | `research`                      | `/research`                      | Structured research with findings, sources, and gaps      |
@@ -28,7 +27,6 @@ These skills are **currently available** in this Space. Upload them to your `ski
 | `to-spec`                       | `/to-spec`                       | Write a technical specification                           |
 | `to-tickets`                    | `/to-tickets`                    | Break a spec into granular dev tickets                    |
 | `triage`                        | `/triage`                        | Triage GitHub issues through a state machine              |
-| `update`                        | `/update`                        | Update MEMORY.md, PLAN.md, and TASKS.md                   |
 | `write-a-skill`                 | `/write-a-skill`                 | Write a new skill file from scratch                       |
 | `writing-for-agents`            | `/writing-for-agents`            | Guidance for writing clear, agent-readable documents      |
 | `writing-great-skills`          | `/writing-great-skills`          | Patterns and principles for high-quality skill files      |
