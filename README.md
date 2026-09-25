@@ -1,75 +1,74 @@
-# Peritia
+# Skills Library
 
-_(Latin: skill or expertise gained through practice and experience)_
+An agent-agnostic living library of reusable skills, specialist bundles, and multi-step workflow patterns. It is organised by purpose so you can copy or load only the pieces relevant to a task.
 
-This is an **agent-agnostic skill library** to plug, play and customise into your own custom workflow on top of existing AI agent platforms.
+## Purpose
+
+I made this repository to keep the skills, workflows, and working patterns I develop in one portable place instead of tying them to a single AI platform. Access, pricing, and capabilities vary across tools, while the underlying knowledge and process should remain reusable.
+
+The same approach can benefit anyone who works with multiple AI assistants, relies on education or free-tier access, or wants to move to local models later. A modular library makes it easier to:
+
+- keep your accumulated expertise under your control;
+- reuse the same workflows across different agents and projects;
+- install only the skills you need instead of loading an entire collection; and
+- adapt gradually as better tools, models, or platforms become available.
+
+## Key Features
+
+- **Portable** — keep reusable instructions and workflows independent from any single agent, model, or platform.
+- **Modular** — copy individual skills, supporting files, expert bundles, or complete workflow patterns as needed.
+- **Layered** — browse the flat `allskills/` mirror index, choose a focused `experts/` or `superpowers/` collection, or use a workflow or orchestrator for multi-step work.
+- **Practice-driven** — refine skills as they are used, tested, and adapted to real projects.
+
+## How to use the library
+
+1. Choose a standalone skill, specialist bundle, workflow, or orchestrator pattern.
+2. Copy the relevant folder and any files it references into the target agent workspace.
+3. Follow the target platform's conventions for loading or invoking the skill. Platforms differ, so `/skill-name` is supported only where that platform exposes folder-based skills as slash commands.
+4. Keep the skill's supporting files with it when the skill links to references, templates, or other dependencies.
+
+Avoid loading the entire collection into an agent context by default. A smaller, task-specific set is easier to discover and reduces instruction overlap.
+
+## Choosing a format
+
+- **Standalone skill:** one reusable capability with its own instructions and supporting files.
+- **Expert bundle:** a curated group of related skills for a role or domain.
+- **Superpower:** a general-purpose utility skill intended for repeated everyday use.
+- **Workflow:** a predictable sequence with known steps, dependencies, and outputs.
+- **Orchestrator:** a dynamic coordinator that routes work and delegates to skills or tools based on the current state.
+
+Use a workflow when the sequence is repeatable and should be deterministic. Use an orchestrator when the next step depends on intermediate findings or changing context. See [`docs/references/workflows-vs-orchestrators.md`](docs/references/workflows-vs-orchestrators.md) for the distinction.
+
+## Maintaining skills
+
+This is a living library. When a skill is used in practice:
+
+- update the source folder in this repository rather than only an installed copy;
+- preserve or update linked dependencies and platform-specific notes;
+- keep bundle indexes and READMEs aligned with the folders that actually exist;
+- review changes before copying them into an agent workspace.
+
+The library is designed to be adapted across agent platforms, but individual skills may still contain platform-specific assumptions. Check each skill's own `SKILL.md` and supporting files before use.
 
 Two ways skills are added to this library:
 
 1. Find open-source from skills.sh/ (see `wishlist.md`) or via `/find-skills` command during chats. Download and customise them to fit your personal needs.
 2. Created from scratch using `write-a-skill.md`. Audit with `references/writing-great-skills`.
 
-This library is meant to build up slowly over time. Every skill here gets refined, corrected, or replaced the more it's actually used across different agent platforms. The repo grows the way real expertise does — iteratively, through practice.
-
-## Personal Benefits
-
-- **Free access, unevenly split** — Pro tiers in Perplexity and Github Copilot via Education student discounts, but not Claude Code. Being agent-agnostic means I'm not stuck picking one platform.
-- **Ready for local models later** — once I can afford a better PC setup, I can plug in local open source models the same way lol
-
-## Key Features
-
-- **Living library** — skills are updated, corrected, and expanded as they're actually used in practice, not written once and left static.
-- **Agent-agnostic** — the same skillset works across Claude Code, Github Copilot, Perplexity/GAIA, and future local models.
-- **Modular & composable** — each skill is a self-contained folder you can copy in isolation, with any dependent reference files clearly linked.
-- **Consistent outputs** — the same standards and behaviour no matter which agent is executing the skill.
-
-## Setup
-
-Skills in this repo are being updated, and new skills added regularly. Check for updates for any old installations.
-
-1. **Copy in** the skill files you want, into your /skills folder in your AI agent's workspace memory.
-
-> NOTE: Do NOT load up all skills in the same workspace (or make sure the are user-invoked only) as this will dumbify your AI model FAST.
-
-2. **Copy dependencies too** — any files referenced inside those skills.
-
-Some skills depend on other files , for example:
-
-- `write-a-skill` uses `writing-great-skills` as its reference file.
-- `bug-fix.md` (orchestrator skill) calls on `/diagnosing-bugs` > `/tdd` > `/pr-review`.
-
-3. **Invoke with `/<skill>`** in your session chat.
-
-Example prompt:
-
-```bash
-/write-a-skill that conducts an accessibility audit for my website.
-```
-
-## Skill Iteration
-
-### Types of skills
-
-| Type                  | What it does                                                                               |
-| --------------------- | ------------------------------------------------------------------------------------------ |
-| **Standalone skill**  | Self-contained, does one job on its own (e.g. a report generator, a formatting task)       |
-| **Reference file**    | Supporting doc, template, or data a skill depends on — not a skill by itself               |
-| **Orchestrator file** | Routes a task across two or more skills, calling them in sequence or choosing between them |
-
-### Combining skills
-
-- **Check dependencies first** — look for a "Dependencies" or "References" note in the skill's docs; copy in anything it calls, or it'll break.
-- **Chain with orchestrators** — for multi-step workflows, use an orchestrator file instead of running skills manually one by one.
-- **Compose, don't duplicate** — if two skills overlap, have one call the other rather than copying logic into both.
-
-### Improving a skill
-
-1. **Use it** — run the skill on whatever platform you're on and note where it breaks or underperforms.
-2. **Edit the source** — fix it in this repo, not just your local copy, so the fix carries into future installs.
-3. **Flag platform quirks** — if a fix is platform-specific, note it inside the skill file rather than forking a new version.
-4. **Commit with context** — a clear commit message turns the version history into a log of what you've learned.
-
 ## Upcoming Features
 
 - 'experts' subfolders that package speciality skillsets together eg. frontenddev/, uxdesigner/, marketresearcher/
 - 'personas' subfolder to hold persona skill files like ways communication styles, user preferences, work approaches etc. to toggle on/off in chat modes eg. caveman, seniordev, mentor, teacher
+
+## Repository layout
+
+| Path                    | Role                                                                                                                                                                    |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `skills/allskills/`     | Flat convenience mirror of the library. It is duplicated for discovery and bulk copying, not a separate skill category.                                                 |
+| `skills/experts/`       | Specialist bundles grouped by role or domain, including developer, designer, market-researcher, project-manager, resume-writer, and saas-builder.                       |
+| `skills/superpowers/`   | Broad, reusable skills for planning, research, handoffs, teaching, and other day-to-day work.                                                                           |
+| `skills/workflows/`     | Fixed, code-defined multi-skill sequences. The repository currently includes `research-to-issues`.                                                                      |
+| `skills/orchestrators/` | Documentation for dynamic coordination patterns. Unlike workflows, orchestrators choose the next step at runtime; this directory currently contains the pattern README. |
+| `docs/`                 | Supporting references, research notes, and resources.                                                                                                                   |
+
+The individual skill folders are the source units to copy or install. `allskills/` is a convenience index and snapshot of the broader collection; use `experts/` and `superpowers/` when you want a more focused selection.
