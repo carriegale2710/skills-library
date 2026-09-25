@@ -1,74 +1,95 @@
 # Skills Library
 
-An agent-agnostic living library of reusable skills, specialist bundles, and multi-step workflow patterns. It is organised by purpose so you can copy or load only the pieces relevant to a task.
+A personal, modular library of reusable AI skills, specialist bundles, and multi-step patterns. The goal is to keep useful operating knowledge portable across different tools, models, and projects without tying it to any single platform.
 
 ## Purpose
 
-I made this repository to keep the skills, workflows, and working patterns I develop in one portable place instead of tying them to a single AI platform. Access, pricing, and capabilities vary across tools, while the underlying knowledge and process should remain reusable.
+This repository holds the skills, workflows, and working patterns that are useful enough to keep and reuse. Instead of relying on a single assistant's built-in prompt library, the idea is to maintain a small set of well-structured resources that can be copied, adapted, and reused elsewhere.
 
-The same approach can benefit anyone who works with multiple AI assistants, relies on education or free-tier access, or wants to move to local models later. A modular library makes it easier to:
+This makes the collection useful for:
 
-- keep your accumulated expertise under your control;
-- reuse the same workflows across different agents and projects;
-- install only the skills you need instead of loading an entire collection; and
-- adapt gradually as better tools, models, or platforms become available.
+- working across different AI tools and environments;
+- keeping your own reusable knowledge in one place;
+- borrowing only the skills relevant to the current task; and
+- evolving the library as real work reveals which patterns are worth keeping.
 
-## Key Features
+## What is in here
 
-- **Portable** — keep reusable instructions and workflows independent from any single agent, model, or platform.
-- **Modular** — copy individual skills, supporting files, expert bundles, or complete workflow patterns as needed.
-- **Layered** — browse the flat `allskills/` mirror index, choose a focused `experts/` or `superpowers/` collection, or use a workflow or orchestrator for multi-step work.
-- **Practice-driven** — refine skills as they are used, tested, and adapted to real projects.
+This repo is organized into a few clear layers:
 
-## How to use the library
+- standalone skills for a single capability;
+- expert bundles for a role or domain;
+- general-purpose superpowers for everyday work;
+- workflows for repeatable multi-step sequences; and
+- orchestrators for dynamic coordination when the next step depends on changing context.
 
-1. Choose a standalone skill, specialist bundle, workflow, or orchestrator pattern.
-2. Copy the relevant folder and any files it references into the target agent workspace.
-3. Follow the target platform's conventions for loading or invoking the skill. Platforms differ, so `/skill-name` is supported only where that platform exposes folder-based skills as slash commands.
-4. Keep the skill's supporting files with it when the skill links to references, templates, or other dependencies.
+## Library structure
 
-Avoid loading the entire collection into an agent context by default. A smaller, task-specific set is easier to discover and reduces instruction overlap.
+| Path | Role |
+| --- | --- |
+| [skills/experts](skills/experts) | Specialist bundles grouped by role or domain, such as developer, designer, marketing, product, and SaaS work. |
+| [skills/superpowers](skills/superpowers) | Broad, reusable utility skills for planning, research, handoff, iteration, and general operational work. |
+| [skills/workflows](skills/workflows) | Fixed multi-step patterns for repeatable processes that benefit from a known sequence. |
+| [skills/orchestrators](skills/orchestrators) | Guidance for dynamic coordination patterns, where the next step depends on context and intermediate results. |
+| [docs](docs) | Supporting references, comparisons, and research notes. |
 
-## Choosing a format
+## How to use it
 
-- **Standalone skill:** one reusable capability with its own instructions and supporting files.
-- **Expert bundle:** a curated group of related skills for a role or domain.
-- **Superpower:** a general-purpose utility skill intended for repeated everyday use.
-- **Workflow:** a predictable sequence with known steps, dependencies, and outputs.
-- **Orchestrator:** a dynamic coordinator that routes work and delegates to skills or tools based on the current state.
+1. Pick the smallest useful unit for the task: a single skill, an expert bundle, or a workflow.
+2. Copy the relevant folder or files into the target agent or workspace.
+3. Adapt the prompt or invocation pattern to the platform you are using.
+4. Keep the library lean: prefer a focused set over loading everything at once.
 
-Use a workflow when the sequence is repeatable and should be deterministic. Use an orchestrator when the next step depends on intermediate findings or changing context. See [`docs/references/workflows-vs-orchestrators.md`](docs/references/workflows-vs-orchestrators.md) for the distinction.
+A narrow, task-specific selection is usually easier to reason about and less likely to conflict with other instructions.
 
-## Maintaining skills
+## Choosing the right format
 
-This is a living library. When a skill is used in practice:
+- Standalone skill: useful for one reusable capability.
+- Expert bundle: grouped around a role, domain, or function.
+- Superpower: general-purpose utility for day-to-day work.
+- Workflow: best when the sequence is known and repeatable.
+- Orchestrator: best when the process is adaptive and depends on intermediate findings.
 
-- update the source folder in this repository rather than only an installed copy;
-- preserve or update linked dependencies and platform-specific notes;
-- keep bundle indexes and READMEs aligned with the folders that actually exist;
-- review changes before copying them into an agent workspace.
+See [docs/references/workflows-vs-orchestrators.md](docs/references/workflows-vs-orchestrators.md) for a more detailed comparison between fixed workflows and dynamic orchestration.
 
-The library is designed to be adapted across agent platforms, but individual skills may still contain platform-specific assumptions. Check each skill's own `SKILL.md` and supporting files before use.
+## Design principles
 
-Two ways skills are added to this library:
+This library favors practical, maintainable patterns over large, over-engineered collections. The main principles are:
 
-1. Find open-source from skills.sh/ (see `wishlist.md`) or via `/find-skills` command during chats. Download and customise them to fit your personal needs.
-2. Created from scratch using `write-a-skill.md`. Audit with `references/writing-great-skills`.
+- keep it portable and agent-agnostic;
+- prefer simple, direct skills over heavy abstractions;
+- bundle related capabilities only when they genuinely belong together;
+- keep the repo readable and easy to adapt; and
+- improve by real use rather than by adding complexity prematurely.
 
-## Upcoming Features
+## Repository conventions
 
-- 'experts' subfolders that package speciality skillsets together eg. frontenddev/, uxdesigner/, marketresearcher/
-- 'personas' subfolder to hold persona skill files like ways communication styles, user preferences, work approaches etc. to toggle on/off in chat modes eg. caveman, seniordev, mentor, teacher
+A few conventions help keep the library usable:
 
-## Repository layout
+- keep each skill focused on a single clear purpose;
+- keep skill descriptions specific enough to be useful in real prompts;
+- maintain the folder structure when adding new content; and
+- review supporting references and bundle indexes when restructuring or renaming files.
 
-| Path                    | Role                                                                                                                                                                    |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `skills/allskills/`     | Flat convenience mirror of the library. It is duplicated for discovery and bulk copying, not a separate skill category.                                                 |
-| `skills/experts/`       | Specialist bundles grouped by role or domain, including developer, designer, market-researcher, project-manager, resume-writer, and saas-builder.                       |
-| `skills/superpowers/`   | Broad, reusable skills for planning, research, handoffs, teaching, and other day-to-day work.                                                                           |
-| `skills/workflows/`     | Fixed, code-defined multi-skill sequences. The repository currently includes `research-to-issues`.                                                                      |
-| `skills/orchestrators/` | Documentation for dynamic coordination patterns. Unlike workflows, orchestrators choose the next step at runtime; this directory currently contains the pattern README. |
-| `docs/`                 | Supporting references, research notes, and resources.                                                                                                                   |
+## What this repo is not
 
-The individual skill folders are the source units to copy or install. `allskills/` is a convenience index and snapshot of the broader collection; use `experts/` and `superpowers/` when you want a more focused selection.
+This is not a platform-specific plugin package, and it is not designed to be a monolithic all-in-one agent. It is a reusable library of operational patterns that can be copied into different environments and adapted as needed.
+
+## Current folders
+
+The active top-level structure of the repository is:
+
+- [AGENTS.md](AGENTS.md)
+- [CLAUDE.md](CLAUDE.md)
+- [README.md](README.md)
+- [docs](docs)
+- [skills](skills)
+
+Within [skills](skills), the main groupings are:
+
+- [skills/experts](skills/experts)
+- [skills/orchestrators](skills/orchestrators)
+- [skills/superpowers](skills/superpowers)
+- [skills/workflows](skills/workflows)
+
+This layout is intentionally simple: the library is meant to stay discoverable, modular, and easy to maintain.
