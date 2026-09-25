@@ -2,6 +2,15 @@
 
 This folder contains broad, reusable skills that are useful across many projects, workflows, and tasks. These are the “general utility” capabilities of the library.
 
+## When to use this folder
+
+Use `superpowers/` when you want a versatile toolkit that works across:
+
+- different projects
+- different domains
+- repeated day-to-day operations
+- general AI-assisted planning and execution
+
 ## Purpose
 
 - keep universally useful skills separate from niche bundles
@@ -39,18 +48,3 @@ Typical examples:
 | `write-a-plan`      | Draft plans and task breakdowns                        |
 | `write-a-reference` | Produce reference material or reusable guidance        |
 | `write-a-skill`     | Create new skill files from scratch                    |
-
-## When to use this folder
-
-Use `superpowers/` when you want a versatile toolkit that works across:
-
-- different projects
-- different domains
-- repeated day-to-day operations
-- general AI-assisted planning and execution
-
-## Compared with the other folders
-
-- `allskills/` = full convenience mirror of everything
-- `experts/` = specialized, niche, role-based skills
-- `superpowers/` = general-purpose power tools for everyday use
