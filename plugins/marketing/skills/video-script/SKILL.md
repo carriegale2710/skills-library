@@ -1,5 +1,5 @@
 ---
-name: script-writer-skill
+name: video-script
 description: |
   Use when the deliverable is spoken words to be performed on camera or into a mic: video and podcast scripts, hooks, and CTAs for short-form (TikTok, Reels, Shorts), YouTube long-form, or podcast episodes. Triggers: "write me a reel about X", "I need a hook for my video", "script a 60-second video", "draft a podcast episode", "turn this idea into a script". For motion/timing/shot specs rather than the words, use motion-picture.
 ---

@@ -1,6 +1,6 @@
 ---
 name: motion-picture
-description: "Use when planning, auditing, or speccing a video's motion and visual craft: shot lists, storyboards, color scripts, transitions, easing, kinetic typography, pacing, retention, or animation principles. Triggers: 'video plan', 'shot list', 'storyboard', 'color script', 'motion spec', 'fix the pacing', 'explainer/demo/brand video'. For the spoken words themselves, use script-writer-skill; for in-code UI motion, use frontend-design."
+description: "Use when planning, auditing, or speccing a video's motion and visual craft: shot lists, storyboards, color scripts, transitions, easing, kinetic typography, pacing, retention, or animation principles. Triggers: 'video plan', 'shot list', 'storyboard', 'color script', 'motion spec', 'fix the pacing', 'explainer/demo/brand video'. For the spoken words themselves, use video-script; for in-code UI motion, use frontend-design."
 ---
 
 # Motion Picture & Video Design Skill
@@ -108,7 +108,7 @@ Always apply the relevant decision framework from the knowledge base:
 
 ## Handoff rules
 
-- **Video/podcast scripts** → Hand off to `script-writer-skill`. Say: "For the actual script, let's use the script-writer skill — I'll provide the structural spec and motion annotations for it to work from."
+- **Video/podcast scripts** → Hand off to `video-script`. Say: "For the actual script, let's use the script-writer skill — I'll provide the structural spec and motion annotations for it to work from."
 - **UI/product motion in code** → Hand off to `frontend-design` or `ui-design`. Say: "For implementing this motion in code, let's use the frontend-design skill."
 - **Copy for CTAs, headlines, hooks** → Hand off to `copywriter-skill` if the user needs the words themselves rather than the motion/timing spec.
 

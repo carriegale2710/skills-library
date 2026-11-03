@@ -130,11 +130,11 @@ When the user needs downstream execution from positioning:
 |------|-------------|
 | Homepage copy, landing page, email copy, CTAs | `copywriter-skill` |
 | Sales deck, battlecards, objection handling, discovery scripts | `sales-skill` |
-| Video/podcast scripts from positioning | `script-writer-skill` |
+| Video/podcast scripts from positioning | `video-script` |
 | Cold outreach, prospecting cadences | `prospecting` |
 | Channel strategy, CAC analysis | `channel-expert` |
 | Pricing & packaging decisions | `pricing` |
-| PLG onboarding messaging | `plg-skill` |
+| PLG onboarding messaging | `plg` |
 
 Explicitly tell the user: "Positioning is set — for [specific task], I'll hand off to [skill name]."
 
