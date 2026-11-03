@@ -9,7 +9,7 @@ description: Blind-tests agent skills with fresh subagents, controlled fixtures,
 
 Find instruction defects that change observable behaviour. Return a case matrix, evidence-backed defects, exact proposed fixes, and coverage limits.
 
-This is a self-contained skill, not a plugin. Use general-purpose subagents with the prompts supplied here; no named custom agents are required. Resolve reference paths relative to this SKILL.md and supply their contents to workers explicitly.
+Use general-purpose subagents with the prompts supplied here; no named custom agents are required. Resolve reference paths relative to this SKILL.md and supply their contents to workers explicitly.
 
 ## Rules
 
@@ -23,31 +23,14 @@ This is a self-contained skill, not a plugin. Use general-purpose subagents with
 
 ## Worker model selection
 
-When spawning workers through the Agent tool, explicitly request:
+Pass these as spawning-tool arguments on every invocation, including retries. Never put them in worker prompts or rely on session defaults:
 
-- Blind testers: `subagent_type: "general-purpose"`, `model: "sonnet"`.
-- Analyst: `subagent_type: "general-purpose"`, `model: "opus"`.
+- Testers: `subagent_type: "general-purpose"`, `model: "sonnet"`, or the user's explicitly named target deployment model (record the override). Keep tester settings identical across comparable trials.
+- Analyst: `subagent_type: "general-purpose"`, `model: "opus"`, unless the user explicitly changes it.
 
-Inspect the available spawning tool's schema before use. These are invocation arguments, not instructions to put in worker prompts. Use equivalent supported parameters if the host exposes a different interface; do not invent arguments.
+If the host uses a different interface, use its equivalent parameters; do not invent arguments. If model selection or a requested model is unavailable, ask before substituting; without confirmation, report BLOCKED.
 
-Set the model on every invocation, including retries. Do not rely on inheritance, session defaults, or worker self-identification.
-
-If per-invocation model selection or a requested model is unavailable, stop and ask whether to proceed using an available model. If confirmation is unavailable, report BLOCKED. Do not silently substitute.
-
-For each worker record:
-
-- Role.
-- Case ID and trial number, where applicable.
-- Requested model alias or model ID.
-- Resolved model ID, if exposed by the host.
-- Verification source.
-- Any observed fallback or override.
-
-Use host/tool metadata for verification. Invocation arguments verify what was requested, not necessarily the model that executed. If no resolved model ID is exposed, record "not exposed". Do not claim an exact version was verified.
-
-Keep the tester model and settings consistent across comparable trials. The default is Sonnet. If the user explicitly specifies a different target deployment model, use that model for all testers and record the override. The analyst remains on Opus unless explicitly changed.
-
-If the resolved model changes during a run, report affected trials separately rather than pooling them as equivalent repetitions.
+Record per worker: role, case and trial, requested model, and resolved model ID or "not exposed". Many hosts expose only the request, so do not claim an exact version was verified. If the resolved model changes mid-run, report those trials separately.
 
 ## 1. Prepare
 
@@ -55,7 +38,7 @@ Read references/case-schema.md and references/grading.md.
 
 Identify the target folders, intended behaviour, decision points, linked dependencies, and output contracts. Validate frontmatter and inspect links. Record broken references as defects; continue with unaffected cases.
 
-Create a disposable working directory containing a snapshot of the target and separate fixture directories per trial. Record the snapshot identifier, model settings, tool permissions, validators, and environment limits.
+Create a disposable working directory containing a snapshot of the target and separate fixture directories per trial. Store frozen cases, expectations, and analyst material outside that directory, where testers cannot reach them. Record the snapshot identifier, model settings, tool permissions, validators, and environment limits.
 
 Use fresh general-purpose subagents through the host's available agent-spawning tool. If none is available, stop and report that blind execution is BLOCKED; do not simulate fresh agents in the main conversation.
 
@@ -63,9 +46,9 @@ Check whether artifact creation and test execution are available within the agre
 
 ## 2. Write and freeze cases
 
-For every material decision point, write fit, wrong-fit, and ambiguous or boundary cases. Where ambiguity is intentional, specify acceptable outcomes; do not invent a preferred route.
+Default budget: eight cases (24 tester runs plus one analyst). If coverage needs more, show the user the proposed case list and subagent count and ask for a larger budget before writing them.
 
-Also cover missing inputs, forbidden actions, conflicting rules where present, and prior failures. Add skill-selection positive and negative cases only if the host can test discovery without forcing the target skill to load. Otherwise mark selection coverage NOT TESTED.
+Within the budget, cover forbidden actions, missing inputs, and prior failures first, then the highest-impact decision points with fit, wrong-fit, and ambiguous or boundary cases. Where ambiguity is intentional, specify acceptable outcomes; do not invent a preferred route. Cover conflicting rules where present. List decision points left untested as NOT TESTED. Add skill-selection positive and negative cases only if the host can test discovery without forcing the target skill to load. Otherwise mark selection coverage NOT TESTED.
 
 Use observable, binary criteria from references/case-schema.md. Distinguish product requirements from what the current skill happens to say. Ask the user to resolve consequential unknown requirements; mark unresolved cases BLOCKED.
 
@@ -75,9 +58,7 @@ Freeze expectations before execution. Do not rewrite them to excuse a result. Fo
 
 Read references/tester-prompt.md.
 
-Spawn three fresh general-purpose subagents per case using the Agent tool with `subagent_type: "general-purpose"` and `model: "sonnet"` on every call, unless an explicit tester-model override has been approved under Worker model selection.
-
-Use bounded concurrency appropriate to the host. Record each invocation's model metadata according to Worker model selection.
+Spawn three fresh tester subagents per case with the tester settings from Worker model selection. Use bounded concurrency appropriate to the host.
 
 Pass only the instantiated tester prompt, target snapshot location, fixture location, output location, and permitted capabilities. Do not preload expected routes or rubric checks.
 
@@ -89,9 +70,7 @@ Collect reports, actual artifacts, and tool traces when available. Retry only mi
 
 Run available deterministic validators against actual artifacts and traces: syntax, required fields, link resolution, file existence, output locations, and forbidden operations. Record the validator and evidence. Unsupported or unobservable checks are UNKNOWN, not PASS.
 
-Spawn one fresh general-purpose analyst subagent using the Agent tool with `subagent_type: "general-purpose"` and `model: "opus"`, unless an explicit analyst-model override has been approved under Worker model selection.
-
-Supply the full contents of references/grading.md, frozen cases, target snapshot, tester reports, artifacts, and check results. Record the invocation's model metadata according to Worker model selection.
+Spawn one fresh analyst subagent with the analyst settings from Worker model selection. Supply the full contents of references/grading.md, frozen cases, target snapshot, tester reports, artifacts, and check results.
 
 The analyst is read-only and must not run the target skill.
 
@@ -107,7 +86,7 @@ Return:
 - Ranked behaviour-changing defects with file location, quotation or precise missing-rule location, observed consequence, affected cases, and exact fix.
 - Fragility flags for correct outcomes supported by incorrect or contradictory stated rules.
 - Regression comparison, settings, snapshot identifier, and untested or blocked coverage.
-- Worker model table: role, requested alias or model ID, resolved model ID if exposed, worker count, and verification source. Disclose unavailable metadata, fallbacks, and overrides. Group rows only when configurations and verification status match.
+- Worker model table: role, requested model, resolved model ID or "not exposed", worker count, and any override or fallback.
 
 Separate target defects from harness, fixture, infrastructure, and unresolved-requirement failures. Do not attribute every tester failure to the skill. Distinguish observed failures from plausible risks.
 

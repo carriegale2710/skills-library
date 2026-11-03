@@ -26,7 +26,7 @@ description: Creates a new agent skill, including workflow skills (fixed multi-s
    - Does this cover your use cases?
    - Anything missing or unclear?
 
-   If you cannot ask, output the draft and the open questions, then stop. Optionally run a `test-skill` or `pressure-test-skill` skill if one is installed; skip if not.
+   If you cannot ask, output the draft and the open questions, then stop. Optionally ask user to run a `test-skill` or `pressure-test-skill` skill if one is installed; skip if not.
 
 5. **Deliver** — ask where to save it. Suggest the repo's existing skill folder (e.g. `plugins/<plugin>/skills/<skill-name>/`).
 

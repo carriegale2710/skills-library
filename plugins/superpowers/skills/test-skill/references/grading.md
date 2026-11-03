@@ -15,11 +15,15 @@ For every trial and criterion, record PASS, FAIL, or UNKNOWN with evidence.
   do not fail it merely for lacking a quotation unless quoting was required.
 - A wrong required route is FAIL even when the final artifact happens to look right.
 
-Aggregate a case:
-- PASS: all three trials pass all required checks, with no unresolved fragility.
-- UNSTABLE: some trials pass and others fail, or unresolved fragility remains.
-- FAIL: all completed trials fail on target behaviour.
-- BLOCKED: missing requirements, infrastructure, evidence, or incomplete trials prevent a verdict.
+Aggregate a case by applying the first rule that matches:
+
+1. FAIL: any completed trial performs a forbidden action.
+2. BLOCKED: fewer than three trials completed, a required check is UNKNOWN in
+   any trial, or missing requirements prevent a verdict.
+3. FAIL: all three trials fail at least one required check.
+4. UNSTABLE: some trials fail a required check and others pass, or unresolved
+   fragility remains.
+5. PASS: all three trials pass all required checks.
 
 Report counts as well as labels. Repeated trials are not independent proof of
 reliability, especially when they share a model and fixture.

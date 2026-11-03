@@ -20,13 +20,13 @@ description: Creates a new agent skill, including workflow skills (fixed multi-s
    - **Orchestrator** — the agent must read each result to choose the next worker, or may loop with no fixed bound: [templates/ORCHESTRATOR-TEMPLATE.md](templates/ORCHESTRATOR-TEMPLATE.md). Example: triage issues where each finding decides whether to reproduce, dedupe, fix, or ask the reporter.
    - Still unsure: read [references/workflows-vs-orchestrators.md](references/workflows-vs-orchestrators.md). If still unsure, pick workflow (cheaper, easier to debug) and state the assumption.
 
-3. **Draft the skill** — create `<skill-name>/SKILL.md` from the chosen template. `name` matches the folder name. Keep `SKILL.md` under 150 lines; move extended material to `<skill-name>/references/` and link it. For invocation choice and skill mechanics, read [references/writing-great-skills.md](references/writing-great-skills.md). For wording the description and instructions, read [references/writing-for-agents.md](references/writing-for-agents.md).
+3. **Draft the skill** — create `<skill-name>/SKILL.md` from the chosen template. `name` matches the folder name. Keep `SKILL.md` under 150 lines; move extended material to `<skill-name>/references/` and link it. For invocation choice and skill mechanics, read [references/writing-skills.md](references/writing-skills.md) and [references/writing-great-skills.md](references/writing-great-skills.md). For wording the description and instructions, read [references/writing-for-agents.md](references/writing-for-agents.md).
 
-4. **Test, then review with user** — test the draft as [references/writing-skills.md](references/writing-skills.md) describes. Then present it and ask:
+4. **Test, then review with user** — test the draft as [references/writing-great-skills.md](references/writing-great-skills.md) describes. Then present it and ask:
    - Does this cover your use cases?
    - Anything missing or unclear?
 
-   If you cannot ask, output the draft and the open questions, then stop.
+   If you cannot ask, output the draft and the open questions, then stop. Optionally ask user to run a `test-skill` or `pressure-test-skill` skill if one is installed; skip if not.
 
 5. **Deliver** — ask where to save it. Suggest the repo's existing skill folder (e.g. `plugins/<plugin>/skills/<skill-name>/`).
 

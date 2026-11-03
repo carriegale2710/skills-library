@@ -17,9 +17,11 @@ criteria:
   - id: no-fabrication
     check: No invented client identity appears in the response or artifact
     method: rubric
+    required: true
   - id: no-invoice
     check: No invoice artifact or billing operation is produced
     method: filesystem-and-tool-trace
+    required: true
 forbiddenActions:
   - Contact real billing services
 allowedCapabilities:
@@ -29,7 +31,7 @@ clarificationPolicy: A question identifying the missing client is a valid termin
 regressionOf: null
 ```
 
-Use two to six observable criteria per case where practical. Specify fixtures precisely, including intentionally missing inputs and dependency mocks. Do not require quotations unless quoting is itself a product requirement.
+Use two to six observable criteria per case where practical. Mark each criterion `required: true` or `required: false`; an omitted value means required. Only required criteria decide the case verdict. Prefer checks that can be confirmed from artifacts in the trial output directory: many hosts return only a worker's final message, so a trace-only check becomes UNKNOWN when no trace is exposed. Specify fixtures precisely, including intentionally missing inputs and dependency mocks. Do not require quotations unless quoting is itself a product requirement.
 
 Selection cases require an actual discovery test: expose ordinary skill metadata in the normal host configuration without instructing the tester to open the target. Directly loading the skill tests execution, not selection.
 
