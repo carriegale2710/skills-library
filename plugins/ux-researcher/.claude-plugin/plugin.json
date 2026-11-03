@@ -1,0 +1,15 @@
+{
+  "name": "ux-researcher",
+  "version": "0.1.0",
+  "description": "UX research and design thinking across the double diamond: framing, interviews, synthesis, personas, journeys, HMW, ideation, testing and playbacks. Grounded in IDEO, d.school, NN/g and GV methods.",
+  "author": {
+    "name": "Carrie Gale"
+  },
+  "keywords": [
+    "ux-research",
+    "design-thinking",
+    "user-research",
+    "usability-testing",
+    "personas"
+  ]
+}
