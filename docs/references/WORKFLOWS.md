@@ -1,12 +1,8 @@
 # Workflows
 
-> A workflow executes a fixed, code-defined sequence of steps (while an orchestrator dynamically decides the path and delegates tasks turn-by-turn).
+> A workflow executes a fixed, predefined sequence of steps (while an orchestrator dynamically decides the path and delegates tasks turn-by-turn).
 
-Multi-skill sequences for work that genuinely needs several stages. Use these only when a single skill (see `SKILL-GUIDE.md`) is not enough — skip steps that do not add value.
-
-## Use a Workflow when
-
-You have crisp evaluation metrics and known, repeatable steps.The process requires strict sequencing, data movement, or parallel fan-outs that don't need mid-flight improvisation.You want to prevent context window bloat by keeping intermediate steps inside a script instead of an LLM's memory
+Multi-skill sequences for work that genuinely needs several stages. Use these only when a single skill (see the skill guide) is not enough — skip steps that do not add value.
 
 ## What it does
 
@@ -18,11 +14,11 @@ You have crisp evaluation metrics and known, repeatable steps.The process requir
 
 ## Difference from orchestrators
 
-Whereas an orchestrator dynamically chooses the next step and delegates work turn-by-turn, a workflow follows a fixed, code-defined sequence. See the [Workflows vs Orchestrators](workflows-vs-orchestrators.md) guide for a detailed comparison.
+Whereas an orchestrator dynamically chooses the next step and delegates work turn-by-turn, a workflow follows a fixed, predefined sequence. See the [Workflows vs Orchestrators](../../plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md) guide for a detailed comparison.
 
 ## Core characteristics
 
-- Fixed, code-defined sequence of steps
+- Fixed, predefined sequence of steps (a script, or ordered stages written in a skill)
 - Deterministic paths and predictable execution
 - Clear sequencing, dependency handling, and conditional logic
 - Better suited to structured, repeatable tasks than ambiguous or open-ended work
@@ -40,7 +36,7 @@ This pattern is useful when the problem has known steps, clear evaluation criter
 
 ## Example 1
 
-A strict, code-defined pipeline where data moves through fixed gates.
+A strict, predefined pipeline where data moves through fixed gates.
 
 ```txt
 [Customer submits return]
@@ -65,7 +61,8 @@ Examples of how solo founders, operators, and teams use workflows in day-to-day 
 
 - A one-person SaaS founder who runs a repeatable customer onboarding pipeline across welcome email, setup tasks, and activation check-ins.
 - A product team that routes feature requests through intake, prioritization, spec creation, and implementation review.
-- A support operator who processes refund or escalation requests through a fixed sequence of checks, approvals, and follow-ups.
+- A support operator who processes one known request type (refunds) through a fixed sequence of checks, approvals, and follow-ups. (Mixed inbound messages that need triage are an orchestrator case.)
+- A content creator who runs plan, draft, edit, publish in that order for every piece, with a retry when review fails.
 - A marketing team that automates campaign planning, content drafting, review, and publication in a known order.
 - A developer who uses a workflow to triage GitHub issues, run tests, summarize findings, and create deployment checklists.
 - A research lead who collects sources, filters them, summarizes findings, and turns them into a brief or recommendation memo.

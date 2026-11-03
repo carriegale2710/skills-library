@@ -21,12 +21,12 @@ A **skill** is a reference guide for proven techniques, patterns, or tools.
 **Frontmatter (YAML):**
 
 - `name`: letters, numbers, hyphens only
-- `description`: third-person, starts with "Use when...", max 1024 chars. Describes ONLY triggering conditions — NEVER summarize the skill's workflow.
+- `description`: follow the Description Requirements in [SKILL.md](../SKILL.md#description-requirements). The "Use when" sentence describes ONLY triggering conditions — NEVER summarize the skill's steps.
 
 ```markdown
 ---
 name: skill-name
-description: Use when [specific triggering conditions]
+description: [What it does]. Use when [specific triggering conditions]
 ---
 
 # Skill Name
@@ -79,13 +79,13 @@ Found a new rationalization? Add an explicit counter. Repeat until the skill is 
 
 **RED Phase:**
 
-- [ ] Define 3+ pressure scenarios
+- [ ] Define pressure scenarios: 3+ for skills with gates, loops, or delegation; 2 mental scenarios for trivial skills
 - [ ] Simulate WITHOUT skill — document baseline rationalizations verbatim
 
 **GREEN Phase:**
 
 - [ ] `name` uses only letters, numbers, hyphens
-- [ ] Description starts with "Use when..." and includes specific triggers/symptoms
+- [ ] Description has a "Use when..." sentence with specific triggers/symptoms
 - [ ] Description does NOT summarize workflow
 - [ ] Address specific baseline failures
 - [ ] Simulate WITH skill — verify compliance
@@ -100,7 +100,9 @@ Found a new rationalization? Add an explicit counter. Repeat until the skill is 
 ## The Iron Law
 
 ```
-NO SKILL WITHOUT A FAILING TEST FIRST
+NO SKILL SHIPS WITHOUT A TEST
 ```
 
-Write skill before testing? Delete it. Start over. No exceptions.
+Shipped before testing? Test it now and fix what fails. No exceptions.
+
+**Trivial skills** (no gates, loops, or delegation; asking one clarifying question does not count): run 2 mental pressure scenarios against the draft and skip the no-skill baseline. Everything else gets the full RED-GREEN-REFACTOR with 3+ scenarios.

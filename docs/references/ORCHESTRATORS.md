@@ -2,9 +2,9 @@
 
 An orchestrator is a dynamic coordinator that evaluates input, chooses which sub-agents or tools to invoke, and manages the flow of work toward a larger objective. It keeps tasks aligned, handles dependencies, and maintains visibility across the process.
 
-Whereas a workflow follows a fixed, code-defined sequence, an orchestrator dynamically chooses the next step and delegates work turn-by-turn.
+Whereas a workflow follows a fixed, predefined sequence, an orchestrator dynamically chooses the next step and delegates work turn-by-turn.
 
-> Difference from workflows: workflows follow a fixed sequence; orchestrators decide dynamically based on the current state and context. See the [Workflows vs Orchestrators](workflows-vs-orchestrators.md) guide for a detailed comparison.
+> Difference from workflows: workflows follow a fixed sequence; orchestrators decide dynamically based on the current state and context. See the [Workflows vs Orchestrators](../../plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md) guide for a detailed comparison.
 
 ## Use an orchestrator when
 
@@ -61,7 +61,7 @@ A central LLM engine that evaluates a messy request, selects tools, and manages 
 
 1. The Orchestrator reads the email and determines the customer is upset. It routes the text to a Sentiment Agent to draft a soft apology. 2. Next, it looks at the image of the "broken item." It calls a Vision Tool to verify the damage. 3. Based on the vision report, it dynamically decides to trigger a warehouse API to ship a replacement, skipping the standard return pipeline entirely to keep the VIP customer happy.
 
-## 🧠 Real-world use cases
+## Real-world use cases
 
 Examples of how solo founders and indie developers use orchestrators in day-to-day project work. These imply dynamic routing, multi-domain coordination, and runtime prioritization that’s hard to pre-specify as a single static workflow:
 
@@ -69,6 +69,8 @@ Examples of how solo founders and indie developers use orchestrators in day-to-d
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | “A one-person SaaS builder that routes feature requests into discovery, technical planning, implementation, and release tasks based on urgency and impact.” | Classifies requests, chooses different sub-skills, re-prioritizes dynamically, and may loop back for more information.                     |
 | “A solo founder who uses an orchestrator to manage customer support, marketing campaigns, and product development simultaneously.”                          | Juggles multiple domains, chooses what to work on based on changing inputs, and reallocates attention dynamically.                         |
-| “An indie developer using an orchestrator to triage GitHub issues, summarize bug reports, draft fixes, and prepare release notes.”                          | Chooses different strategies per issue, calls different child skills, and determines what belongs in a release based on evolving criteria. |
+| “An indie developer using an orchestrator to triage GitHub issues, summarize bug reports, and draft fixes.”                                                | Chooses different strategies per issue, calls different child skills, and loops back when a repro fails.                                   |
 | “A UX designer who leverages an orchestrator to gather user feedback, prototype interfaces, and iterate on designs efficiently.”                            | Decides which feedback to act on, which prototype to generate, and whether to run another testing round based on intermediate results.     |
-| “A content creator who uses an orchestrator to plan, draft, edit, and publish content across multiple platforms efficiently.”                               | Adapts the process per platform, content type, and performance data rather than always following the same pipeline.                        |
+| “A content creator who adds new platforms and formats on the fly, deciding per piece which research, drafting, or repurposing skills to call.”              | Next step depends on what each result reveals; steps cannot be listed in advance. |
+
+Note: a content pipeline that always runs plan, draft, edit, publish in that order is a workflow, not an orchestrator.

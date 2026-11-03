@@ -19,7 +19,6 @@ This makes the collection useful for:
 | ------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | [plugins/](plugins)             | Skills grouped by role or domain, one subfolder per bundle. Source of truth.                          |
 | [skills/](skills)               | Flat copy of every unique skill, as an easy-to-reach index. See [skills/README.md](skills/README.md). |
-| [orchestrators/](orchestrators) | Dynamic coordination files that route a task across skills.                                           |
 | [docs/](docs)                   | References, research notes, and the skills wishlist.                                                  |
 | [AGENTS.md](AGENTS.md)          | Core rules for agents working in this repo.                                                           |
 | [ISSUES.md](ISSUES.md)          | Known issues.                                                                                         |
@@ -40,7 +39,7 @@ Browse [plugins/](plugins) for the current bundles.
 - Workflow: known, repeatable sequence. See [docs/references/WORKFLOWS.md](docs/references/WORKFLOWS.md).
 - Orchestrator: adaptive process that depends on intermediate findings. See [docs/references/ORCHESTRATORS.md](docs/references/ORCHESTRATORS.md).
 
-Comparison: [docs/references/workflows-vs-orchestrators.md](docs/references/workflows-vs-orchestrators.md).
+Comparison: [plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md](plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md).
 
 ## Plugins
 

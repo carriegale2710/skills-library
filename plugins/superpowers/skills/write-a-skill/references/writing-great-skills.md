@@ -15,7 +15,7 @@ Pick model-invocation only when the agent must reach the skill on its own. If it
 
 - **Front-load the skill's leading word.**
 - **One trigger per branch.** Synonyms for the same branch are duplication — collapse them.
-- **Cut identity already in the body.** Keep description to triggers only.
+- **Keep the "Use when" sentence to triggers only.** Full description rules: [SKILL.md](../SKILL.md#description-requirements).
 
 ## Information hierarchy
 
