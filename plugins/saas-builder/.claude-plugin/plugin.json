@@ -1,0 +1,5 @@
+{
+  "name": "saas-builder",
+  "description": "SaaS build skills: auth, database, payments, deployment, security, launch",
+  "author": { "name": "Carrie Gale" }
+}

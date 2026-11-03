@@ -1,0 +1,16 @@
+{
+  "name": "job-hunter",
+  "version": "1.3.0",
+  "description": "Job application agent and skills: company research, job ad analysis, gap interviews, tailored resume, cover letter and email, selection criteria responses, application form answers, portfolio shortlist and case studies, linting with keyword coverage, .docx export, application tracking, interview prep and LinkedIn profile. Based on the UNSW Careers resume, cover letter and selection criteria guides.",
+  "author": {
+    "name": "Carrie Gale"
+  },
+  "keywords": [
+    "resume",
+    "cv",
+    "cover-letter",
+    "selection-criteria",
+    "career",
+    "job-application"
+  ]
+}

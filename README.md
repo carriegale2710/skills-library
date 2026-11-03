@@ -13,48 +13,73 @@ This makes the collection useful for:
 - borrowing only the skills relevant to the current task; and
 - evolving the library as real work reveals which patterns are worth keeping.
 
-## What is in here
+## Repository structure
 
-This repo is organized into a few clear layers:
+| Path                            | Role                                                                                                  |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| [plugins/](plugins)             | Skills grouped by role or domain, one subfolder per bundle. Source of truth.                          |
+| [skills/](skills)               | Flat copy of every unique skill, as an easy-to-reach index. See [skills/README.md](skills/README.md). |
+| [docs/](docs)                   | References, research notes, and the skills wishlist.                                                  |
+| [AGENTS.md](AGENTS.md)          | Core rules for agents working in this repo.                                                           |
+| [ISSUES.md](ISSUES.md)          | Known issues.                                                                                         |
 
-- standalone skills for a single capability;
-- expert bundles for a role or domain;
-- general-purpose superpowers for everyday work;
-- workflows for repeatable multi-step sequences; and
-- orchestrators for dynamic coordination when the next step depends on changing context.
-
-## Library structure
-
-| Path | Role |
-| --- | --- |
-| [skills/experts](skills/experts) | Specialist bundles grouped by role or domain, such as developer, designer, marketing, product, and SaaS work. |
-| [skills/superpowers](skills/superpowers) | Broad, reusable utility skills for planning, research, handoff, iteration, and general operational work. |
-| [skills/workflows](skills/workflows) | Fixed multi-step patterns for repeatable processes that benefit from a known sequence. |
-| [skills/orchestrators](skills/orchestrators) | Guidance for dynamic coordination patterns, where the next step depends on context and intermediate results. |
-| [docs](docs) | Supporting references, comparisons, and research notes. |
+Browse [plugins/](plugins) for the current bundles.
 
 ## How to use it
 
-1. Pick the smallest useful unit for the task: a single skill, an expert bundle, or a workflow.
-2. Copy the relevant folder or files into the target agent or workspace.
+1. Pick the smallest useful unit for the task: a single skill, a plugin bundle, or a workflow.
+2. Copy the relevant folder or files into the target agent or workspace, plus any files a skill references.
 3. Adapt the prompt or invocation pattern to the platform you are using.
 4. Keep the library lean: prefer a focused set over loading everything at once.
 
-A narrow, task-specific selection is usually easier to reason about and less likely to conflict with other instructions.
-
 ## Choosing the right format
 
-- Standalone skill: useful for one reusable capability.
-- Expert bundle: grouped around a role, domain, or function.
-- Superpower: general-purpose utility for day-to-day work.
-- Workflow: best when the sequence is known and repeatable.
-- Orchestrator: best when the process is adaptive and depends on intermediate findings.
+- Standalone skill: one reusable capability.
+- Plugin bundle: grouped around a role, domain, or function.
+- Workflow: known, repeatable sequence. See [docs/references/WORKFLOWS.md](docs/references/WORKFLOWS.md).
+- Orchestrator: adaptive process that depends on intermediate findings. See [docs/references/ORCHESTRATORS.md](docs/references/ORCHESTRATORS.md).
 
-See [docs/references/workflows-vs-orchestrators.md](docs/references/workflows-vs-orchestrators.md) for a more detailed comparison between fixed workflows and dynamic orchestration.
+Comparison: [plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md](plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md).
+
+## Plugins
+
+A plugin is an installable bundle of skills (it can also hold agents, hooks, and MCP servers) that Claude Code loads as one unit. This repo is itself a plugin marketplace: every folder in [plugins/](plugins) is installable on its own, with no separate GitHub repo.
+
+### Install one plugin from this repo
+
+```text
+/plugin marketplace add carriegale2710/skills-library
+/plugin install idea-hunter@skills-library
+```
+
+Only the named plugin is installed, not the whole repo. Plugin names: `designer`, `developer`, `idea-hunter`, `marketing`, `product-manager`, `saas-builder`, `startup`, `superpowers`, `job-hunter`. Skills run namespaced, e.g. `/idea-hunter:reddit-pain-mining`.
+
+### How the setup works
+
+- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) at the repo root lists each plugin with a relative `source` such as `"./plugins/idea-hunter"`.
+- Each plugin folder has `.claude-plugin/plugin.json` with a `name`, and its skills in a `skills/` subfolder (`plugins/<name>/skills/<skill>/SKILL.md`), the default location Claude Code looks in.
+- The `name` in a marketplace entry must match the `name` in that plugin's `plugin.json`, or install fails with "Plugin ... not found in marketplace".
+
+### Add a new plugin
+
+1. Create `plugins/<name>/skills/` with skill folders inside.
+2. Add `plugins/<name>/.claude-plugin/plugin.json` with `name` and `description`.
+3. Add an entry to the root `marketplace.json`.
+4. Run `claude plugin validate .`.
+
+### Plugins in their own GitHub repo
+
+A plugin can live in a separate repo instead (for example the original `job-hunter` repo). List it in a marketplace with `"source": { "source": "github", "repo": "owner/plugin-repo" }`, or add that repo directly as a marketplace if it has its own `.claude-plugin/marketplace.json`.
+
+### Try without installing
+
+```text
+claude --plugin-dir ./plugins/idea-hunter
+```
+
+Docs: <https://code.claude.com/docs/en/plugins/overview.md> and <https://code.claude.com/docs/en/plugins/create-marketplace.md>.
 
 ## Design principles
-
-This library favors practical, maintainable patterns over large, over-engineered collections. The main principles are:
 
 - keep it portable and agent-agnostic;
 - prefer simple, direct skills over heavy abstractions;
@@ -64,8 +89,6 @@ This library favors practical, maintainable patterns over large, over-engineered
 
 ## Repository conventions
 
-A few conventions help keep the library usable:
-
 - keep each skill focused on a single clear purpose;
 - keep skill descriptions specific enough to be useful in real prompts;
 - maintain the folder structure when adding new content; and
@@ -73,29 +96,4 @@ A few conventions help keep the library usable:
 
 ## What this repo is not
 
-This is not a platform-specific plugin package, and it is not designed to be a monolithic all-in-one agent. It is a reusable library of operational patterns that can be copied into different environments and adapted as needed.
-
-## Current folders
-
-The active top-level structure of the repository is:
-
-- [AGENTS.md](AGENTS.md)
-- [CLAUDE.md](CLAUDE.md)
-- [README.md](README.md)
-- [docs](docs)
-- [skills](skills)
-
-Within [skills](skills), the main groupings are:
-
-- [skills/experts](skills/experts)
-- [skills/orchestrators](skills/orchestrators)
-- [skills/superpowers](skills/superpowers)
-- [skills/workflows](skills/workflows)
-
-This layout is intentionally simple: the library is meant to stay discoverable, modular, and easy to maintain.
-
-## Upcoming Features
-
-- [x] 'experts' subfolders that package speciality skillsets together eg. frontenddev/, uxdesigner/, marketresearcher/
-- 'personas' subfolder to hold persona skill files like ways communication styles, user preferences, work approaches etc. to toggle on/off in chat modes eg. caveman, seniordev, mentor, teacher
->>>>>>> origin/main
+Not a platform-specific plugin package, and not a monolithic all-in-one agent. It is a reusable library of operational patterns to copy into different environments and adapt.
