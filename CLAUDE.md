@@ -1,3 +1,3 @@
 # Claude
 
-Refer to [`AGENTS.md`](AGENTS.md).
+Refer to [`AGENTS.md`](Projects/skills-library/AGENTS.md).

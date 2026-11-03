@@ -29,7 +29,7 @@ This repo is organized into a few clear layers:
 | --- | --- |
 | [skills/experts](skills/experts) | Specialist bundles grouped by role or domain, such as developer, designer, marketing, product, and SaaS work. |
 | [skills/superpowers](skills/superpowers) | Broad, reusable utility skills for planning, research, handoff, iteration, and general operational work. |
-| [skills/workflows](skills/workflows) | Fixed multi-step patterns for repeatable processes that benefit from a known sequence. |
+| [WORKFLOWS](WORKFLOWS.md) | Fixed multi-step patterns for repeatable processes that benefit from a known sequence. |
 | [skills/orchestrators](skills/orchestrators) | Guidance for dynamic coordination patterns, where the next step depends on context and intermediate results. |
 | [docs](docs) | Supporting references, comparisons, and research notes. |
 
@@ -50,7 +50,7 @@ A narrow, task-specific selection is usually easier to reason about and less lik
 - Workflow: best when the sequence is known and repeatable.
 - Orchestrator: best when the process is adaptive and depends on intermediate findings.
 
-See [docs/references/workflows-vs-orchestrators.md](docs/references/workflows-vs-orchestrators.md) for a more detailed comparison between fixed workflows and dynamic orchestration.
+See [docs/references/workflows-vs-orchestrators.md](workflows-vs-orchestrators.md) for a more detailed comparison between fixed workflows and dynamic orchestration.
 
 ## Design principles
 
@@ -79,17 +79,17 @@ This is not a platform-specific plugin package, and it is not designed to be a m
 
 The active top-level structure of the repository is:
 
-- [AGENTS.md](AGENTS.md)
-- [CLAUDE.md](CLAUDE.md)
-- [README.md](README.md)
+- [AGENTS.md](Projects/skills-library/AGENTS.md)
+- [CLAUDE.md](Projects/skills-library/CLAUDE.md)
+- [README.md](Projects/skills-library/README.md)
 - [docs](docs)
-- [skills](skills)
+- [skills](skills.md)
 
-Within [skills](skills), the main groupings are:
+Within [skills](skills.md), the main groupings are:
 
 - [skills/experts](skills/experts)
 - [skills/orchestrators](skills/orchestrators)
 - [skills/superpowers](skills/superpowers)
-- [skills/workflows](skills/workflows)
+- [WORKFLOWS](WORKFLOWS.md)
 
 This layout is intentionally simple: the library is meant to stay discoverable, modular, and easy to maintain.
