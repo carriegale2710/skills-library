@@ -1,4 +1,4 @@
-# job-application-agent
+# job-hunter
 
 A Claude Code plugin that runs a job application end to end: company research, job ad analysis, a tailored resume, cover letter and email, selection criteria responses, a portfolio shortlist, linting, and export to Word.
 
@@ -9,21 +9,21 @@ It follows the UNSW Careers guides to resumes, cover letters and selection crite
 In Claude Code:
 
 ```
-/plugin marketplace add carriegale2710/job-application-agent
-/plugin install job-application-agent@job-application-agent
+/plugin marketplace add carriegale2710/skills-library
+/plugin install job-hunter@skills-library
 ```
 
 Or from your shell:
 
 ```bash
-claude plugin marketplace add carriegale2710/job-application-agent
-claude plugin install job-application-agent@job-application-agent
+claude plugin marketplace add carriegale2710/skills-library
+claude plugin install job-hunter@skills-library
 ```
 
 To get updates later:
 
 ```bash
-claude plugin marketplace update job-application-agent
+claude plugin marketplace update skills-library
 ```
 
 ### Requirements
@@ -37,7 +37,7 @@ Start Claude Code in the folder where you keep your resume and applications, the
 
 > Apply for this role: \<paste the job ad or a link\>
 
-The `job-application-agent` agent runs these steps:
+The `job-hunter` agent runs these steps:
 
 1. **Master resume and stories.** Builds or reads your source-of-truth resume and STAR story bank.
 2. **Research.** Looks up the company's products, recent projects, values and news, and finds hooks for your cover letter.
@@ -52,7 +52,7 @@ The `job-application-agent` agent runs these steps:
 11. **Track.** Adds the application to `applications/tracker.md`, with closing and follow-up dates.
 12. **Interview prep.** When you get an interview: likely questions matched to your STAR stories, honest answers for gaps and hard questions, company facts and questions to ask.
 
-You can also call any skill on its own, for example `/job-application-agent:cover-letter`. Use `/job-application-agent:linkedin-profile` to write your LinkedIn headline, About section and Featured items from your master resume.
+You can also call any skill on its own, for example `/job-hunter:cover-letter`. Use `/job-hunter:linkedin-profile` to write your LinkedIn headline, About section and Featured items from your master resume.
 
 ### Rules it always follows
 
@@ -91,7 +91,7 @@ applications/<company>-<role>/
 
 | Component | What it does |
 |---|---|
-| `agents/job-application-agent.md` | Runs the workflow and enforces the rules above |
+| `agents/job-hunter.md` | Runs the workflow and enforces the rules above |
 | `skills/master-resume` | Builds your master resume, selling points, motivations, values and story bank, and runs gap interviews |
 | `skills/company-research` | Researches the organisation, its terminology and cover letter hooks, with sources |
 | `skills/job-ad-decoder` | Finds the vital criteria, evidence level, keywords, gaps, risks and application facts |
@@ -147,7 +147,7 @@ node skills/docx-export/scripts/export_docx.js --test
 
 ### GitHub Copilot
 
-The skills are plain `SKILL.md` folders. Copy `skills/*` into `.github/skills/`, and copy `agents/job-application-agent.md` to `.github/agents/job-application-agent.agent.md`.
+The skills are plain `SKILL.md` folders. Copy `skills/*` into `.github/skills/`, and copy `agents/job-hunter.md` to `.github/agents/job-hunter.agent.md`.
 
 ## Credits
 

@@ -43,6 +43,44 @@ Browse [plugins/](plugins) for the current bundles.
 
 Comparison: [docs/references/workflows-vs-orchestrators.md](docs/references/workflows-vs-orchestrators.md).
 
+## Plugins
+
+A plugin is an installable bundle of skills (it can also hold agents, hooks, and MCP servers) that Claude Code loads as one unit. This repo is itself a plugin marketplace: every folder in [plugins/](plugins) is installable on its own, with no separate GitHub repo.
+
+### Install one plugin from this repo
+
+```text
+/plugin marketplace add carriegale2710/skills-library
+/plugin install idea-hunter@skills-library
+```
+
+Only the named plugin is installed, not the whole repo. Plugin names: `designer`, `developer`, `idea-hunter`, `marketing`, `product-manager`, `saas-builder`, `startup`, `superpowers`, `job-hunter`. Skills run namespaced, e.g. `/idea-hunter:reddit-pain-mining`.
+
+### How the setup works
+
+- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) at the repo root lists each plugin with a relative `source` such as `"./plugins/idea-hunter"`.
+- Each plugin folder has `.claude-plugin/plugin.json` with a `name`, and its skills in a `skills/` subfolder (`plugins/<name>/skills/<skill>/SKILL.md`), the default location Claude Code looks in.
+- The `name` in a marketplace entry must match the `name` in that plugin's `plugin.json`, or install fails with "Plugin ... not found in marketplace".
+
+### Add a new plugin
+
+1. Create `plugins/<name>/skills/` with skill folders inside.
+2. Add `plugins/<name>/.claude-plugin/plugin.json` with `name` and `description`.
+3. Add an entry to the root `marketplace.json`.
+4. Run `claude plugin validate .`.
+
+### Plugins in their own GitHub repo
+
+A plugin can live in a separate repo instead (for example the original `job-hunter` repo). List it in a marketplace with `"source": { "source": "github", "repo": "owner/plugin-repo" }`, or add that repo directly as a marketplace if it has its own `.claude-plugin/marketplace.json`.
+
+### Try without installing
+
+```text
+claude --plugin-dir ./plugins/idea-hunter
+```
+
+Docs: <https://code.claude.com/docs/en/plugins/overview.md> and <https://code.claude.com/docs/en/plugins/create-marketplace.md>.
+
 ## Design principles
 
 - keep it portable and agent-agnostic;

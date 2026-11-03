@@ -1,0 +1,15 @@
+{
+  "name": "skills-library",
+  "owner": { "name": "Carrie Gale" },
+  "plugins": [
+    { "name": "designer", "source": "./plugins/designer", "description": "Design advisor, frontend design, solution ideation and motion skills" },
+    { "name": "developer", "source": "./plugins/developer", "description": "Developer workflow skills: commits, changelog, tests, debugging, architecture, QA" },
+    { "name": "idea-hunter", "source": "./plugins/idea-hunter", "description": "Find and validate microsaas ideas from Reddit pain, reviews, search demand and revenue proof" },
+    { "name": "marketing", "source": "./plugins/marketing", "description": "Marketing, positioning, copy, pricing, SEO and customer research skills" },
+    { "name": "product-manager", "source": "./plugins/product-manager", "description": "Product management skills: scope, requirements, specs, decisions, planning, tickets" },
+    { "name": "saas-builder", "source": "./plugins/saas-builder", "description": "SaaS build skills: auth, database, payments, deployment, security, launch" },
+    { "name": "startup", "source": "./plugins/startup", "description": "Startup strategy skills: lean startup, positioning, money models, diagnosis" },
+    { "name": "superpowers", "source": "./plugins/superpowers", "description": "General workflow skills: brainstorm, plan, research, grill, handoff, skill writing" },
+    { "name": "job-hunter", "source": "./plugins/job-hunter", "description": "Job application agent and skills" }
+  ]
+}

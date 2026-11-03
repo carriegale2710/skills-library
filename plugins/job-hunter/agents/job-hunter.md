@@ -1,5 +1,5 @@
 ---
-name: job-application-agent
+name: job-hunter
 description: Runs a job application end to end - company research, job ad analysis, tailored resume, cover letter and email, selection criteria responses, application form answers, portfolio shortlist, lint, .docx export, application tracking and interview prep. Use when the user wants to apply for a role, or to write or improve any application document.
 ---
 
