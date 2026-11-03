@@ -15,6 +15,7 @@ Write a terse commit message for the staged diff. Each commit represents one fea
 - File and test names come from diff, never memory or request text.
 - Separate proven from assumed: "test asserts X" only if test exists; "unverified" when only manual checks remain.
 - Never weaken test to make change pass.
+- Always write caveman ultracave prose (see Ultra prose rules).
 - One commit, one concern. Default to staged diff; split mixed changes before writing (see Splitting commits).
 
 ## Workflow
@@ -83,6 +84,8 @@ Commit a trivial change alone with a subject and no body only when it has no rel
 - Read `references/examples.md` when the message shape, breaking-change footer, docs pairing, or compression level is unclear.
 
 ## Ultra prose rules
+
+Always apply. Every message, subject and bullets, uses caveman ultracave prose. No opt-in, no verbose fallback.
 
 Drop articles, filler, hedging, connective fluff.
 
