@@ -78,7 +78,7 @@ Most tech adoption models show a smooth bell curve. **It's a lie.** The reality:
 | **THE CHASM** | Early Adopters ↔ Early Majority | Visionaries can't reference for pragmatists | **CATASTROPHIC** |
 | **Late crack** | Early Majority ↔ Late Majority | Product remains too hard for non-competent users | Medium |
 
-Detailed segment profiles: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/frameworks.md#detailed-segment-profiles).
+Detailed segment profiles: see [frameworks.md](references/frameworks.md#detailed-segment-profiles).
 
 ---
 
@@ -196,9 +196,9 @@ This is rhetorical - Moore's actual claim is a gradient, not a hard threshold. B
 
 ### Why Pragmatists Pick "Inferior" Products
 
-In every case, the "winner" had inferior generic product but superior whole product. See [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/frameworks.md#the-pragmatist-whole-product-examples-why-inferior-wins) for the full Intel/Oracle/Word/HP table.
+In every case, the "winner" had inferior generic product but superior whole product. See [frameworks.md](references/frameworks.md#the-pragmatist-whole-product-examples-why-inferior-wins) for the full Intel/Oracle/Word/HP table.
 
-Full whole-product framework, doughnut diagram, partner management: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/frameworks.md#whole-product-management).
+Full whole-product framework, doughnut diagram, partner management: see [frameworks.md](references/frameworks.md#whole-product-management).
 
 ---
 
@@ -244,7 +244,7 @@ We have assembled (key whole product features for your specific application).
 
 If you fail: word-of-mouth can't transmit; marketing scatters; R&D drifts; can't recruit partners; can't get experienced financing.
 
-Examples and the 4 stages of positioning through the lifecycle: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/frameworks.md#positioning-lifecycle---4-stages-through-talc).
+Examples and the 4 stages of positioning through the lifecycle: see [frameworks.md](references/frameworks.md#positioning-lifecycle---4-stages-through-talc).
 
 ---
 
@@ -272,7 +272,7 @@ After dominating the niche, transition to a more efficient fulfillment channel.
 
 *Moore's heuristic from consulting practice, not measured.
 
-Full distribution channel table (8 channels) and pricing detail: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/frameworks.md#distribution--pricing).
+Full distribution channel table (8 channels) and pricing detail: see [frameworks.md](references/frameworks.md#distribution--pricing).
 
 ---
 
@@ -381,7 +381,7 @@ The framework's core ideas are durable. Specific tactics, channels, and case stu
 - Direct sales force always preferred for chasm - now often a worse choice than self-serve PLG
 - TALC bell curve assumes single market - modern products cross multiple sub-chasms simultaneously
 
-Full modern-relevance breakdown: see [integration.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/integration.md#modern-relevance-1991--2026).
+Full modern-relevance breakdown: see [integration.md](references/integration.md#modern-relevance-1991--2026).
 
 ---
 
@@ -444,10 +444,10 @@ The opposite of crossing the chasm isn't "moving fast." It's **focus.**
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/frameworks.md)** - Detailed segment profiles, application vs platform distinction, target-customer characterization (Day in the Life), sub-segmentation, whole-product layers and management (8 tips), positioning lifecycle (4 stages), distribution channels (8), pricing detail
-- **[cases.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/cases.md)** - Documentum (regulatory affairs beachhead), Lotus Notes (Sheldon Laube/Price Waterhouse 10,000-seat commitment), Microsoft Exception ("Evel Knievel"), Silicon Graphics (Hollywood post-production), Quicken (paper checks/Tobias), Channelpoint (insurance agents), Wang/Lotus/Macintosh/Silicon Graphics death-by-tornado, Steve Jobs/Xerox PARC
-- **[examples.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/examples.md)** - Two-sentence positioning template, 9-factor target selection scoring sheet, doughnut diagram, target-customer characterization (5+3 elements), staircase vs hockey stick model
-- **[integration.md](Projects/skills-library/skills/experts/founder-strategist/crossing-the-chasm/integration.md)** - Beyond the Chasm (Inside the Tornado: bowling alley, tornado, Main Street), Pioneers vs Settlers org transition, Modern Relevance details, conflicts with Mom Test/Monetizing Innovation/$100M Offers/SPIN Selling
+- **[frameworks.md](references/frameworks.md)** - Detailed segment profiles, application vs platform distinction, target-customer characterization (Day in the Life), sub-segmentation, whole-product layers and management (8 tips), positioning lifecycle (4 stages), distribution channels (8), pricing detail
+- **[cases.md](references/cases.md)** - Documentum (regulatory affairs beachhead), Lotus Notes (Sheldon Laube/Price Waterhouse 10,000-seat commitment), Microsoft Exception ("Evel Knievel"), Silicon Graphics (Hollywood post-production), Quicken (paper checks/Tobias), Channelpoint (insurance agents), Wang/Lotus/Macintosh/Silicon Graphics death-by-tornado, Steve Jobs/Xerox PARC
+- **[examples.md](references/examples.md)** - Two-sentence positioning template, 9-factor target selection scoring sheet, doughnut diagram, target-customer characterization (5+3 elements), staircase vs hockey stick model
+- **[integration.md](references/integration.md)** - Beyond the Chasm (Inside the Tornado: bowling alley, tornado, Main Street), Pioneers vs Settlers org transition, Modern Relevance details, conflicts with Mom Test/Monetizing Innovation/$100M Offers/SPIN Selling
 
 ---
 

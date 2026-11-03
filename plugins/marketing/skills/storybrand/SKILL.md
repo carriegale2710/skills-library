@@ -202,7 +202,7 @@ SUCCESS:      If they do act: [specific positive outcomes].
 TRANSFORMATION: From [___] to [___].
 ```
 
-Detailed templates and worked examples: see [examples.md](Projects/skills-library/skills/experts/marketing-sales/storybrand/examples.md).
+Detailed templates and worked examples: see [examples.md](references/examples.md).
 
 ---
 
@@ -250,7 +250,7 @@ After completing the BrandScript, execute these five tasks to build a complete m
 4. **Collect Transformation Testimonials** - Not "great product!" testimonials. Before/after stories: "Before I was [problem]. After working with [brand], I am [transformation]."
 5. **Create a Referral System** - Give existing customers a reason and a mechanism to refer others.
 
-Detailed implementation guides: see [frameworks.md](Projects/skills-library/skills/experts/marketing-sales/storybrand/frameworks.md).
+Detailed implementation guides: see [frameworks.md](references/frameworks.md).
 
 ---
 
@@ -280,7 +280,7 @@ The SB7 Framework is best understood as a **messaging and copy framework**, not 
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/storybrand/frameworks.md)** - SB7 module deep dives, website framework deep dive, marketing roadmap deep dive, SB7 in company culture
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/storybrand/cases.md)** - Fitzii, Reed's Dairy, Kyle Shultz, Jenny Shih, Mavuno Church, Marie Mae Company, Tidal (failure case), CarMax, Starbucks, Apple, Dave Ramsey
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/storybrand/examples.md)** - BrandScript worksheet, one-liner worksheet, website wireframe, email drip templates, testimonial-collection template, messaging diagnostic
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/storybrand/integration.md)** - Integration and conflicts with Made to Stick, Obviously Awesome, Traction, $100M Offers, Mom Test, SPIN Selling, Monetizing Innovation, Influence
+- **[frameworks.md](references/frameworks.md)** - SB7 module deep dives, website framework deep dive, marketing roadmap deep dive, SB7 in company culture
+- **[cases.md](references/cases.md)** - Fitzii, Reed's Dairy, Kyle Shultz, Jenny Shih, Mavuno Church, Marie Mae Company, Tidal (failure case), CarMax, Starbucks, Apple, Dave Ramsey
+- **[examples.md](references/examples.md)** - BrandScript worksheet, one-liner worksheet, website wireframe, email drip templates, testimonial-collection template, messaging diagnostic
+- **[integration.md](references/integration.md)** - Integration and conflicts with Made to Stick, Obviously Awesome, Traction, $100M Offers, Mom Test, SPIN Selling, Monetizing Innovation, Influence

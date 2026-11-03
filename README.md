@@ -21,7 +21,6 @@ This makes the collection useful for:
 | [skills/](skills)               | Flat copy of every unique skill, as an easy-to-reach index. See [skills/README.md](skills/README.md). |
 | [orchestrators/](orchestrators) | Dynamic coordination files that route a task across skills.                                           |
 | [docs/](docs)                   | References, research notes, and the skills wishlist.                                                  |
-| [.gaia/](.gaia)                 | Plans and templates. See [.gaia/README.md](.gaia/README.md).                                          |
 | [AGENTS.md](AGENTS.md)          | Core rules for agents working in this repo.                                                           |
 | [ISSUES.md](ISSUES.md)          | Known issues.                                                                                         |
 

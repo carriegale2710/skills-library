@@ -33,7 +33,7 @@ Only ~5% of business cases include real WTP (willingness-to-pay) data. Most comp
 
 **Real examples:** Amazon Fire Phone (Feature Shock, $170M write-down), Audi Q7 (Minivation, missed €210M/yr), Kodak digital camera 1974 (Hidden Gem), Segway/Google Glass (Undead).
 
-Full case file: see [cases.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/cases.md).
+Full case file: see [cases.md](references/cases.md).
 
 ---
 
@@ -61,7 +61,7 @@ Full case file: see [cases.md](Projects/skills-library/skills/experts/founder-st
 | 8 | **Behavioral Pricing** | 6 tactics: compromise, anchoring, signals, razor-blade, pennies-a-day, thresholds. |
 | 9 | **Maintain Price Integrity** | Don't cut after launch. Use 3 nonprice actions first. |
 
-Full framework details with sub-frameworks, methods, and checklists: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/frameworks.md).
+Full framework details with sub-frameworks, methods, and checklists: see [frameworks.md](references/frameworks.md).
 
 ---
 
@@ -219,10 +219,10 @@ Before designing a new product:
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/frameworks.md)** - Full detail on all 9 rules, sub-frameworks, methods, and lists (10 WTP insights, 10 bundling insights, 6 post-launch tips, etc.)
-- **[cases.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/cases.md)** - Detailed case studies (Porsche, Dodge Dart, LinkedIn, Dräger, Uber, Swarovski, Optimizely, Innovative Pharma) plus failure exemplars
-- **[examples.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/examples.md)** - Worked examples: Pizza & Breadsticks bundling math, MOCA matrix, value-selling spreadsheet, 100-point goal allocation, BECAUSE test templates
-- **[integration.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/integration.md)** - Implementation roadmap (4 phases), 9 pitfalls, startup/SaaS adaptation, WTP research limitations, conflict resolution with Mom Test/$100M Offers/SPIN
+- **[frameworks.md](references/frameworks.md)** - Full detail on all 9 rules, sub-frameworks, methods, and lists (10 WTP insights, 10 bundling insights, 6 post-launch tips, etc.)
+- **[cases.md](references/cases.md)** - Detailed case studies (Porsche, Dodge Dart, LinkedIn, Dräger, Uber, Swarovski, Optimizely, Innovative Pharma) plus failure exemplars
+- **[examples.md](references/examples.md)** - Worked examples: Pizza & Breadsticks bundling math, MOCA matrix, value-selling spreadsheet, 100-point goal allocation, BECAUSE test templates
+- **[integration.md](references/integration.md)** - Implementation roadmap (4 phases), 9 pitfalls, startup/SaaS adaptation, WTP research limitations, conflict resolution with Mom Test/$100M Offers/SPIN
 
 ---
 
@@ -238,4 +238,4 @@ Before designing a new product:
 
 ## Caveat on WTP Research
 
-Stated WTP and revealed WTP differ. Customers predict their own behavior poorly in interviews. Treat WTP findings as a strong prior, not certainty. Validate with paid pilots, pre-orders, live A/B price tests, or money-back guarantees. See [integration.md](Projects/skills-library/skills/experts/founder-strategist/monetizing-innovation/integration.md#wtp-research-limitations-critical-caveat).
+Stated WTP and revealed WTP differ. Customers predict their own behavior poorly in interviews. Treat WTP findings as a strong prior, not certainty. Validate with paid pilots, pre-orders, live A/B price tests, or money-back guarantees. See [integration.md](references/integration.md#wtp-research-limitations-critical-caveat).

@@ -4,7 +4,7 @@
 
 A reference is supporting material that an agent consults when a skill, workflow, or system needs detail. It is not an invocable skill and should not compete with the consuming document as a second source of truth.
 
-See [`writing-for-agents.md`](Projects/skills-library/skills/superpowers/write-a-reference/references/writing-for-agents.md) for a deeper explaination.
+See [`writing-for-agents.md`](writing-for-agents.md) for a deeper explaination.
 
 ## Scope
 

@@ -357,10 +357,10 @@ Does this metric go up and to the right no matter what you do?
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/lean-startup/frameworks.md)** - Build-Measure-Learn detailed breakdown, leap-of-faith assumptions, MVP selection, innovation accounting milestones, vanity vs. actionable metrics, pivot catalog, engines of growth mechanics, small batches, Five Whys, innovation sandbox, adaptive organization
-- **[cases.md](Projects/skills-library/skills/experts/founder-strategist/lean-startup/cases.md)** - IMVU (founding story + continuous deployment), Zappos (Wizard of Oz MVP), Dropbox (video MVP), Groupon (MVP origin), Grockit (innovation accounting), Votizen (3 pivots with metrics), Wealthfront (platform pivot), QuickBooks (large company transformation), IGN Entertainment (Five Whys), SGW Designworks (physical product small batches)
-- **[examples.md](Projects/skills-library/skills/experts/founder-strategist/lean-startup/examples.md)** - MVP selection worksheet, innovation accounting setup template, pivot-or-persevere meeting template, engine of growth diagnostic, Five Whys session template, cohort analysis template, Build-Measure-Learn cycle planner
-- **[integration.md](Projects/skills-library/skills/experts/founder-strategist/lean-startup/integration.md)** - Relationship to Four Steps (Lean Startup is direct descendant), relationship to Mom Test (conversation technique for the Learn phase), relationship to Crossing the Chasm (Lean Startup stops at product/market fit), conflicts with $100M Offers (validation-first vs. offer-first), master sequence
+- **[frameworks.md](references/frameworks.md)** - Build-Measure-Learn detailed breakdown, leap-of-faith assumptions, MVP selection, innovation accounting milestones, vanity vs. actionable metrics, pivot catalog, engines of growth mechanics, small batches, Five Whys, innovation sandbox, adaptive organization
+- **[cases.md](references/cases.md)** - IMVU (founding story + continuous deployment), Zappos (Wizard of Oz MVP), Dropbox (video MVP), Groupon (MVP origin), Grockit (innovation accounting), Votizen (3 pivots with metrics), Wealthfront (platform pivot), QuickBooks (large company transformation), IGN Entertainment (Five Whys), SGW Designworks (physical product small batches)
+- **[examples.md](references/examples.md)** - MVP selection worksheet, innovation accounting setup template, pivot-or-persevere meeting template, engine of growth diagnostic, Five Whys session template, cohort analysis template, Build-Measure-Learn cycle planner
+- **[integration.md](references/integration.md)** - Relationship to Four Steps (Lean Startup is direct descendant), relationship to Mom Test (conversation technique for the Learn phase), relationship to Crossing the Chasm (Lean Startup stops at product/market fit), conflicts with $100M Offers (validation-first vs. offer-first), master sequence
 
 ---
 

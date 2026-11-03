@@ -35,7 +35,7 @@ Priority when rules conflict:
 
 Never follow a rule that requires invented behavior, tests, decisions, dates, or completion claims.
 
-See [`update-docs-reference.md`](update-docs-reference.md) for the full discovery checklist, conflict matrix, delegation contract, and examples.
+See [`update-docs-reference.md`](references/update-docs-reference.md) for the full discovery checklist, conflict matrix, delegation contract, and examples.
 
 ## Workflows
 

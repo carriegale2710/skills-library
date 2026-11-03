@@ -66,7 +66,7 @@ The 6+1 principles are humanity's most powerful heuristics - which makes them th
 
 Plus the bonus: **Contrast** (sequential items - second seems more different than it is).
 
-Detailed experiments and mechanics for each principle: see [principles.md](Projects/skills-library/skills/experts/marketing-sales/influence/principles.md).
+Detailed experiments and mechanics for each principle: see [principles.md](references/principles.md).
 
 ## The Inner-Choice Insight (Critical)
 
@@ -91,7 +91,7 @@ The persuasive moment isn't only when you make the ask. It's the moments BEFORE,
 - Anchoring high before asking small ($50K mentioned before $5K request)
 - Background music in stores (French wine sales up when French music plays)
 
-Detailed Pre-Suasion examples: see [pre-suasion.md](Projects/skills-library/skills/experts/marketing-sales/influence/pre-suasion.md).
+Detailed Pre-Suasion examples: see [pre-suasion.md](references/pre-suasion.md).
 
 ## How Principles Combine (Real Power)
 
@@ -269,7 +269,7 @@ In a world drowning in information, shortcuts will only matter more.
 
 ## Supporting Files
 
-- **[principles.md](Projects/skills-library/skills/experts/marketing-sales/influence/principles.md)** - Full 6+1 principles with experiments, sub-factors, manipulative tactics, defenses
-- **[pre-suasion.md](Projects/skills-library/skills/experts/marketing-sales/influence/pre-suasion.md)** - The 2016 update: framing, anchoring, priming questions, environmental cues
-- **[replication-notes.md](Projects/skills-library/skills/experts/marketing-sales/influence/replication-notes.md)** - Specific failed/contested studies in detail (Bickman correction, Hofling modern replications, Milgram variations, Genovese debunked, Romeo-Juliet, Bargh, ego depletion, Drive Carefully condition disambiguation)
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/influence/integration.md)** - How principles interact with Mom Test, SPIN Selling, $100M Offers, $100M Leads, Obviously Awesome, Crossing the Chasm, Blue Ocean Strategy, Monetizing Innovation; honest conflicts
+- **[principles.md](references/principles.md)** - Full 6+1 principles with experiments, sub-factors, manipulative tactics, defenses
+- **[pre-suasion.md](references/pre-suasion.md)** - The 2016 update: framing, anchoring, priming questions, environmental cues
+- **[replication-notes.md](references/replication-notes.md)** - Specific failed/contested studies in detail (Bickman correction, Hofling modern replications, Milgram variations, Genovese debunked, Romeo-Juliet, Bargh, ego depletion, Drive Carefully condition disambiguation)
+- **[integration.md](references/integration.md)** - How principles interact with Mom Test, SPIN Selling, $100M Offers, $100M Leads, Obviously Awesome, Crossing the Chasm, Blue Ocean Strategy, Monetizing Innovation; honest conflicts

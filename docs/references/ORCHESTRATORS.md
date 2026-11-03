@@ -4,7 +4,7 @@ An orchestrator is a dynamic coordinator that evaluates input, chooses which sub
 
 Whereas a workflow follows a fixed, code-defined sequence, an orchestrator dynamically chooses the next step and delegates work turn-by-turn.
 
-> Difference from workflows: workflows follow a fixed sequence; orchestrators decide dynamically based on the current state and context. See the [Workflows vs Orchestrators](../workflows-vs-orchestrators.md) guide for a detailed comparison.
+> Difference from workflows: workflows follow a fixed sequence; orchestrators decide dynamically based on the current state and context. See the [Workflows vs Orchestrators](workflows-vs-orchestrators.md) guide for a detailed comparison.
 
 ## Use an orchestrator when
 

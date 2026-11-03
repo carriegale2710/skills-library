@@ -102,7 +102,7 @@ If anyone can compare your offer to a competitor's, you don't have a Grand Slam 
 | 5 | Trim and stack (value-cost matrix) | 6-10 strong components |
 | 6 | Add enhancements | Guarantees, scarcity, urgency, bonuses |
 
-Detail in **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/100m-offers/frameworks.md)**.
+Detail in **[frameworks.md](references/frameworks.md)**.
 
 ### Step 1: Dream Outcome Format
 
@@ -129,7 +129,7 @@ Hormozi's wording for environmental is "External" - same concept.
 
 Score each component on Value to customer (1-10) and Cost to deliver (1-10). High-value, low-cost components stay in the core offer; mid-value components move to bonuses; low-value or high-cost components get cut. Target 6-10 strong components total.
 
-Full value-cost matrix and scoring: see [frameworks.md](Projects/skills-library/skills/experts/marketing-sales/100m-offers/frameworks.md#step-5-trim--stack-value-cost-matrix).
+Full value-cost matrix and scoring: see [frameworks.md](references/frameworks.md#step-5-trim--stack-value-cost-matrix).
 
 ## The Stacking Principle
 
@@ -250,7 +250,7 @@ If they don't, the offer needs more work.
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/100m-offers/frameworks.md)** - Detailed step-by-step processes, delivery vehicle dimensions, naming formula (MAGIC), enhancements (guarantees, scarcity, urgency, bonuses)
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/100m-offers/cases.md)** - Hormozi's gym case study with verification notes, before/after examples
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/100m-offers/examples.md)** - Bundle naming patterns, one-page offer template, real offer examples
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/100m-offers/integration.md)** - How offers connect to mom-test (input) and 100m-leads (output); conflicts with monetizing-innovation pricing approaches and how the offer feeds money-models (offer sequencing)
+- **[frameworks.md](references/frameworks.md)** - Detailed step-by-step processes, delivery vehicle dimensions, naming formula (MAGIC), enhancements (guarantees, scarcity, urgency, bonuses)
+- **[cases.md](references/cases.md)** - Hormozi's gym case study with verification notes, before/after examples
+- **[examples.md](references/examples.md)** - Bundle naming patterns, one-page offer template, real offer examples
+- **[integration.md](references/integration.md)** - How offers connect to mom-test (input) and 100m-leads (output); conflicts with monetizing-innovation pricing approaches and how the offer feeds money-models (offer sequencing)

@@ -242,7 +242,7 @@ Made to Stick is a **message design toolkit**. It helps you craft individual mes
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/made-to-stick/frameworks.md)** - SUCCESs principle deep dives, Message Clinic framework, the Villain Lineup (Curse of Knowledge variants)
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/made-to-stick/cases.md)** - Cases organized by principle: Southwest, Clinton '92, Palm Pilot, Nordstrom, Jane Elliott, Boeing 727, Pam Laffin, Safexpress, Rokia study, Don't Mess with Texas, Jared/Subway, Stephen Denning/World Bank
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/made-to-stick/examples.md)** - SUCCESs audit worksheet, message clinic template, Commander's Intent worksheet, statistic-reframing worksheet, story-spotting interview templates
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/made-to-stick/integration.md)** - Integration and conflicts with StoryBrand, Obviously Awesome, Traction, $100M Offers, Lean Startup, SPIN Selling, Mom Test, Influence, Four Steps
+- **[frameworks.md](references/frameworks.md)** - SUCCESs principle deep dives, Message Clinic framework, the Villain Lineup (Curse of Knowledge variants)
+- **[cases.md](references/cases.md)** - Cases organized by principle: Southwest, Clinton '92, Palm Pilot, Nordstrom, Jane Elliott, Boeing 727, Pam Laffin, Safexpress, Rokia study, Don't Mess with Texas, Jared/Subway, Stephen Denning/World Bank
+- **[examples.md](references/examples.md)** - SUCCESs audit worksheet, message clinic template, Commander's Intent worksheet, statistic-reframing worksheet, story-spotting interview templates
+- **[integration.md](references/integration.md)** - Integration and conflicts with StoryBrand, Obviously Awesome, Traction, $100M Offers, Lean Startup, SPIN Selling, Mom Test, Influence, Four Steps

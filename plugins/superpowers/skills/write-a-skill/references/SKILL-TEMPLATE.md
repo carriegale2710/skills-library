@@ -99,7 +99,7 @@ skill-name/
 
 - Target: under 2000 words
 - Move detailed reference material to `references/` folder
-- Reference external files inline: "See [references/leading-words.md](references/leading-words.md) for details"
+- Reference external files inline: "See `references/leading-words.md` for details"
 
 **Example pattern:**
 
@@ -109,7 +109,7 @@ skill-name/
 - **Assumption**: A statement taken to be true without verification.
 - **High-risk assumption**: An assumption that would invalidate your approach if false.
 
-See [references/leading-words.md](references/leading-words.md) for extended definitions and examples.
+See `references/leading-words.md` for extended definitions and examples.
 ```
 
 **When to disclose:**

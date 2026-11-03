@@ -419,10 +419,10 @@ Has CPA risen above LTV?
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/traction/frameworks.md)** - Bullseye Framework deep dive, critical path methodology, channel testing protocol, each of the 19 channels with detailed tactics and mechanics, phase-channel matching, Law of Shitty Click-Throughs
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/traction/cases.md)** - Mint ($170M acquisition via blog targeting), Half.com (unconventional PR), DuckDuckGo (billboard + community), Dollar Shave Club ($5K video), JBoss ($350M acquisition via sales funnel), HubSpot (content + engineering as marketing), Dropbox (viral), Twitter SXSW (offline events), Evernote (existing platforms), WePay (publicity stunt)
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/traction/examples.md)** - Bullseye brainstorm worksheet, channel test template, critical path planner, CPA/LTV calculator, channel scoring matrix, viral coefficient calculator, end-to-end example startup
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/traction/integration.md)** - Relationship to Lean Startup (traction testing IS Build-Measure-Learn for growth), relationship to Four Steps (Customer Creation = Traction), relationship to $100M Leads (tactical overlap), relationship to Crossing the Chasm (beachhead channel selection), master sequence
+- **[frameworks.md](references/frameworks.md)** - Bullseye Framework deep dive, critical path methodology, channel testing protocol, each of the 19 channels with detailed tactics and mechanics, phase-channel matching, Law of Shitty Click-Throughs
+- **[cases.md](references/cases.md)** - Mint ($170M acquisition via blog targeting), Half.com (unconventional PR), DuckDuckGo (billboard + community), Dollar Shave Club ($5K video), JBoss ($350M acquisition via sales funnel), HubSpot (content + engineering as marketing), Dropbox (viral), Twitter SXSW (offline events), Evernote (existing platforms), WePay (publicity stunt)
+- **[examples.md](references/examples.md)** - Bullseye brainstorm worksheet, channel test template, critical path planner, CPA/LTV calculator, channel scoring matrix, viral coefficient calculator, end-to-end example startup
+- **[integration.md](references/integration.md)** - Relationship to Lean Startup (traction testing IS Build-Measure-Learn for growth), relationship to Four Steps (Customer Creation = Traction), relationship to $100M Leads (tactical overlap), relationship to Crossing the Chasm (beachhead channel selection), master sequence
 
 ---
 

@@ -18,7 +18,7 @@ You have crisp evaluation metrics and known, repeatable steps.The process requir
 
 ## Difference from orchestrators
 
-Whereas an orchestrator dynamically chooses the next step and delegates work turn-by-turn, a workflow follows a fixed, code-defined sequence. See the [Workflows vs Orchestrators](../../docs/workflows-vs-orchestrators.md) guide for a detailed comparison.
+Whereas an orchestrator dynamically chooses the next step and delegates work turn-by-turn, a workflow follows a fixed, code-defined sequence. See the [Workflows vs Orchestrators](workflows-vs-orchestrators.md) guide for a detailed comparison.
 
 ## Core characteristics
 

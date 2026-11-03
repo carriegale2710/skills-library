@@ -29,10 +29,10 @@ They're complementary, not competing.
 - The framework is hard to falsify: when BOS-cited companies fail, the response is "they stopped applying it" or "it wasn't really blue ocean." Use it predictively with care.
 - Bratton/NYPD case is contested (broken-windows critiques, Compstat manipulation). Use as illustrative, not history.
 
-Full framework details: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/frameworks.md).
-Case studies with decline caveats: see [cases.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/cases.md).
-Worked examples: see [examples.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/examples.md).
-Integrations and conflicts: see [integration.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/integration.md).
+Full framework details: see [frameworks.md](references/frameworks.md).
+Case studies with decline caveats: see [cases.md](references/cases.md).
+Worked examples: see [examples.md](references/examples.md).
+Integrations and conflicts: see [integration.md](references/integration.md).
 
 ## The Core Insight
 
@@ -57,7 +57,7 @@ Integrations and conflicts: see [integration.md](Projects/skills-library/skills/
 
 Three characteristics of a strong strategy curve: **Focus, Divergence, Compelling Tagline**.
 
-ERRC mechanics in detail: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/frameworks.md).
+ERRC mechanics in detail: see [frameworks.md](references/frameworks.md).
 
 ## The Six Paths to Blue Oceans
 
@@ -70,7 +70,7 @@ ERRC mechanics in detail: see [frameworks.md](Projects/skills-library/skills/exp
 | 5 | Functional vs emotional appeal | Switch the appeal type |
 | 6 | Trends | What's decisive, irreversible, with clear trajectory? |
 
-Cases for each path (with decline notes): see [cases.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/cases.md).
+Cases for each path (with decline notes): see [cases.md](references/cases.md).
 
 ## Strategic Sequence (Test Before Launch)
 
@@ -87,7 +87,7 @@ Buyer Utility Map = 6 stages × 6 utility levers = 36 cells. Find empty cells wh
 
 Three stakeholder hurdles: employees (job security), partners (disrupted relationships), public (ethical/safety). Skip any one and execution dies.
 
-Full Buyer Utility Map and Price Corridor: see [frameworks.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/frameworks.md).
+Full Buyer Utility Map and Price Corridor: see [frameworks.md](references/frameworks.md).
 
 ## Three Tiers of Noncustomers
 
@@ -198,7 +198,7 @@ These cases are taught as canonical wins. Many later collapsed. Cite carefully:
 - **NTT DoCoMo i-mode** - Path 1 alternatives. (Note: crushed by iPhone post-2007.)
 - **Southwest Airlines** - Tagline iconic. (Note: ongoing operational/competitive struggles.)
 
-Of ~12 major cases, only ~3 (Novo Nordisk, Bloomberg, Salesforce) remain solidly successful. Detailed cases with full decline analysis: see [cases.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/cases.md).
+Of ~12 major cases, only ~3 (Novo Nordisk, Bloomberg, Salesforce) remain solidly successful. Detailed cases with full decline analysis: see [cases.md](references/cases.md).
 
 ## Key Critical Caveats
 
@@ -243,7 +243,7 @@ Worth asking every few years - even when the answer is "no, this game is worth p
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/frameworks.md)** - Strategy Canvas in depth, ERRC mechanics, Buyer Utility Map (6×6), Price Corridor of the Mass, Pioneer-Migrator-Settler map, BOI Index, Imitation barriers, 4-step Visualizing Strategy
-- **[cases.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/cases.md)** - All cases by Path, with inline decline caveats, plus Bratton/NYPD historical contestation, Elco Plant detail
-- **[examples.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/examples.md)** - Worked ERRC tables (Cirque, Yellow Tail), tagline examples, value curve drawings, Strategic Sequence walkthroughs
-- **[integration.md](Projects/skills-library/skills/experts/founder-strategist/blue-ocean-strategy/integration.md)** - Conflicts/integrations with Mom Test, Crossing the Chasm, Monetizing Innovation, $100M Offers, Money Models, $100M Leads, SPIN Selling, Obviously Awesome, Influence
+- **[frameworks.md](references/frameworks.md)** - Strategy Canvas in depth, ERRC mechanics, Buyer Utility Map (6×6), Price Corridor of the Mass, Pioneer-Migrator-Settler map, BOI Index, Imitation barriers, 4-step Visualizing Strategy
+- **[cases.md](references/cases.md)** - All cases by Path, with inline decline caveats, plus Bratton/NYPD historical contestation, Elco Plant detail
+- **[examples.md](references/examples.md)** - Worked ERRC tables (Cirque, Yellow Tail), tagline examples, value curve drawings, Strategic Sequence walkthroughs
+- **[integration.md](references/integration.md)** - Conflicts/integrations with Mom Test, Crossing the Chasm, Monetizing Innovation, $100M Offers, Money Models, $100M Leads, SPIN Selling, Obviously Awesome, Influence

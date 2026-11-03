@@ -194,10 +194,10 @@ Even enthusiastic, paying customers can derail you:
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/mom-test/frameworks.md)** - VFWPA email template, ACA framework, deeper question hierarchy, finding-conversations playbook
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/mom-test/cases.md)** - Earlyvangelist concept (Steve Blank's term, used by Fitzpatrick), case-style examples
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/mom-test/examples.md)** - Note-taking symbols, full email scripts, conversation walk-throughs
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/mom-test/integration.md)** - How Mom Test feeds 100m-offers, 100m-leads, spin-selling, obviously-awesome; conflicts with hypothesis-testing approaches
+- **[frameworks.md](references/frameworks.md)** - VFWPA email template, ACA framework, deeper question hierarchy, finding-conversations playbook
+- **[cases.md](references/cases.md)** - Earlyvangelist concept (Steve Blank's term, used by Fitzpatrick), case-style examples
+- **[examples.md](references/examples.md)** - Note-taking symbols, full email scripts, conversation walk-throughs
+- **[integration.md](references/integration.md)** - How Mom Test feeds 100m-offers, 100m-leads, spin-selling, obviously-awesome; conflicts with hypothesis-testing approaches
 
 ## The Nuance
 

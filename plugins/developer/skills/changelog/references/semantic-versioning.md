@@ -1,10 +1,10 @@
 # Reference for Semantic Versioning
 
-> Condensed from [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) for the `changelog` skill. Changelog format and entry style live in [keep-a-changelog.md](keep-a-changelog.md).
+> Condensed from [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) for the `changelog` skill. Changelog format and entry style live in [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## Purpose and scope
 
-Use when the `changelog` skill must pick a version number, decide whether a change is breaking, or order version headings. In scope: meaning of MAJOR.MINOR.PATCH, bump rules, frozen releases, pre-release ordering. Out of scope: changelog entry format (`keep-a-changelog.md`), git tag and commit naming, release tooling.
+Use when the `changelog` skill must pick a version number, decide whether a change is breaking, or order version headings. In scope: meaning of MAJOR.MINOR.PATCH, bump rules, frozen releases, pre-release ordering. Out of scope: changelog entry format ([Keep a Changelog](https://keepachangelog.com/en/1.1.0/)), git tag and commit naming, release tooling.
 
 Keywords: semver, version bump, breaking change, deprecation, pre-release, build metadata, 0.y.z, 1.0.0, unreleased.
 

@@ -83,13 +83,13 @@ Every solved problem surfaces a new problem, and each new problem is a legitimat
 | **II - Get More Cash** | Extract more from those same customers, faster | Upsell + Downsell |
 | **III - Get The Most Cash** | Maximize lifetime spend, add recurring revenue | Continuity |
 
-Stage II bundles two offer types; the 4-step build in **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/money-models/frameworks.md)** treats them as separate steps - same model, finer grain.
+Stage II bundles two offer types; the 4-step build in **[frameworks.md](references/frameworks.md)** treats them as separate steps - same model, finer grain.
 
 Build them **one at a time, in order**. Never bootstrap a finished four-stage model from zero - it collapses on top of the business. Get customers reliably first, then make them pay for themselves, then pay for the next customer, then maximize their lifetime value.
 
 ## The Four Offer Types
 
-An offer is the unit; the money model is the sequence of units. Each type has named plays (full mechanics in **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/money-models/frameworks.md)**).
+An offer is the unit; the money model is the sequence of units. Each type has named plays (full mechanics in **[frameworks.md](references/frameworks.md)**).
 
 | Type | Job | Named plays | Use each when... |
 |------|-----|-------------|------------------|
@@ -179,7 +179,7 @@ Money models evolve; they aren't built finished. Hormozi's own businesses all st
    possible to print money
 ```
 
-Each stage funds the next. As the model starts working, the *business* starts breaking - operational strain is the expected sign you've won; the fix is a strong operator, not a slower model. Detailed 4-step build in **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/money-models/frameworks.md)**.
+Each stage funds the next. As the model starts working, the *business* starts breaking - operational strain is the expected sign you've won; the fix is a strong operator, not a slower model. Detailed 4-step build in **[frameworks.md](references/frameworks.md)**.
 
 ## Rules of Thumb
 
@@ -226,7 +226,7 @@ You have a working money model when:
 | **Pure enterprise / long sales cycles** | 30-day payback and rapid downsell laddering don't fit 9-month committee deals. See **spin-selling**. |
 | **Deep-tech / hardware with long build** | Cash timing is dominated by COGS and lead times, not offer sequencing. |
 | **Trust-first / regulated categories** | Penalty and auto-renew mechanics create legal and reputational risk that outweighs the cash gain. |
-| **One-time, genuinely non-repeatable purchase** | No continuity to add; maximize the single basket (see Boot Factory in **[cases.md](Projects/skills-library/skills/experts/founder-strategist/money-models/cases.md)**). |
+| **One-time, genuinely non-repeatable purchase** | No continuity to add; maximize the single basket (see Boot Factory in **[cases.md](references/cases.md)**). |
 
 ## The Test
 
@@ -248,7 +248,7 @@ Attraction offer collects:        $ ____
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/founder-strategist/money-models/frameworks.md)** - Every named offer play with its steps, formulas, and worked math: the 4-step build, the 7-step payment-plan ladder, giveaway 6-step, decoy, anchor 5-step, rollover 4x rule, trial-with-penalty 5-step, Profitwell churn data, continuity pricing multiples.
-- **[cases.md](Projects/skills-library/skills/experts/founder-strategist/money-models/cases.md)** - The book's case studies with real numbers (storage unit, gym launch, Boot Factory, suit shop, Gym Launch full model) and honest verification notes.
-- **[examples.md](Projects/skills-library/skills/experts/founder-strategist/money-models/examples.md)** - Fill-in worksheet, scripts, a modern worked example (AI SaaS / agency), payment-plan ladder template, continuity pricing calculator.
-- **[integration.md](Projects/skills-library/skills/experts/founder-strategist/money-models/integration.md)** - Where money-models sits in the Hormozi sequence and how it combines with (and conflicts with) offers, leads, monetizing-innovation, influence, spin-selling, and lean-startup.
+- **[frameworks.md](references/frameworks.md)** - Every named offer play with its steps, formulas, and worked math: the 4-step build, the 7-step payment-plan ladder, giveaway 6-step, decoy, anchor 5-step, rollover 4x rule, trial-with-penalty 5-step, Profitwell churn data, continuity pricing multiples.
+- **[cases.md](references/cases.md)** - The book's case studies with real numbers (storage unit, gym launch, Boot Factory, suit shop, Gym Launch full model) and honest verification notes.
+- **[examples.md](references/examples.md)** - Fill-in worksheet, scripts, a modern worked example (AI SaaS / agency), payment-plan ladder template, continuity pricing calculator.
+- **[integration.md](references/integration.md)** - Where money-models sits in the Hormozi sequence and how it combines with (and conflicts with) offers, leads, monetizing-innovation, influence, spin-selling, and lean-startup.

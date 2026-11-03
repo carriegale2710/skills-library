@@ -53,7 +53,7 @@ Before finalizing any commit, update `docs/CHANGELOG.md` to record:
 
 ## Workflows
 
-1. Follow Keep a Changelog format. Refer to `references/keep-a-changelog.md` for writing principles and detailed examples of a changelog.
+1. Follow Keep a Changelog format. Refer to [keepachangelog.com](https://keepachangelog.com/en/1.1.0/) for writing principles and detailed examples of a changelog.
 2. Use Semantic versioning for headings. Group changes under the current version heading. Refer to `references/semantic-versioning.md` for what semantic versioning is and how to follow it.
 3. Add entries for each notable change: Added, Changed, Fixed, Removed, Deprecated.
 4. A commit that only adds tests for unbuilt behavior says so explicitly; do not claim behavior that does not exist.

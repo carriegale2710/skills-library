@@ -1,6 +1,6 @@
 # Reference for Changelog Purpose
 
-> Supporting reference for the `changelog` skill. Explains why `docs/CHANGELOG.md` exists and what belongs in it. Entry format, categories, and version numbering live in [keep-a-changelog.md](keep-a-changelog.md) and [semantic-versioning.md](semantic-versioning.md).
+> Supporting reference for the `changelog` skill. Explains why `docs/CHANGELOG.md` exists and what belongs in it. Entry format, categories, and version numbering live in [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [semantic-versioning.md](semantic-versioning.md).
 
 ## Purpose and scope
 

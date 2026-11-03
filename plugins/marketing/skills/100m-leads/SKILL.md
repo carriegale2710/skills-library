@@ -76,7 +76,7 @@ The lead magnet solves one problem, which reveals the NEXT problem your core off
 
 ## The Core Four Channels (Summary)
 
-Detailed playbooks in **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/frameworks.md)**.
+Detailed playbooks in **[frameworks.md](references/frameworks.md)**.
 
 ### 1. Warm Outreach (Free, 1-to-1)
 Start here. Phone contacts, email, social media followers = your warm list. Personalize. Use ACA framework (Acknowledge, Compliment, Ask). Ask for referrals.
@@ -88,7 +88,7 @@ Build an audience. Hook-Retain-Reward. Give-Give-Give-Ask pattern. Don't pitch u
 Reach strangers. Personalization + Big Fast Value. Volume + multi-channel follow-up. List of 1000+ to start.
 
 ### 4. Run Paid Ads (Paid, 1-to-Many)
-Trade money for attention at scale. Three phases: Track Money → Lose Money → Print Money. Use lookalike + factor targeting. Detailed math in **[paid-ads.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/paid-ads.md)**.
+Trade money for attention at scale. Three phases: Track Money → Lose Money → Print Money. Use lookalike + factor targeting. Detailed math in **[paid-ads.md](references/paid-ads.md)**.
 
 ## The Money Math: LTGP:CAC
 
@@ -156,7 +156,7 @@ Once YOU can get leads, get others to do it.
 | **Agencies** | Marketing firms | Pay for results |
 | **Affiliates** | Partners with audiences | Commission structure |
 
-Detailed playbook in **[lead-getters.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/lead-getters.md)**.
+Detailed playbook in **[lead-getters.md](references/lead-getters.md)**.
 
 ## Warning Signs
 
@@ -211,13 +211,13 @@ Detailed playbook in **[lead-getters.md](Projects/skills-library/skills/experts/
 
 ## The Mindset (Many-Sided Die)
 
-You have a die with unknown sides - one green, the rest red. Roll green and a red turns green; roll red and nothing happens. The only way to lose is to stop rolling. More rolls, more greens; persistence is mathematically guaranteed to work. Full breakdown with the advertising application in **[cases.md → The Many-Sided Die](Projects/skills-library/skills/experts/marketing-sales/100m-leads/cases.md)**.
+You have a die with unknown sides - one green, the rest red. Roll green and a red turns green; roll red and nothing happens. The only way to lose is to stop rolling. More rolls, more greens; persistence is mathematically guaranteed to work. Full breakdown with the advertising application in **[cases.md → The Many-Sided Die](references/cases.md)**.
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/frameworks.md)** - Detailed Core Four channel playbooks (warm, content, cold)
-- **[paid-ads.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/paid-ads.md)** - Paid advertising deep dive (targeting, callouts, budgets, metrics, three phases)
-- **[lead-getters.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/lead-getters.md)** - Referral programs, hiring, agencies, affiliates, the 3Ds training framework
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/cases.md)** - Roadmap from $0 to $100M (7 levels), case-style examples, decade-in-a-page
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/examples.md)** - Email templates, ad scripts, content hooks, checklists
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/100m-leads/integration.md)** - How leads connects to mom-test, 100m-offers, influence; conflicts with crossing-the-chasm channel choice; money model sets the affordable CAC
+- **[frameworks.md](references/frameworks.md)** - Detailed Core Four channel playbooks (warm, content, cold)
+- **[paid-ads.md](references/paid-ads.md)** - Paid advertising deep dive (targeting, callouts, budgets, metrics, three phases)
+- **[lead-getters.md](references/lead-getters.md)** - Referral programs, hiring, agencies, affiliates, the 3Ds training framework
+- **[cases.md](references/cases.md)** - Roadmap from $0 to $100M (7 levels), case-style examples, decade-in-a-page
+- **[examples.md](references/examples.md)** - Email templates, ad scripts, content hooks, checklists
+- **[integration.md](references/integration.md)** - How leads connects to mom-test, 100m-offers, influence; conflicts with crossing-the-chasm channel choice; money model sets the affordable CAC

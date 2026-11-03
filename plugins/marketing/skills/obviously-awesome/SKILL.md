@@ -54,7 +54,7 @@ Alternatives → Attributes → Value → Target Market → Category → (Trends
 
 Why traditional "For X who Y, our product is a Z that does W unlike V" template fails: assumes you already know category and competitors. For novel products, those are exactly what you're trying to figure out.
 
-Detailed component definitions: see [frameworks.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/frameworks.md).
+Detailed component definitions: see [frameworks.md](references/frameworks.md).
 
 ## The 10-Step Process (High Level)
 
@@ -71,7 +71,7 @@ Detailed component definitions: see [frameworks.md](Projects/skills-library/skil
 | 9 | Layer on a trend (optional) |
 | 10 | Capture positioning so it can be shared |
 
-Step-by-step detail with team formation, baggage handling, value-theme clustering, segmentation: see [frameworks.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/frameworks.md).
+Step-by-step detail with team formation, baggage handling, value-theme clustering, segmentation: see [frameworks.md](references/frameworks.md).
 
 ## The Circular Dependency (Why Step 1 Matters)
 
@@ -141,7 +141,7 @@ Does an existing category fit?
 
 Dunford's hypothetical: take Coke and reposition for the pet-treat subsegment ("tastes like bones"). Different competitors, different value, different category - same product. Sometimes a subsegment IS available; you just have to look creatively.
 
-Wattpad case (often omitted): repositioned a writing-platform product after finding a subset of users using it differently. See [cases.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/cases.md).
+Wattpad case (often omitted): repositioned a writing-platform product after finding a subset of users using it differently. See [cases.md](references/cases.md).
 
 ## Decision Trees
 
@@ -263,7 +263,7 @@ Most companies let positioning happen accidentally. Dunford's contribution: **po
 
 ## Supporting Files
 
-- **[frameworks.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/frameworks.md)** - 10-step process detail (team formation, baggage, attributes/value mapping, segmentation), positioning canvas, traditional template critique
-- **[cases.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/cases.md)** - Janna Systems, Eloqua, Wave, Arm & Hammer, Wattpad, Redgate, Bic for Her, Long Blockchain
-- **[examples.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/examples.md)** - Worked positioning canvases, sales-story templates, value-theme clustering examples, "so what?" tests
-- **[integration.md](Projects/skills-library/skills/experts/marketing-sales/obviously-awesome/integration.md)** - Integration and conflicts with Mom Test, Crossing the Chasm, Blue Ocean Strategy, Monetizing Innovation, $100M Offers, $100M Money Models, $100M Leads, SPIN Selling, Influence
+- **[frameworks.md](references/frameworks.md)** - 10-step process detail (team formation, baggage, attributes/value mapping, segmentation), positioning canvas, traditional template critique
+- **[cases.md](references/cases.md)** - Janna Systems, Eloqua, Wave, Arm & Hammer, Wattpad, Redgate, Bic for Her, Long Blockchain
+- **[examples.md](references/examples.md)** - Worked positioning canvases, sales-story templates, value-theme clustering examples, "so what?" tests
+- **[integration.md](references/integration.md)** - Integration and conflicts with Mom Test, Crossing the Chasm, Blue Ocean Strategy, Monetizing Innovation, $100M Offers, $100M Money Models, $100M Leads, SPIN Selling, Influence

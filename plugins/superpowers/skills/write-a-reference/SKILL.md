@@ -32,7 +32,7 @@ Create one focused, retrievable Markdown reference that strengthens an existing 
 
 ## Reference
 
-Read [`writing-good-references.md`](writing-good-references.md) for the reference structure, retrieval design, provenance rules, pressure checks, and review checklist.
+Read [`writing-good-references.md`](references/writing-good-references.md) for the reference structure, retrieval design, provenance rules, pressure checks, and review checklist.
 
 ## Output contract
 

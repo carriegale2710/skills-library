@@ -38,4 +38,4 @@ When writing the code, be careful of structuring your CSS selector specificities
 
 Try to do a lot of this planning and iteration in your thinking, and only show ideas to the user when you have higher confidence it'll delight them.
 
-> **Extended reference:** See [frontend-design-reference.md](frontend-design-reference.md) for in-depth guidance on restraint, self-critique, and writing copy in design.
+> **Extended reference:** See [frontend-copywriting.md](frontend-copywriting.md) for in-depth guidance on restraint, self-critique, and writing copy in design.
