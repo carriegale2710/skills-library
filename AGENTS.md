@@ -5,7 +5,7 @@
 1. Read the request.
 2. Match it against skill `description` fields.
 3. Use one direct skill for simple work.
-4. Use a listed workflow (see `skills/workflows/README.md`) for multi-step work.
+4. Use a listed workflow (see `docs/references/WORKFLOWS.md`) for multi-step work.
 5. Ask a clarification question only if a missing answer would materially change the result.
 6. Preserve facts, assumptions, uncertainty, and decision status.
 
