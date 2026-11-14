@@ -4,6 +4,8 @@ description: This skill should be used when the user asks to "keep it simple", "
 user-invocable: true
 ---
 
+<!-- test -->
+
 # Simplify Skill
 
 ## Goal
