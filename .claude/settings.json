@@ -1,9 +1,3 @@
-// {
-//   "enabledPlugins": {
-//     "skills-library@<marketplace>": false,
-//     "caveman@<marketplace>": false,
-//     "ponytail@<marketplace>": false,
-//     "superpowers@<marketplace>": false,
-//     "engineering@<marketplace>": false
-//   }
-// }
+{
+  "enabledPlugins": {}
+}

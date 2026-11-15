@@ -41,7 +41,7 @@ Before recommending, confirm:
 
 ## Output
 
-End every session with the decision brief: recommended wedge, why now, buyer, trigger, painful job, current workaround, incumbent constraint, proposed outcome, differentiation, expansion path, evidence strength, biggest unknown, cheapest next test, kill criteria.
+End every session with the decision brief: recommended wedge (or "no wedge qualifies" when evidence is insufficient or all candidates are killed), why now, buyer, trigger, painful job, current workaround, incumbent constraint, proposed outcome, differentiation, expansion path, evidence strength, biggest unknown, cheapest next test, kill criteria, next research or decision step (the action that resolves the biggest unknown; if no wedge qualifies, the research to run or the pivot/stop decision to make).
 
 Full response also includes: evidence summary, wedge candidates, ranked shortlist, open questions.
 
