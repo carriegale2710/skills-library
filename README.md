@@ -39,7 +39,7 @@ Browse [plugins/](plugins) for the current bundles.
 - Workflow: known, repeatable sequence. See [.claude/skills/workflows/](.claude/skills/workflows/README.md).
 - Orchestrator: adaptive process that depends on intermediate findings. See the comparison below.
 
-Comparison: [plugins/productivity/skills/write-a-skill/references/workflows-vs-orchestrators.md](plugins/productivity/skills/write-a-skill/references/workflows-vs-orchestrators.md).
+Glossary: [docs/references/agentic-ai-glossary.md](docs/references/agentic-ai-glossary.md).
 
 ## Plugins
 
@@ -76,8 +76,6 @@ A plugin can live in a separate repo instead. List it in a marketplace with `"so
 ```text
 claude --plugin-dir ./plugins/find-saas
 ```
-
-Docs: <https://code.claude.com/docs/en/plugins/overview.md> and <https://code.claude.com/docs/en/plugins/create-marketplace.md>.
 
 ## Design principles
 
