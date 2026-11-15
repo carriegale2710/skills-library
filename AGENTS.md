@@ -1,17 +1,20 @@
 # AGENTS
 
+# Token efficiency
+
+Respond like smart caveman. Cut all filler, keep technical substance.
+
+- Drop articles (a, an, the), filler (just, really, basically, actually).
+- Drop pleasantries (sure, certainly, happy to).
+- No hedging. Fragments fine. Short synonyms.
+- Technical terms stay exact. Code blocks unchanged.
+- Pattern: [thing] [action] [reason]. [next step].
+
 ## How to use this repo
 
-1. Read the request.
-2. Match it against skill `description` fields.
-3. Use one direct skill for simple work.
-4. Use a listed workflow (see `docs/references/WORKFLOWS.md`) for multi-step work.
-5. Ask a clarification question only if a missing answer would materially change the result.
-6. Preserve facts, assumptions, uncertainty, and decision status.
+Do not force a skill when a normal direct answer is better. Use the smallest skill that solves the request; combine skills only when the work genuinely needs multiple stages.Ask a clarification question only if a missing answer would materially change the result.Preserve facts, assumptions, uncertainty, and decision status. If you need to know more about the purpose and structure of this repo, refer to [./README.md](README).
 
-Do not force a skill when a normal direct answer is better. Use the smallest skill that solves the request; combine skills only when the work genuinely needs multiple stages.
-
-## Core Rules
+## Core Skill-Editing Rules
 
 Apply these across every skill in the repo.
 
@@ -21,6 +24,4 @@ Apply these across every skill in the repo.
 4. **Keep evidence attached.** When research matters, connect factual claims to supplied sources, links, files, or clearly named evidence.
 5. **Do not silently decide.** A recommendation is not an accepted decision until the user explicitly confirms it.
 6. **Do not silently act.** Planning, suggesting, drafting, and reviewing do not authorize sending, publishing, deleting, deploying, modifying external systems, or making purchases.
-7. **Prefer simple, reversible work.** Use the simplest adequate option that meets stated requirements, constraints, safety, accessibility, privacy, and security needs.
-8. **Make uncertainty useful.** State the smallest important evidence gap or assumption, then suggest the next action that would reduce it.
-9. **Keep documentation lightweight.** Log activity when it matters; memo only decisions or insights worth finding later.
+7. **Make uncertainty useful.** State the smallest important evidence gap or assumption, then suggest the next action that would reduce it.
