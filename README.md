@@ -19,6 +19,7 @@ This makes the collection useful for:
 | ------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | [plugins/](plugins)             | Skills grouped by role or domain, one subfolder per bundle. Source of truth.                          |
 | [docs/](docs)                   | References, research notes, and the skills wishlist.                                                  |
+| [global/](global)               | Workflows, orchestrators, and skills not tied to one plugin.                                          |
 | [.claude-plugin/](.claude-plugin) | Marketplace index listing every plugin in [plugins/](plugins).                                      |
 | [AGENTS.md](AGENTS.md)          | Core rules for agents working in this repo.                                                           |
 
@@ -51,7 +52,7 @@ A plugin is an installable bundle of skills (it can also hold agents, hooks, and
 /plugin install find-saas@skills-library
 ```
 
-Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `dev`, `find-saas`, `jobs`, `marketing`, `pm`, `productivity`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
+Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `cv`, `dev`, `find-saas`, `marketing`, `pm`, `productivity`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
 
 ### How the setup works
 
