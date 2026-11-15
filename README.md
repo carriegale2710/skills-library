@@ -15,13 +15,13 @@ This makes the collection useful for:
 
 ## Repository structure
 
-| Path                            | Role                                                                                                  |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| [plugins/](plugins)             | Skills grouped by role or domain, one subfolder per bundle. Source of truth.                          |
-| [skills/](skills)               | Flat copy of every unique skill, as an easy-to-reach index. See [skills/README.md](skills/README.md). |
-| [docs/](docs)                   | References, research notes, and the skills wishlist.                                                  |
-| [AGENTS.md](AGENTS.md)          | Core rules for agents working in this repo.                                                           |
-| [ISSUES.md](ISSUES.md)          | Known issues.                                                                                         |
+| Path                              | Role                                                                         |
+| --------------------------------- | ---------------------------------------------------------------------------- |
+| [plugins/](plugins)               | Skills grouped by role or domain, one subfolder per bundle. Source of truth. |
+| [docs/](docs)                     | References, research notes, and the skills wishlist.                         |
+| [global/](global)                 | Workflows, orchestrators, and skills not tied to one plugin.                 |
+| [.claude-plugin/](.claude-plugin) | Marketplace index listing every plugin in [plugins/](plugins).               |
+| [AGENTS.md](AGENTS.md)            | Core rules for agents working in this repo.                                  |
 
 Browse [plugins/](plugins) for the current bundles.
 
@@ -36,10 +36,10 @@ Browse [plugins/](plugins) for the current bundles.
 
 - Standalone skill: one reusable capability.
 - Plugin bundle: grouped around a role, domain, or function.
-- Workflow: known, repeatable sequence. See [docs/references/WORKFLOWS.md](docs/references/WORKFLOWS.md).
-- Orchestrator: adaptive process that depends on intermediate findings. See [docs/references/ORCHESTRATORS.md](docs/references/ORCHESTRATORS.md).
+- Workflow: known, repeatable sequence. See [.claude/skills/workflows/](.claude/skills/workflows/README.md).
+- Orchestrator: adaptive process that depends on intermediate findings. See the comparison below.
 
-Comparison: [plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md](plugins/superpowers/skills/write-a-skill/references/workflows-vs-orchestrators.md).
+Comparison: [plugins/productivity/skills/write-a-skill/references/workflows-vs-orchestrators.md](plugins/productivity/skills/write-a-skill/references/workflows-vs-orchestrators.md).
 
 ## Plugins
 
@@ -49,14 +49,14 @@ A plugin is an installable bundle of skills (it can also hold agents, hooks, and
 
 ```text
 /plugin marketplace add carriegale2710/skills-library
-/plugin install idea-hunter@skills-library
+/plugin install find-saas@skills-library
 ```
 
-Only the named plugin is installed, not the whole repo. Plugin names: `designer`, `developer`, `idea-hunter`, `marketing`, `product-manager`, `saas-builder`, `startup`, `superpowers`, `job-hunter`. Skills run namespaced, e.g. `/idea-hunter:reddit-pain-mining`.
+Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `resume`, `dev`, `find-saas`, `marketing`, `pm`, `productivity`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
 
 ### How the setup works
 
-- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) at the repo root lists each plugin with a relative `source` such as `"./plugins/idea-hunter"`.
+- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) lists each plugin with a relative `source` such as `"./plugins/find-saas"`.
 - Each plugin folder has `.claude-plugin/plugin.json` with a `name`, and its skills in a `skills/` subfolder (`plugins/<name>/skills/<skill>/SKILL.md`), the default location Claude Code looks in.
 - The `name` in a marketplace entry must match the `name` in that plugin's `plugin.json`, or install fails with "Plugin ... not found in marketplace".
 
@@ -64,17 +64,17 @@ Only the named plugin is installed, not the whole repo. Plugin names: `designer`
 
 1. Create `plugins/<name>/skills/` with skill folders inside.
 2. Add `plugins/<name>/.claude-plugin/plugin.json` with `name` and `description`.
-3. Add an entry to the root `marketplace.json`.
+3. Add an entry to `.claude-plugin/marketplace.json`.
 4. Run `claude plugin validate .`.
 
 ### Plugins in their own GitHub repo
 
-A plugin can live in a separate repo instead (for example the original `job-hunter` repo). List it in a marketplace with `"source": { "source": "github", "repo": "owner/plugin-repo" }`, or add that repo directly as a marketplace if it has its own `.claude-plugin/marketplace.json`.
+A plugin can live in a separate repo instead. List it in a marketplace with `"source": { "source": "github", "repo": "owner/plugin-repo" }`, or add that repo directly as a marketplace if it has its own `.claude-plugin/marketplace.json`.
 
 ### Try without installing
 
 ```text
-claude --plugin-dir ./plugins/idea-hunter
+claude --plugin-dir ./plugins/find-saas
 ```
 
 Docs: <https://code.claude.com/docs/en/plugins/overview.md> and <https://code.claude.com/docs/en/plugins/create-marketplace.md>.

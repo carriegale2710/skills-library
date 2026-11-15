@@ -1,0 +1,16 @@
+{
+  "name": "resume",
+  "version": "1.3.0",
+  "description": "Land a job: research the company and role, tailor resumes and cover letters to each application, answer selection criteria and forms, polish LinkedIn and portfolios, prep for interviews and negotiate salary.",
+  "author": {
+    "name": "Carrie Gale"
+  },
+  "keywords": [
+    "resume",
+    "cv",
+    "cover-letter",
+    "selection-criteria",
+    "career",
+    "job-application"
+  ]
+}

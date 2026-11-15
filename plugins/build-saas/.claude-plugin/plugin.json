@@ -1,0 +1,5 @@
+{
+  "name": "build-saas",
+  "description": "Build and launch a SaaS app: set up login, database, payments, email, file storage and analytics, secure the API, add legal pages, test, deploy, and launch.",
+  "author": { "name": "Carrie Gale" }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ux-research",
+  "version": "0.1.0",
+  "description": "Understand users before building: plan and run research (interviews, surveys, usability tests), recruit participants, synthesize findings into personas, journeys and insights, and share recommendations.",
+  "author": {
+    "name": "Carrie Gale"
+  },
+  "keywords": [
+    "ux-research",
+    "design-thinking",
+    "user-research",
+    "usability-testing",
+    "personas"
+  ]
+}
