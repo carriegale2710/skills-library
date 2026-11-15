@@ -1,6 +1,6 @@
 # GAIA Expert Architecture Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use productivity:subagent-driven-development (recommended) or productivity:executing-plans to implement this plan task-by-task.
 
 **Goal:** Build a reusable four-Expert GAIA package system with curated skills, operational personalities, shared coordination skills, and project-level `.gaia/` coordination files.
 

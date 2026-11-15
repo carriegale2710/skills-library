@@ -1,0 +1,5 @@
+{
+  "name": "dev",
+  "description": "Ship and maintain software: make architecture and tech decisions, debug and fix code safely, review and refactor code, test well, deploy and handle incidents, and keep docs and changelogs current.",
+  "author": { "name": "Carrie Gale" }
+}

@@ -1,56 +1,58 @@
 {
   "name": "skills-library",
-  "owner": { "name": "Carrie Gale" },
+  "owner": {
+    "name": "Carrie Gale"
+  },
   "plugins": [
     {
-      "name": "designer",
-      "source": "./plugins/designer",
-      "description": "Design advisor, frontend design, solution ideation and motion skills"
+      "name": "build-saas",
+      "source": "./plugins/build-saas",
+      "description": "Build and launch a SaaS app: set up login, database, payments, email, file storage and analytics, secure the API, add legal pages, test, deploy, and launch."
     },
     {
-      "name": "developer",
-      "source": "./plugins/developer",
-      "description": "Developer workflow skills: commits, changelog, tests, debugging, architecture, QA"
+      "name": "dev",
+      "source": "./plugins/dev",
+      "description": "Ship and maintain software: make architecture and tech decisions, debug and fix code safely, review and refactor code, test well, deploy and handle incidents, and keep docs and changelogs current."
     },
     {
-      "name": "idea-hunter",
-      "source": "./plugins/idea-hunter",
-      "description": "Find and validate microsaas ideas from Reddit pain, reviews, search demand and revenue proof"
+      "name": "find-saas",
+      "source": "./plugins/find-saas",
+      "description": "Find problem gaps worth solving: mine Reddit and reviews for real pain, check search demand, and confirm people already pay for solutions."
+    },
+    {
+      "name": "cv",
+      "source": "./plugins/cv",
+      "description": "Land a job: research the company and role, tailor resumes and cover letters to each application, answer selection criteria and forms, polish LinkedIn and portfolios, prep for interviews and negotiate salary."
     },
     {
       "name": "marketing",
       "source": "./plugins/marketing",
-      "description": "Marketing, positioning, copy, pricing, SEO and customer research skills"
+      "description": "Write marketing that gets remembered and converts: clarify positioning, craft messaging and landing copy, pick acquisition channels, improve SEO, and script videos."
     },
     {
-      "name": "product-manager",
-      "source": "./plugins/product-manager",
-      "description": "Product management skills: scope, requirements, specs, decisions, planning, tickets"
+      "name": "pm",
+      "source": "./plugins/pm",
+      "description": "Turn ideas into shipped product: scope a project, gather requirements, write PRDs and specs, plan work into tickets, log decisions, and triage incoming requests."
     },
     {
-      "name": "saas-builder",
-      "source": "./plugins/saas-builder",
-      "description": "SaaS build skills: auth, database, payments, deployment, security, launch"
+      "name": "productivity",
+      "source": "./plugins/productivity",
+      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, stress-test an idea, summarize long material, hand off work between sessions, and build new Claude skills."
     },
     {
       "name": "startup",
       "source": "./plugins/startup",
-      "description": "Startup strategy skills: lean startup, positioning, money models, diagnosis"
+      "description": "Figure out a startup's strategy: validate the problem with customers, choose a growth channel, set pricing and business model, find traction, and diagnose why growth is stalling."
     },
     {
-      "name": "superpowers",
-      "source": "./plugins/superpowers",
-      "description": "General workflow skills: brainstorm, plan, research, grill, handoff, skill writing"
+      "name": "ux-design",
+      "source": "./plugins/ux-design",
+      "description": "Design user experiences: generate and refine solution ideas, plan prototypes, critique interfaces, and turn design challenges into concepts and visual designs."
     },
     {
-      "name": "job-hunter",
-      "source": "./plugins/job-hunter",
-      "description": "Job application agent and skills"
-    },
-    {
-      "name": "ux-researcher",
-      "source": "./plugins/ux-researcher",
-      "description": "UX research and design thinking across the double diamond, grounded in IDEO, d.school, NN/g and GV methods."
+      "name": "ux-research",
+      "source": "./plugins/ux-research",
+      "description": "Understand users before building: plan and run research (interviews, surveys, usability tests), recruit participants, synthesize findings into personas, journeys and insights, and share recommendations."
     }
   ]
 }
