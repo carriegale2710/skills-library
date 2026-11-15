@@ -20,8 +20,8 @@
       "description": "Find problem gaps worth solving: mine Reddit and reviews for real pain, check search demand, and confirm people already pay for solutions."
     },
     {
-      "name": "cv",
-      "source": "./plugins/cv",
+      "name": "resume",
+      "source": "./plugins/resume",
       "description": "Land a job: research the company and role, tailor resumes and cover letters to each application, answer selection criteria and forms, polish LinkedIn and portfolios, prep for interviews and negotiate salary."
     },
     {
