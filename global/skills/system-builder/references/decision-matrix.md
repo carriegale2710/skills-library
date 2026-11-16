@@ -11,6 +11,7 @@ Pick the smallest row that satisfies every requirement.
 | Fixed steps fanned out over many items, rerunnable | Workflow |
 | Runtime-chosen path across multiple workers, with state | Orchestrator (a skill) |
 | Install/share as one unit | Plugin (only after parts work) |
+| On-demand detail for an existing skill | Reference file |
 | Applies to nearly every session | `~/.claude/CLAUDE.md` |
 | Learned correction | Auto memory |
 

@@ -41,11 +41,14 @@ Keep mandatory steps in the main file. Move on-demand detail to `references/<top
 
 Load only the matching template from `templates/`: `skill`, `subagent`, `workflow`, `orchestrator`, `plugin`, `hook`, `reference`. Apply [references/writing-rules.md](references/writing-rules.md). Save where the template says.
 
+`~/.claude/CLAUDE.md` or auto memory selected: no template. Draft the one line to add and its target file; write only after the user approves.
+
 ## 5. Validate
 
 Done when all hold:
 
-- Frontmatter parses; `name` matches folder; every linked path exists.
+- Skill/subagent: frontmatter parses; `name` matches folder or file. Reference files have no frontmatter.
+- Every linked path exists.
 - Plugin: `claude plugin validate <path>` passes, if available.
 - Writing-rules checklist passes.
 - 2-3 test prompts written and walked through the artifact (normal, edge, failure); fix any that fail.
