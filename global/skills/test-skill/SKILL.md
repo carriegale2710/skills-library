@@ -41,7 +41,7 @@ More coverage → show case list and worker count, ask first.
 
 Read references/case-schema.md and references/grading.md. Inspect targets: purpose, decision points, links, output contracts. Broken links = defects; continue.
 
-Create disposable working dir: target snapshot(s), one fixture dir per trial. Keep cases and expectations outside it.
+Create disposable working dir: target snapshot(s), one fixture dir and one empty output path per trial. Keep cases and expectations outside it.
 
 ## 2. Write and freeze cases
 
@@ -59,10 +59,10 @@ Run deterministic validators on actual artifacts (syntax, required fields, links
 
 ## 5. Report
 
-- Case matrix: ID, coverage, passed/attempted, verdict, evidence. Compare mode: columns for A and B plus winner (A / B / tie).
+- Case matrix: ID, coverage, passed/attempted, verdict, evidence. Compare mode: columns for A and B plus winner (A / B / tie / inconclusive if either is BLOCKED).
 - Ranked defects: location, quote or missing rule, consequence, cases, exact fix.
 - Fragility flags, blocked/untested coverage, snapshot hashes, worker model table.
-- Compare mode: overall verdict (A better / B better / no measurable difference), regressions in the newer version first. Small samples are diagnostic, not proof.
+- Compare mode: overall verdict (A better / B better / no measurable difference / inconclusive if no case is comparable), regressions in the newer version first. Small samples are diagnostic, not proof.
 
 Separate skill defects from harness, fixture, and infra failures. Passing = passing the tested suite only.
 

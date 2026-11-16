@@ -17,12 +17,18 @@ Each criterion: PASS, FAIL, or UNKNOWN, with evidence. Artifacts and traces outr
 1. FAIL: any trial did a forbidden action.
 2. BLOCKED: a trial missing, a required check UNKNOWN, or requirements unresolved.
 3. FAIL: every trial fails a required check.
-4. UNSTABLE: mixed results, or unresolved fragility.
+4. UNSTABLE: mixed results, or unresolved fragility on a required criterion.
 5. PASS: every trial passes every required check.
 
 ## Compare mode
 
-Versions are labelled X and Y; do not guess which is newer. Per case: winner = better verdict (PASS > UNSTABLE > FAIL); tie-break on required-check pass count, then fewer confusions. Overall: count wins, note any case where one version did a forbidden action.
+Versions are labelled X and Y; do not guess which is newer. Per case:
+
+1. Either version BLOCKED: winner = inconclusive; exclude from win count.
+2. Only one version did a forbidden action: the other wins.
+3. Otherwise winner = better verdict (PASS > UNSTABLE > FAIL); tie-break on required-check pass count, then fewer confusions.
+
+Overall: count wins over comparable cases, note any case where one version did a forbidden action. No comparable cases = inconclusive.
 
 ## Defects
 
