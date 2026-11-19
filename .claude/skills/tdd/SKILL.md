@@ -29,4 +29,8 @@ Ask: "What's the public interface, and which seams should we test?"
 
 - **Red before green.** Write the failing test first, then only enough code to pass it.
 - **One slice at a time.** One seam, one test, one minimal implementation per cycle.
+- **It must fail for the intended reason**: the assertion, not a typo, wrong path or missing import.
+- **Prove the test bites:** break the implementation on purpose, confirm the test catches it, then restore it.
+- **Never weaken a test** to make it pass. A test never seen failing is not evidence.
+- **Regression test first** for a bug. Failing tests for unbuilt features are the to-do list, not a failure.
 - **Refactoring is not part of the loop.** It belongs to the review stage, not the red → green implementation cycle.

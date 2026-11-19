@@ -1,6 +1,6 @@
 ---
 name: caveman-review
-description: "Compressed code review - one line per finding with location, problem and fix. Use for /caveman-review, \"review this PR\", or \"review the diff\".\n"
+description: "Compressed manual code review - one line per finding with location, problem and fix, checked for security, performance, correctness and maintainability. Use for /caveman-review, or when reviewing a diff by hand instead of with the CodeRabbit CLI."
 ---
 
 Write code review comments terse and actionable. One line per finding. Location, problem, fix. No throat-clearing.
@@ -45,6 +45,13 @@ Write code review comments terse and actionable. One line per finding. Location,
 ## Auto-Clarity
 
 Drop terse mode for: security findings (CVE-class bugs need full explanation + reference), architectural disagreements (need rationale, not just a one-liner), and onboarding contexts where the author is new and needs the "why". In those cases write a normal paragraph, then resume terse for the rest.
+
+## What to check
+
+- **Security:** injection (SQL, XSS), CSRF, authn/authz gaps, secrets in code, insecure deserialization, path traversal, SSRF.
+- **Performance:** N+1 queries, missing indexes, unbounded queries or loops, O(n²) in hot paths, resource leaks.
+- **Correctness:** edge cases (empty, null, overflow), races, error handling and propagation, off-by-one, type safety.
+- **Maintainability:** naming, single responsibility, duplication, test coverage, comments on non-obvious logic.
 
 ## Boundaries
 
