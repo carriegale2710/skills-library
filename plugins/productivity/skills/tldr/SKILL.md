@@ -22,7 +22,7 @@ This skill outputs the abstract as a copyable block. It does not modify the arti
 
 ## Setup
 
-Load config per `../../CONFIG.md` ("Applying Config in Skills"). This skill uses **`tonality.md`** and **`references/tonality-guide.md`** — the abstract is written in the user's voice, in the source article's register.
+Optional user config: if `.online-writing/` exists at the vault root, read the files this skill names from it when populated; if missing or empty, skip them and use defaults. This skill uses **`tonality.md`** and **`references/tonality-guide.md`** — the abstract is written in the user's voice, in the source article's register.
 
 Skipped on purpose: `purpose.md`, `buckets.md`, `expertise.md`. The abstract describes the article, not the user's strategic positioning. The article's register beats the user's typical register: a descriptive case study gets a descriptive abstract regardless of how the user usually writes.
 

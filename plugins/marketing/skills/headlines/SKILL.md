@@ -18,12 +18,12 @@ One draft is never enough. Buzzfeed's rule is 30 variants per headline before pi
 
 ## Setup
 
-Load config per `../../CONFIG.md` ("Applying Config in Skills"). This skill uses:
+Optional user config: if `.online-writing/` exists at the vault root, read the files this skill names from it when populated; if missing or empty, skip them and use defaults. This skill uses:
 
 - **`purpose.md`** — aligns voice and category positioning. The headline should plausibly serve the user's Motivation, Audience, Category, POV, and Vision.
 - **`buckets.md`** — identifies whether the piece targets the General, Niche, or Industry bucket, which changes the headline strategy (universal question vs. niche-specific question vs. niche-topic-answering-universal-question).
 
-**Reference:** The core headline rules live in `../../references/post-structure-guide.md` (The Headline, Curiosity Gap, Anatomy, Proven Formats, Headline Rules). Read that section before generating. Do not restate its content inline — apply it.
+**Reference:** The core headline rules live in `references/post-structure-guide.md` (The Headline, Curiosity Gap, Anatomy, Proven Formats, Headline Rules). Read that section before generating. Do not restate its content inline — apply it.
 
 ---
 
