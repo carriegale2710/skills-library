@@ -67,11 +67,11 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 ### How to add voice:
 
-**Have opinions.** Don't just report facts - react to them. "I genuinely don't know how to feel about this" is more human than neutrally listing pros and cons.
+**Keep the author's stance.** Never invent opinions, reactions, or experiences. If the author supplied a view, keep it sharp. If the input is neutral, stay neutral or ask the author for their take before adding one.
 
 **Vary your rhythm.** Short punchy sentences. Then longer ones that take their time getting where they're going. Mix it up.
 
-**Acknowledge complexity.** Real humans have mixed feelings. "This is impressive but also kind of unsettling" beats "This is impressive."
+**Acknowledge complexity.** Keep mixed feelings the author already expressed. Do not add new ones.
 
 **Use "I" when it fits.** First person isn't unprofessional - it's honest. "I keep coming back to..." or "Here's what gets me..." signals a real person thinking.
 

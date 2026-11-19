@@ -268,7 +268,7 @@
 > While specific details about the company's founding are not extensively documented in readily available sources, it appears to have been established sometime in the 1990s.
 
 **After:**
-> The company was founded in 1994, according to its registration documents.
+> The company appears to have been founded in the 1990s. (Keep the uncertainty. Add an exact year or source only if the author supplies one.)
 
 ---
 
