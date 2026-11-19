@@ -1,4 +1,4 @@
-# job-hunter
+# resume
 
 A Claude Code plugin that runs a job application end to end: company research, job ad analysis, a tailored resume, cover letter and email, selection criteria responses, a portfolio shortlist, linting, and export to Word.
 
@@ -10,14 +10,14 @@ In Claude Code:
 
 ```
 /plugin marketplace add carriegale2710/skills-library
-/plugin install job-hunter@skills-library
+/plugin install resume@skills-library
 ```
 
 Or from your shell:
 
 ```bash
 claude plugin marketplace add carriegale2710/skills-library
-claude plugin install job-hunter@skills-library
+claude plugin install resume@skills-library
 ```
 
 To get updates later:
