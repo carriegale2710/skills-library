@@ -45,6 +45,8 @@ Use the `Letter type` in `criteria.md`.
 
 Look for a name first: the ad, `research.md`, then ask the user. Never write "To whom it may concern".
 
+For industry tweaks (tech, marketing, finance, startup vs enterprise) and tricky cases (no named hiring manager, referral, under- or overqualified, career change), read `references/scenarios.md`.
+
 ## 5. Rules
 
 - One page: about 300-400 words. No paragraph longer than 6 lines.
