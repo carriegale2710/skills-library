@@ -36,10 +36,10 @@ Browse [plugins/](plugins) for the current bundles.
 
 - Standalone skill: one reusable capability.
 - Plugin bundle: grouped around a role, domain, or function.
-- Workflow: known, repeatable sequence. See [.claude/skills/workflows/](.claude/skills/workflows/README.md).
+- Workflow: known, repeatable sequence. See [global/workflows/](global/workflows/README.md).
 - Orchestrator: adaptive process that depends on intermediate findings. See the comparison below.
 
-Comparison: [plugins/productivity/skills/write-a-skill/references/workflows-vs-orchestrators.md](plugins/productivity/skills/write-a-skill/references/workflows-vs-orchestrators.md).
+Glossary: [docs/references/agentic-ai-glossary.md](docs/references/agentic-ai-glossary.md).
 
 ## Plugins
 
@@ -52,7 +52,7 @@ A plugin is an installable bundle of skills (it can also hold agents, hooks, and
 /plugin install find-saas@skills-library
 ```
 
-Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `resume`, `dev`, `find-saas`, `marketing`, `pm`, `productivity`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
+Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `resume`, `dev-core`, `dev-frontend`, `dev-backend`, `find-saas`, `marketing`, `pm`, `productivity`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
 
 ### How the setup works
 
@@ -76,8 +76,6 @@ A plugin can live in a separate repo instead. List it in a marketplace with `"so
 ```text
 claude --plugin-dir ./plugins/find-saas
 ```
-
-Docs: <https://code.claude.com/docs/en/plugins/overview.md> and <https://code.claude.com/docs/en/plugins/create-marketplace.md>.
 
 ## Design principles
 

@@ -1,0 +1,5 @@
+{
+  "name": "dev-core",
+  "description": "Stack-agnostic engineering habits: make architecture decisions, debug and fix code safely, review and refactor, test well, and keep commits, docs and changelogs current.",
+  "author": { "name": "Carrie Gale" }
+}

@@ -10,9 +10,19 @@
       "description": "Build and launch a SaaS app: set up login, database, payments, email, file storage and analytics, secure the API, add legal pages, test, deploy, and launch."
     },
     {
-      "name": "dev",
-      "source": "./plugins/dev",
-      "description": "Ship and maintain software: make architecture and tech decisions, debug and fix code safely, review and refactor code, test well, deploy and handle incidents, and keep docs and changelogs current."
+      "name": "dev-core",
+      "source": "./plugins/dev-core",
+      "description": "Stack-agnostic engineering habits: make architecture decisions, debug and fix code safely, review and refactor, test well, and keep commits, docs and changelogs current."
+    },
+    {
+      "name": "dev-frontend",
+      "source": "./plugins/dev-frontend",
+      "description": "Frontend work: build and test UI in the browser with Playwright, and implement polished frontend designs."
+    },
+    {
+      "name": "dev-backend",
+      "source": "./plugins/dev-backend",
+      "description": "Backend and ops: deploy and operate infrastructure, run safe migrations, pre-deploy checklists, and incident response."
     },
     {
       "name": "find-saas",
@@ -27,12 +37,12 @@
     {
       "name": "marketing",
       "source": "./plugins/marketing",
-      "description": "Write marketing that gets remembered and converts: clarify positioning, craft messaging and landing copy, pick acquisition channels, improve SEO, and script videos."
+      "description": "Write marketing that gets remembered and converts: copy and headlines, persuasion, sticky stories, storyboards and video scripts. Positioning, channels and SEO live in pm."
     },
     {
       "name": "pm",
       "source": "./plugins/pm",
-      "description": "Turn ideas into shipped product: scope a project, gather requirements, write PRDs and specs, plan work into tickets, log decisions, and triage incoming requests."
+      "description": "Turn ideas into shipped product: scope a project, gather requirements, write PRDs and specs, plan work into tickets, log decisions, triage requests, and set positioning, messaging, channels and SEO direction."
     },
     {
       "name": "productivity",

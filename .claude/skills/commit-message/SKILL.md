@@ -1,6 +1,6 @@
 ---
 name: commit-message
-description: Use when drafting or reviewing a commit message, deciding whether staged work needs splitting, or making a commit message shorter.
+description: Use when drafting or reviewing a commit message ("write a commit", "commit message", /commit), deciding whether staged work needs splitting, or making a commit message shorter.
 user-invocable: true
 ---
 
