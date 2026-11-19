@@ -1,0 +1,5 @@
+{
+  "name": "dev-backend",
+  "description": "Backend and ops: deploy and operate infrastructure, run safe migrations, pre-deploy checklists, and incident response.",
+  "author": { "name": "Carrie Gale" }
+}

@@ -22,7 +22,7 @@ Create an Architecture Decision Record (ADR) or evaluate a system design.
 **Evaluate a design**: "Review this microservices proposal"
 **System design**: "Design the notification system for our app"
 
-See the **system-design** skill for detailed frameworks on requirements gathering, scalability analysis, and trade-off evaluation.
+See the **software-architect** skill for detailed frameworks on requirements gathering, scalability analysis, and trade-off evaluation.
 
 ## Output — ADR Format
 

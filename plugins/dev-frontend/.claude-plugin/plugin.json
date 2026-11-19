@@ -1,0 +1,5 @@
+{
+  "name": "dev-frontend",
+  "description": "Frontend work: build and test UI in the browser with Playwright, and implement polished frontend designs.",
+  "author": { "name": "Carrie Gale" }
+}
