@@ -10,7 +10,8 @@ Copied (markdown only; bundled scripts left out) and adapted. Each skill folder 
 | autofix, coderabbit-config, coderabbit-review | plugins/dev-core/skills/ | [coderabbitai/skills](https://github.com/coderabbitai/skills) (code-review renamed) | MIT |
 | playwright-cli | plugins/dev-frontend/skills/ | [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) | Apache-2.0 |
 | accessibility-review, design-critique | plugins/ux-design/skills/ | [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | Apache-2.0 |
-| citation-check, decision-matrix, research-litnote | plugins/ux-research/skills/ | [najikay/claude-research-skills](https://github.com/najikay/claude-research-skills) | Apache-2.0 |
+| citation-check, research-litnote | plugins/ux-research/skills/ | [najikay/claude-research-skills](https://github.com/najikay/claude-research-skills) | Apache-2.0 |
+| decision-matrix | plugins/ux-design/skills/ | [najikay/claude-research-skills](https://github.com/najikay/claude-research-skills) | Apache-2.0 |
 | fit-check | plugins/resume/skills/ | [benskamps/career-compass-plugin](https://github.com/benskamps/career-compass-plugin) | MIT |
 | github-portfolio-builder | plugins/resume/skills/ | [rachaelquisel/github-portfolio-builder](https://github.com/rachaelquisel/github-portfolio-builder) | MIT |
 | headlines | plugins/marketing/skills/ | [donheidi/online-writing-skills](https://github.com/donheidi/online-writing-skills) | MIT |
