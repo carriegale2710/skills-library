@@ -37,12 +37,12 @@
     {
       "name": "marketing",
       "source": "./plugins/marketing",
-      "description": "Write marketing that gets remembered and converts: copy and headlines, persuasion, sticky stories, storyboards and video scripts. Positioning, channels and SEO live in pm."
+      "description": "Write marketing that gets remembered and converts: positioning and brand messaging (StoryBrand, Obviously Awesome), SEO, copy and headlines, persuasion, sticky stories, storyboards and video scripts."
     },
     {
       "name": "pm",
       "source": "./plugins/pm",
-      "description": "Turn ideas into shipped product: scope a project, gather requirements, write PRDs and specs, plan work into tickets, log decisions, triage requests, and set positioning, messaging, channels and SEO direction."
+      "description": "Turn ideas into shipped product: scope a project, gather requirements, write PRDs and specs, plan work into tickets, log decisions, and triage requests."
     },
     {
       "name": "productivity",
@@ -52,7 +52,7 @@
     {
       "name": "startup",
       "source": "./plugins/startup",
-      "description": "Figure out a startup's strategy: validate the problem with customers, choose a growth channel, set pricing and business model, find traction, and diagnose why growth is stalling."
+      "description": "Figure out a startup's strategy: validate the problem with customers, choose and balance acquisition channels (CAC, LTV, payback), set pricing and business model, find traction, and diagnose why growth is stalling."
     },
     {
       "name": "ux-design",
