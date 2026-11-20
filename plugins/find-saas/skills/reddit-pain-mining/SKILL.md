@@ -33,6 +33,38 @@ GummySearch, the usual tool for this, shut down in November 2025 after losing Re
 
 Run the same queries without `site:reddit.com` against niche forums (Figma forum, Indie Hackers, Hacker News) when they fit the audience.
 
+## Fetching thread text (optional)
+
+Web search often returns only snippets and blocks Reddit pages. When you need the full thread, read a handful of chosen public threads (cap about 10 per run, `maxComments` about 40). Needs the `firecrawl` and `apify` CLIs logged in. Tested 2026-11.
+
+1. **Find thread URLs.** `firecrawl search "reddit [audience] [job]" --limit 8`, then keep lines matching `reddit.com/r/`. WebSearch rejects `reddit.com` as an allowed domain, so use firecrawl for this.
+2. **Fetch threads.** Run Apify `trudax/reddit-scraper-lite` with direct URLs only:
+   ```
+   {"startUrls":[{"url":"<thread url>"}],"maxItems":200,"maxPostCount":8,"maxComments":40,"proxy":{"useApifyProxy":true}}
+   apify call trudax/reddit-scraper-lite --input-file in.json --silent --output-dataset > out.json
+   ```
+   Test with 1-2 URLs first. Items have `dataType` of `post` or `comment`, plus `title`, `body`, `createdAt`.
+3. **Summarise.** Tally tool and product names across `body` text, and filter comments for pain words (expensive, overkill, manual, hate, chasing, cost). Then apply the quality check below.
+
+Gotchas:
+- The actor's `searches` input needs a Reddit `sessionToken` (a logged-in account cookie). Do not use it. Direct `startUrls` work without one.
+- `firecrawl scrape` refuses reddit.com.
+- Run the setup once: `apify login`.
+
+### Fallback: Perplexity
+
+If firecrawl or Apify return empty, truncated or off-topic data, stop retrying. Write a filled prompt for the user to paste into Perplexity, which reads Reddit URLs better. Put the thread URLs (or subreddits plus keywords) in it, then ask the user to paste the answer back and apply the quality check. Template:
+
+```
+Read these Reddit threads in full, including comments: [URL list, or subreddits + keywords + "last 24 months"].
+Context: I am researching [problem space] for [target user].
+For each thread return: link, post date, who is posting (target user or founder promoting), the workflow described, current workaround or paid tool and its price, cost in time or money, and how many commenters share the same pain.
+Then list: tools named (count each), the 3 most repeated complaints, and any threads that argue against the pain being real.
+Quote at most one short line (under 15 words) per thread, no usernames. Say "not found" instead of guessing.
+```
+
+For feature-level validation with verbatim quotes, `reddit-quote-mining` has its own Perplexity prompt in `references/perplexity-prompt.md`.
+
 ## Quality check
 
 Keep a thread only when all of these hold:
@@ -49,7 +81,7 @@ Then rate it:
 
 ## Ground rules
 
-- Read public pages only. No logging in, no Reddit API, no bulk scraping.
+- Read public pages only. No logging in, no Reddit API, no bulk scraping. The optional fetch above reads a few chosen public threads by URL, never a Reddit session token or keyword crawl.
 - Paraphrase. At most one short quote (under 15 words) per thread.
 - Never record usernames. Link the thread instead.
 
