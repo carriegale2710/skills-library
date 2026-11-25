@@ -1,0 +1,5 @@
+{
+  "name": "savepoint",
+  "description": "Save game for work: snapshot a session, load it to resume, list saves, park unrelated work as a Trello card, and autosave every N turns.",
+  "author": { "name": "Carrie Gale" }
+}
