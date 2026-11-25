@@ -1,56 +1,42 @@
 ---
 name: define-scope
-description: This skill should be used when the user asks to "define scope", "what's in scope", "what's out of scope", or needs to clarify boundaries for a project, feature, or sprint.
-user-invocable: true
+description: Draw the boundaries of any piece of work — a project, feature, task, sprint, piece of writing, research question or errand — so it can finish. Use when the user asks "what's in scope", "what's out of scope", "define scope", "where does this stop", says a task keeps growing, or needs a clear "done" before starting.
 ---
 
-# Define-Scope Skill
+# Define Scope
 
 ## Goal
 
-Define clear boundaries for what is included (in scope) and excluded (out of scope) to prevent scope creep and align expectations.
+Make a piece of work finishable: say what it includes, what it excludes, what limits it, and when it is done.
 
 ## Steps
 
-1. **State the objective** — what is this project/feature/sprint trying to accomplish?
-2. **List in-scope items** — what specific deliverables, features, or work is included?
-3. **List out-of-scope items** — what explicitly is NOT included? (Be specific — this prevents assumptions)
-4. **Identify constraints** — what are the time, budget, resource, or technical limits?
-5. **Define success criteria** — how will you know the scope was successfully delivered?
-6. **Document assumptions** — what are you assuming to be true that could affect scope?
-7. **Review with stakeholders** — ensure everyone agrees on what's in and out.
+1. **Outcome:** one sentence on what this work produces or changes.
+2. **In:** the specific deliverables or actions included. Concrete nouns, not themes.
+3. **Out:** what is explicitly excluded, especially the tempting next steps. Anything not listed as In is Out by default.
+4. **Limits:** time, money, energy, tools or people available.
+5. **Done when:** an observable condition that ends the work.
+6. **Assumptions:** what must be true for this scope to hold.
 
-## Reference
+Keep it short: a few lines per section. Infer from context; ask only when a missing answer would change the boundary.
 
-### Leading Words
+## Rules
 
-- **Scope**: The boundaries of what work is included and excluded in a project or feature.
-- **Scope creep**: The gradual expansion of scope without corresponding adjustments to time, budget, or resources.
+- Out matters as much as In; it is what stops creep.
+- A scope change is a decision: say what is added, what is dropped or what limit moves. Never grow scope silently.
+- Vague is not a scope. "Improve onboarding" is a theme; "3-screen onboarding flow with skip" is a scope.
+- Writing a PRD? Scope lives in its Requirements and Non-Goals (`to-prd`); don't make a separate document.
 
-### Rules
+## Example
 
-- Out-of-scope items are as important as in-scope items — they prevent misunderstandings.
-- If it's not explicitly in scope, it's out of scope by default.
-- Changes to scope require explicit agreement and corresponding adjustments to time/budget.
+**Outcome:** Users can log in with email and password.
 
-## Common Mistakes
+**In:** login form, password reset by email link, 7-day sessions.
 
-- **Vague scope**: "Build a good user experience" is vague. "Implement onboarding flow with 3 screens" is specific.
-- **Implicit scope**: Assuming something is included without stating it. Write it down.
-- **Scope without constraints**: Scope is meaningless without time/budget/resource limits.
+**Out:** social login, 2FA, SSO.
 
-## Examples
+**Limits:** 2 weeks, 1 developer.
 
-**In scope:**
+**Done when:** a new user can sign up, log out, reset their password and log back in on production.
 
-- User login with email/password
-- Password reset flow
-- Session management (7-day expiry)
-
-**Out of scope:**
-
-- Social login (Google, GitHub)
-- Two-factor authentication
-- SSO integration
-
-**Constraint:** 2 weeks, 1 developer
+**Assumptions:** the existing email provider can send reset links.
