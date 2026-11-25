@@ -1,6 +1,6 @@
 ---
 name: product-manager
-description: "Orchestrate the PM document workflow for a feature: find its current stage, size the work, propose a chain of document skills, run them one at a time with a confirm gate, and pause for other plugins when asked. Invoke as /product-manager <feature>."
+description: "Orchestrate the PM document workflow for a feature: find its current stage, size the work, propose a chain of document skills, run them one at a time with a confirm gate, and pause for other plugins when asked. Invoke as /product-manager followed by the feature name."
 disable-model-invocation: true
 ---
 
