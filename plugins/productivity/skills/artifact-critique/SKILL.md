@@ -1,6 +1,6 @@
 ---
 name: artifact-critique
-description: Gives honest, ranked, actionable feedback on something the user made, after first asking what it is for. Use when the user shares a script, code snippet, design screenshot, mockup, Figma frame, landing page, doc, copy, email, slide deck, plan or pitch and wants an opinion, e.g. "what do you think", "thoughts?", "review this", "critique this", "roast this", "be honest", "is this good", "sanity check this", "what's wrong with this", "how can I improve this". Also use when they paste a new version and ask "better?" or want two versions compared. Not for a git diff or PR (use code-review), polishing a draft (use improve-writing), removing AI-sounding text (use humanize), or a vague request with no artifact (use clarify-intent).
+description: "Honest, ranked feedback on something the user made, after asking what it is for. Use when they share a script, design, mockup, landing page, doc, copy, email, deck, plan or pitch and ask 'what do you think', 'review this', 'critique this', 'roast this', 'is this good', 'sanity check', or paste a new version asking 'better?'. Not for git diffs or PRs (code-review), polishing (improve-writing), de-AI-ing text (humanize), or vague asks with no artifact (clarify-intent)."
 ---
 
 # Artifact critique

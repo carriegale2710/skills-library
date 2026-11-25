@@ -1,13 +1,6 @@
 ---
 name: headlines
-description: >
-  Use when the user wants headlines generated, workshopped, or iterated on — either for an
-  existing draft, a topic brief without a draft yet, or a published piece that needs sharper
-  options. Triggers include "give me headlines", "headline variants", "rework this title",
-  "write headlines for", "titles for this post", "help me with the headline". Also use when a
-  user shows a draft and asks what to call it, or when an existing headline underperforms and
-  they want alternatives. Not for full-post generation (see create-post / create-draft) or for
-  diagnosing a finished piece's quality (see rate / diagnose).
+description: "Generate, workshop or iterate headlines for a draft, a topic brief, or an underperforming published piece. Triggers: 'give me headlines', 'headline variants', 'rework this title', 'what should I call this'. Not for full posts (create-post / create-draft) or quality diagnosis (rate / diagnose)."
 ---
 
 # Headlines

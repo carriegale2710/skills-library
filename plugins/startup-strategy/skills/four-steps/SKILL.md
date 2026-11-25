@@ -1,6 +1,6 @@
 ---
 name: four-steps
-description: Applies Steve Blank's Customer Development methodology from The Four Steps to the Epiphany. Use when a startup is searching for customers and a business model before scaling. Covers Customer Discovery, Customer Validation, Customer Creation, and Company Building. Triggers include 'we built it but no one's buying', 'should we hire salespeople yet', 'how do we find our first customers', 'we're burning cash and sales aren't scaling', 'are we in a new or existing market', 'when do we scale'. NOT for companies that have already crossed the chasm into mainstream (use Crossing the Chasm instead), not for optimizing an existing sales funnel, not for product development methodology (this is its companion, not replacement).
+description: "Steve Blank's Customer Development (Four Steps to the Epiphany): Discovery, Validation, Creation, Company Building. Use when a startup is still searching for customers and a business model. Triggers: 'we built it but no one's buying', 'should we hire salespeople yet', 'how do we find first customers', 'new or existing market'. Not for post-chasm companies (Crossing the Chasm) or optimising an existing funnel."
 ---
 
 > **Note:** This skill is independent analysis and commentary, not a reproduction of the original text. It synthesizes the book's core ideas with modern startup practice, surfaces where frameworks are outdated or incomplete, and integrates perspectives from adjacent disciplines. For the full argument and context, read the original book.
