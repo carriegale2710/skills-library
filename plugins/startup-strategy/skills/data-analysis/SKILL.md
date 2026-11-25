@@ -1,7 +1,7 @@
 ---
 name: data-analysis
 description: |
-  Use when the user needs to design, run, or audit product or GTM analytics — metric hierarchies and north stars, funnels, cohort retention, churn, pipeline velocity, forecasting, lead scoring, NRR, A/B tests, or analytical SQL — or uploads a dataset to analyze. Triggers on questions like "why did activation drop", "is this metric meaningful", "review my dashboard", or "what should I measure". For writing the spec that defines a feature's success metrics, use product-spec.
+  Use when the user needs to design, run, or audit product or GTM analytics — metric hierarchies and north stars, funnels, cohort retention, churn, pipeline velocity, forecasting, lead scoring, NRR, A/B tests, or analytical SQL — or uploads a dataset to analyze. Triggers on questions like "why did activation drop", "is this metric meaningful", "review my dashboard", or "what should I measure". For writing the PRD that defines a feature's success metrics, use to-prd.
 ---
 
 # Data Analysis Skill
