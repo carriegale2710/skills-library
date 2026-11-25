@@ -52,7 +52,7 @@ A plugin is an installable bundle of skills (it can also hold agents, hooks, and
 /plugin install find-saas@skills-library
 ```
 
-Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `resume`, `dev-core`, `dev-frontend`, `dev-backend`, `find-saas`, `marketing`, `pm`, `productivity`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
+Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `resume`, `dev-core`, `dev-frontend`, `dev-backend`, `find-saas`, `marketing`, `pm`, `productivity`, `savepoint`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
 
 ### How the setup works
 

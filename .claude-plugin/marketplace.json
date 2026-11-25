@@ -42,12 +42,17 @@
     {
       "name": "pm",
       "source": "./plugins/pm",
-      "description": "Turn ideas into shipped product: scope a project, gather requirements, write PRDs and specs, plan work into tickets, log decisions, and triage requests."
+      "description": "Turn ideas into shipped product: run a gated workflow from brief to PRD, flows, stories, tech spec and release plan, plan work into tickets, log decisions, and triage requests."
     },
     {
       "name": "productivity",
       "source": "./plugins/productivity",
-      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, stress-test an idea, summarize long material, hand off work between sessions, and build new Claude skills."
+      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, define scope, stress-test an idea, summarize long material, hand off work between sessions, and build new Claude skills."
+    },
+    {
+      "name": "savepoint",
+      "source": "./plugins/savepoint",
+      "description": "Save game for work: snapshot a session, load it to resume, list saves, park unrelated work as a Trello card, and autosave every N turns."
     },
     {
       "name": "startup",
