@@ -5,8 +5,8 @@
   },
   "plugins": [
     {
-      "name": "build-saas",
-      "source": "./plugins/build-saas",
+      "name": "saas-builder",
+      "source": "./plugins/saas-builder",
       "description": "Build and launch a SaaS app: set up login, database, payments, email, file storage and analytics, secure the API, add legal pages, test, deploy, and launch."
     },
     {
@@ -25,8 +25,8 @@
       "description": "Backend and ops: deploy and operate infrastructure, run safe migrations, pre-deploy checklists, and incident response."
     },
     {
-      "name": "find-saas",
-      "source": "./plugins/find-saas",
+      "name": "saas-research",
+      "source": "./plugins/saas-research",
       "description": "Find problem gaps worth solving: mine Reddit and reviews for real pain, check search demand, and confirm people already pay for solutions."
     },
     {
@@ -40,8 +40,8 @@
       "description": "Write marketing that gets remembered and converts: positioning and brand messaging (StoryBrand, Obviously Awesome), SEO, copy and headlines, persuasion, sticky stories, storyboards and video scripts."
     },
     {
-      "name": "pm",
-      "source": "./plugins/pm",
+      "name": "product-manager",
+      "source": "./plugins/product-manager",
       "description": "Turn ideas into shipped product: run a gated workflow from brief to PRD, flows, stories, tech spec and release plan, plan work into tickets, log decisions, and triage requests."
     },
     {
@@ -55,8 +55,8 @@
       "description": "Save game for work: snapshot a session, load it to resume, list saves, park unrelated work as a Trello card, and autosave every N turns."
     },
     {
-      "name": "startup",
-      "source": "./plugins/startup",
+      "name": "startup-strategy",
+      "source": "./plugins/startup-strategy",
       "description": "Figure out a startup's strategy: validate the problem with customers, choose and balance acquisition channels (CAC, LTV, payback), set pricing and business model, find traction, and diagnose why growth is stalling."
     },
     {

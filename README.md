@@ -49,14 +49,14 @@ A plugin is an installable bundle of skills (it can also hold agents, hooks, and
 
 ```text
 /plugin marketplace add carriegale2710/skills-library
-/plugin install find-saas@skills-library
+/plugin install saas-research@skills-library
 ```
 
-Only the named plugin is installed, not the whole repo. Plugin names: `build-saas`, `resume`, `dev-core`, `dev-frontend`, `dev-backend`, `find-saas`, `marketing`, `pm`, `productivity`, `savepoint`, `startup`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/find-saas:reddit-pain-mining`.
+Only the named plugin is installed, not the whole repo. Plugin names: `saas-builder`, `resume`, `dev-core`, `dev-frontend`, `dev-backend`, `saas-research`, `marketing`, `product-manager`, `productivity`, `savepoint`, `startup-strategy`, `ux-design`, `ux-research`. Skills run namespaced, e.g. `/saas-research:reddit-pain-mining`.
 
 ### How the setup works
 
-- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) lists each plugin with a relative `source` such as `"./plugins/find-saas"`.
+- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) lists each plugin with a relative `source` such as `"./plugins/saas-research"`.
 - Each plugin folder has `.claude-plugin/plugin.json` with a `name`, and its skills in a `skills/` subfolder (`plugins/<name>/skills/<skill>/SKILL.md`), the default location Claude Code looks in.
 - The `name` in a marketplace entry must match the `name` in that plugin's `plugin.json`, or install fails with "Plugin ... not found in marketplace".
 
@@ -74,7 +74,7 @@ A plugin can live in a separate repo instead. List it in a marketplace with `"so
 ### Try without installing
 
 ```text
-claude --plugin-dir ./plugins/find-saas
+claude --plugin-dir ./plugins/saas-research
 ```
 
 ## Design principles
