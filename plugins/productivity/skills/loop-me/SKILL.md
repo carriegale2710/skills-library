@@ -1,7 +1,6 @@
 ---
-name: loop
+name: loop-me
 description: Grill me about specs for the workflows I want to build, within this workspace.
-disable-model-invocation: true
 argument-hint: A workflow to design, or nothing to go find one
 ---
 
@@ -27,6 +26,8 @@ A shared language, reached for only when a workflow calls for it: never a checkl
 A workflow spec is done when an implementer agent could build it without asking a single question. Grill until then; nothing is done while a question remains.
 
 ## The workspace
+
+The workspace is the environment in which the user works, including their tools, processes, and terminology. Check these exist, and if not, create them and tell user where they are located in the workspace:
 
 - `workflows/*.md`: one spec per workflow.
 - `NOTES.md`: raw notes on the user's world, the tools they use, the channels they process, and their own terminology for both. When it is empty or thin, interview them about their world before specifying anything. Sharpen fuzzy terms into canonical ones as they surface, and record them here.
