@@ -47,7 +47,7 @@
     {
       "name": "productivity",
       "source": "./plugins/productivity",
-      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, define scope, stress-test an idea, summarize long material, hand off work between sessions, and build new Claude skills."
+      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, define scope, stress-test an idea, get unstuck, build habits, shrink big decisions, summarize long material, hand off work between sessions, and build new Claude skills."
     },
     {
       "name": "savepoint",

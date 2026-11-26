@@ -10,6 +10,8 @@ user-invocable: true
 
 Make a clear, defensible decision by systematically evaluating options against criteria.
 
+Paralysed by a big "forever" decision or too many options, rather than weighing 2+ known ones? Use shrink-decision instead.
+
 ## Steps
 
 1. **State the decision** — what exactly are you deciding? Frame it as a question.
