@@ -1,5 +1,5 @@
 ---
-description: Toggle autosave (savepoint every 10 turns, or every N with --N) for this session
+description: Toggle autosave (savepoint after every ~150 KB of new session context, or every N KB with --N) for this session
 argument-hint: [on|off|--N]
 allowed-tools: Bash(node:*)
 ---
