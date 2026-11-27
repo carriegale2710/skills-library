@@ -68,6 +68,11 @@
       "name": "ux-research",
       "source": "./plugins/ux-research",
       "description": "Understand users before building: plan and run research (interviews, surveys, usability tests), recruit participants, synthesize findings into personas, journeys and insights, and share recommendations."
+    },
+    {
+      "name": "writer",
+      "source": "./plugins/writer",
+      "description": "Write in your own voice: save a style profile, remove AI-sounding patterns, improve drafts, and summarize or TL;DR long text."
     }
   ]
 }
