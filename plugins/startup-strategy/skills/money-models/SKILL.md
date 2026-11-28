@@ -1,6 +1,6 @@
 ---
 name: money-models
-description: Designs a deliberate sequence of offers (attraction, upsell, downsell, continuity) so a new customer generates enough cash within ~30 days to fund acquiring the next one - Alex Hormozi's client-financed acquisition. Use when customers buy once and never again, when CAC eats all the profit, when you can't afford to advertise profitably, when the business grows but cash shrinks, when you sell one product at one price, when deciding what to sell first or next, or when structuring upsells, downsells, payment plans, trials, and continuity. Covers the 30-day payback rule, attraction/upsell/downsell/continuity offer types, and cash-flow sequencing for validated markets.
+description: "Hormozi's client-financed acquisition: sequence offers (attraction, upsell, downsell, continuity) so a new customer pays back CAC within ~30 days. Use when customers buy once, CAC eats profit, you can't afford ads, cash shrinks as the business grows, or when structuring first offers, upsells, payment plans, trials and subscriptions."
 ---
 
 > **Note:** This skill is independent analysis and commentary, not a reproduction of the original text. It synthesizes the book's core ideas with modern startup practice, surfaces where frameworks are outdated or incomplete, and integrates perspectives from adjacent disciplines. For the full argument and context, read the original book.

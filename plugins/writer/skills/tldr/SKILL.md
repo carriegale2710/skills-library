@@ -1,15 +1,6 @@
 ---
 name: tldr
-description: >
-  Use when the user has a long-form article (their own draft, typically 2,500–3,000 words)
-  and wants a single-paragraph abstract for the top of the piece. Triggers: "tldr",
-  "abstract this", "write an abstract for", "synopsis of this draft", "summarize this
-  article". Produces ~100–150 words, neutral synthesis register, in the user's voice and
-  the source's register — functions as a hybrid academic abstract / synopsis that lets
-  a reader decide whether to commit to the full piece. Not for: distilling into multiple
-  shorter posts (see distill), rating quality (see rate), generating headlines (see
-  headlines), structural diagnostics (see diagnose), or marketing teasers / meta
-  descriptions / SEO blurbs (different register, out of scope).
+description: "Write a 100-150 word single-paragraph abstract for the top of a long-form article (own draft, ~2,500-3,000 words). Triggers: 'tldr', 'abstract this', 'synopsis of this draft', 'summarize this article'. Not for multi-post distilling (distill), rating (rate), headlines, diagnostics (diagnose), or teasers/SEO blurbs."
 ---
 
 # TLDR

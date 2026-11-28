@@ -1,6 +1,6 @@
 ---
 name: clarify-intent
-description: Asks the user why they want something before Claude acts on a vague, broad or change request. Use when the user wants to change, redo, rework, fix, improve, simplify or "make better" a plan, design, doc, code, process or decision without saying why or what done looks like, e.g. "I want to change this plan", "this isn't working", "something feels off", "can we rework X", "make it better", "help me with my launch". Also use when a request could mean two different things, is open-ended with no clear outcome, or the user shares a file, screenshot, log or link without saying what they want from it. Use even if not asked to be questioned, since a wrong guess wastes the task. Not when goal and done-state are already stated or the task is small and easy to undo. For feedback on a shared artifact, use artifact-critique.
+description: "Asks why before acting on a vague, broad or change request. Use when the user wants to change, rework, fix, improve or 'make better' something without saying why or what done looks like (e.g. 'this isn't working', 'something feels off', 'help me with my launch'), when a request could mean two things, or when a file, screenshot, log or link is shared with no ask. Not when goal and done-state are stated or the task is small and reversible. For feedback on an artifact, use artifact-critique."
 ---
 
 # Clarify intent
