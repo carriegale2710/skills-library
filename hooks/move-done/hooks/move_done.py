@@ -4,11 +4,14 @@ Ticked lines (`- [x]`) and any indented lines under them (blank lines between
 paragraphs included) go under today's `## YYYY-MM-DD` heading at the top of CHANGELOG.md (newest first).
 Runs in the project root (CLAUDE_PROJECT_DIR).
 Does nothing if TODO.md is missing or no line is ticked, so it is safe to run on every save.
+As a PostToolUse hook it only acts when the edited file (stdin JSON `tool_input.file_path`) is TODO.md.
 """
 import datetime
+import json
 import os
 import pathlib
 import re
+import sys
 
 ROOT = pathlib.Path(os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd())
 TODO = ROOT / "TODO.md"
@@ -65,15 +68,28 @@ def add_to_changelog(done):
     CHANGELOG.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
+def edited_todo():
+    try:
+        path = json.loads(sys.stdin.read())["tool_input"]["file_path"]
+    except (ValueError, KeyError, TypeError):
+        return False
+    return os.path.basename(str(path)).lower() == "todo.md"
+
+
 def main():
-    if not TODO.exists():
+    if not edited_todo() or not TODO.exists():
         return
-    lines = TODO.read_text(encoding="utf-8").splitlines()
-    keep, done = split_todo(lines)
+    text = TODO.read_text(encoding="utf-8")
+    keep, done = split_todo(text.splitlines())
     if not done:
         return
-    add_to_changelog(done)
+    # TODO first: if it fails nothing changed; if CHANGELOG fails, put TODO back.
     TODO.write_text("\n".join(keep) + "\n", encoding="utf-8")
+    try:
+        add_to_changelog(done)
+    except Exception:
+        TODO.write_text(text, encoding="utf-8")
+        raise
 
 
 if __name__ == "__main__":
