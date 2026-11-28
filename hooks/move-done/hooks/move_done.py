@@ -4,7 +4,7 @@ Ticked lines (`- [x]`) and any indented lines under them (blank lines between
 paragraphs included) go under today's `## YYYY-MM-DD` heading at the top of CHANGELOG.md (newest first).
 Runs in the project root (CLAUDE_PROJECT_DIR).
 Does nothing if TODO.md is missing or no line is ticked, so it is safe to run on every save.
-As a PostToolUse hook it only acts when the edited file (stdin JSON `tool_input.file_path`) is TODO.md.
+As a PostToolUse hook it only acts when the edited file (stdin JSON `tool_input.file_path`) is the root TODO.md.
 """
 import datetime
 import json
@@ -73,7 +73,8 @@ def edited_todo():
         path = json.loads(sys.stdin.read())["tool_input"]["file_path"]
     except (ValueError, KeyError, TypeError):
         return False
-    return os.path.basename(str(path)).lower() == "todo.md"
+    same = lambda p: os.path.normcase(os.path.abspath(p))
+    return same(ROOT / str(path)) == same(TODO)
 
 
 def main():
