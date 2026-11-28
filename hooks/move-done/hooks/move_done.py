@@ -51,7 +51,7 @@ def add_to_changelog(done):
     heading = f"## {datetime.date.today().isoformat()}"
     text = CHANGELOG.read_text(encoding="utf-8") if CHANGELOG.exists() else ""
     lines = text.splitlines()
-    if not lines or lines[0].strip() != TITLE:
+    if not lines or not lines[0].startswith("# "):
         lines = [TITLE, ""] + lines
     first = next((i for i, l in enumerate(lines) if l.startswith("## ")), None)
     if first is not None and lines[first].strip() == heading:
@@ -88,7 +88,7 @@ def main():
     TODO.write_text("\n".join(keep) + "\n", encoding="utf-8")
     try:
         add_to_changelog(done)
-    except Exception:
+    except BaseException:
         TODO.write_text(text, encoding="utf-8")
         raise
 
