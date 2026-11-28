@@ -2,6 +2,8 @@
 # PostToolUse Bash: after gh pr create / git push, re-inject CLAUDE.md PR + CodeRabbit rules.
 # Match only as a command (line start or after && ; |), not as text inside strings.
 c=$(jq -r '.tool_input.command // empty' 2>/dev/null)
+# Collapse quoted strings to Q so ; | && inside quotes don't count and git -C "a b" stays one arg.
+c=$(printf '%s' "$c" | sed -E "s/'[^']*'/Q/g; s/\"[^\"]*\"/Q/g")
 pre='(^|&&|;|\|)[[:space:]]*'
 msg=""
 if printf '%s' "$c" | grep -qE "${pre}gh pr create"; then

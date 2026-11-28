@@ -1,7 +1,7 @@
 """Move ticked to-dos from TODO.md to CHANGELOG.md, word for word.
 
-Ticked lines (`- [x]`) and any indented lines under them go under today's
-`## YYYY-MM-DD` heading at the top of CHANGELOG.md (newest first).
+Ticked lines (`- [x]`) and any indented lines under them (blank lines between
+paragraphs included) go under today's `## YYYY-MM-DD` heading at the top of CHANGELOG.md (newest first).
 Runs in the project root (CLAUDE_PROJECT_DIR).
 Does nothing if TODO.md is missing or no line is ticked, so it is safe to run on every save.
 """
@@ -33,9 +33,14 @@ def split_todo(lines):
         level = len(m.group(1))
         done.append(lines[i])
         i += 1
-        while i < len(lines) and lines[i].strip() and indent(lines[i]) > level:
-            done.append(lines[i])
-            i += 1
+        while i < len(lines):
+            j = i
+            while j < len(lines) and not lines[j].strip():
+                j += 1
+            if j == len(lines) or indent(lines[j]) <= level:
+                break
+            done.extend(lines[i:j + 1])
+            i = j + 1
     return keep, done
 
 
