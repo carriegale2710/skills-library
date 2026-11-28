@@ -19,7 +19,7 @@ Save game, for work. **Save** snapshots where things stand. **Load** reads a sna
 | `/load [label or timestamp]` | Read a save, summarise, resume. No arg: newest save. Label: newest save with that label. Timestamp: exact match or prefix. |
 | `/saves` | List saves, newest first. |
 | `/park [label]` | Save, then create a Trello inbox card pointing to it. For switching away to unrelated work. |
-| `/autosave [on\|off\|--N]` | Toggle autosave for this session (default off). When on, a hook asks for a Save labelled `autosave` every 10 turns. `--5` turns it on at every 5 turns. |
+| `/autosave [on\|off\|--N]` | Toggle autosave for this session (default off). When on, a hook asks for a Save labelled `autosave` after every ~150 KB of new session context, with the Save steps inline so this skill isn't loaded. `--300` sets 300 KB. |
 
 If invoked as `/savepoint <create\|save\|load\|list\|park\|autosave> [arg]`, route the same way.
 

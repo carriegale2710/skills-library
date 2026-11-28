@@ -47,12 +47,12 @@
     {
       "name": "productivity",
       "source": "./plugins/productivity",
-      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, define scope, stress-test an idea, summarize long material, hand off work between sessions, and build new Claude skills."
+      "description": "General thinking and productivity help: brainstorm, research a topic, make a plan, define scope, stress-test an idea, get unstuck, build habits, shrink big decisions, summarize long material, hand off work between sessions, and build new Claude skills."
     },
     {
       "name": "savepoint",
       "source": "./plugins/savepoint",
-      "description": "Save game for work: snapshot a session, load it to resume, list saves, park unrelated work as a Trello card, and autosave every N turns."
+      "description": "Save game for work: snapshot a session, load it to resume, list saves, park unrelated work as a Trello card, and autosave as the session grows."
     },
     {
       "name": "startup-strategy",
@@ -68,6 +68,11 @@
       "name": "ux-research",
       "source": "./plugins/ux-research",
       "description": "Understand users before building: plan and run research (interviews, surveys, usability tests), recruit participants, synthesize findings into personas, journeys and insights, and share recommendations."
+    },
+    {
+      "name": "writer",
+      "source": "./plugins/writer",
+      "description": "Write in your own voice: save a style profile, remove AI-sounding patterns, improve drafts, and summarize or TL;DR long text."
     }
   ]
 }
