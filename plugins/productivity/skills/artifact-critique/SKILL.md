@@ -1,6 +1,6 @@
 ---
 name: artifact-critique
-description: "Honest, ranked feedback on something the user made, after asking what it is for. Use when they share a script, design, mockup, landing page, doc, copy, email, deck, plan or pitch and ask 'what do you think', 'review this', 'critique this', 'roast this', 'is this good', 'sanity check', or paste a new version asking 'better?'. Not for git diffs or PRs (code-review), polishing (improve-writing), de-AI-ing text (humanize), or vague asks with no artifact (clarify-intent)."
+description: "Honest, ranked feedback on something the user made, asking what it is for only if unclear. Use when they share a script, design, mockup, landing page, doc, copy, email, deck, plan or pitch and ask 'what do you think', 'review this', 'critique this', 'roast this', 'is this good', 'sanity check', or paste a new version asking 'better?'. Not for git diffs or PRs (code-review), polishing (improve-writing), de-AI-ing text (humanize), or vague asks with no artifact (clarify-intent)."
 ---
 
 # Artifact critique
