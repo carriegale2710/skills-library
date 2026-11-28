@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$(command -v py || command -v python || command -v python3)\" \"${CLAUDE_PLUGIN_ROOT}/hooks/move_done.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
